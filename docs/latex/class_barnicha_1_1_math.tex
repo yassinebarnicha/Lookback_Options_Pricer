@@ -1,0 +1,52 @@
+\doxysection{Barnicha::\+Math Class Reference}
+\hypertarget{class_barnicha_1_1_math}{}\label{class_barnicha_1_1_math}\index{Barnicha::Math@{Barnicha::Math}}
+
+
+Small math helpers (standard normal PDF/\+\+CDF).  
+
+
+
+
+{\ttfamily \+\#include $<$math.\+h$>$}
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static double \doxymbox{\hyperlink{class_barnicha_1_1_math_a0b955239ed91db8955373bf8f0d69a8e}{normal\+\_\+pdf}} (double x)
+\begin{DoxyCompactList}\small\item\em Standard normal PDF:\+ phi(x). \end{DoxyCompactList}\item 
+static double \doxymbox{\hyperlink{class_barnicha_1_1_math_a2fd79d062f74d59d90f5e590549190b9}{normal\+\_\+cdf}} (double x)
+\begin{DoxyCompactList}\small\item\em Standard normal CDF:\+ Phi(x). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Small math helpers (standard normal PDF/\+\+CDF). 
+
+\label{doc-func-members}
+\Hypertarget{class_barnicha_1_1_math_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_barnicha_1_1_math_a2fd79d062f74d59d90f5e590549190b9}\index{Barnicha::Math@{Barnicha::Math}!normal\_cdf@{normal\_cdf}}
+\index{normal\_cdf@{normal\_cdf}!Barnicha::Math@{Barnicha::Math}}
+\doxysubsubsection{\texorpdfstring{normal\_cdf()}{normal\_cdf()}}
+{\footnotesize\ttfamily \label{class_barnicha_1_1_math_a2fd79d062f74d59d90f5e590549190b9} 
+double Barnicha::\+\+Math::\+normal\+\_\+cdf (\begin{DoxyParamCaption}\item[{double}]{x}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Standard normal CDF:\+ Phi(x). 
+
+Implemented as Phi(x) = 0.\+5 \texorpdfstring{$\ast$}{*} erfc(-\/x /\+ sqrt(2)) for good numerical stability. \Hypertarget{class_barnicha_1_1_math_a0b955239ed91db8955373bf8f0d69a8e}\index{Barnicha::Math@{Barnicha::Math}!normal\_pdf@{normal\_pdf}}
+\index{normal\_pdf@{normal\_pdf}!Barnicha::Math@{Barnicha::Math}}
+\doxysubsubsection{\texorpdfstring{normal\_pdf()}{normal\_pdf()}}
+{\footnotesize\ttfamily \label{class_barnicha_1_1_math_a0b955239ed91db8955373bf8f0d69a8e} 
+double Barnicha::\+\+Math::\+normal\+\_\+pdf (\begin{DoxyParamCaption}\item[{double}]{x}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Standard normal PDF:\+ phi(x). 
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+Barnicha/\+include/\+lookback/\+\doxymbox{\hyperlink{math_8h}{math.\+h}}\item 
+Barnicha/\+src/\+\doxymbox{\hyperlink{math_8cpp}{math.\+cpp}}\end{DoxyCompactItemize}

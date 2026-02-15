@@ -1,0 +1,22 @@
+\doxysection{analytic\+\_\+engine.\+h}
+\hypertarget{analytic__engine_8h_source}{}\label{analytic__engine_8h_source}\index{Barnicha/include/lookback/analytic\_engine.h@{Barnicha/include/lookback/analytic\_engine.h}}
+\doxymbox{\hyperlink{analytic__engine_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{pricing__engine_8h}{pricing\_engine.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_barnicha}{Barnicha}}\ \{}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_barnicha_1_1_analytic_engine}{AnalyticEngine}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_barnicha_1_1_pricing_engine}{PricingEngine}}\ \{}
+\DoxyCodeLine{00020\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ \ \ \ \ std::vector<double>\ \doxymbox{\hyperlink{class_barnicha_1_1_analytic_engine_a0ce2df64db49c93593c9c0573eb12a0f}{discounted\_payoff\_samples}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_barnicha_1_1_market_data}{MarketData}}\&\ market,}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_barnicha_1_1_lookback_option}{LookbackOption}}\&\ option)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \}\ \textcolor{comment}{//\ namespace\ lookback}}
+
+\end{DoxyCode}

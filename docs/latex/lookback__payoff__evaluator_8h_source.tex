@@ -1,0 +1,28 @@
+\doxysection{lookback\+\_\+payoff\+\_\+evaluator.\+h}
+\hypertarget{lookback__payoff__evaluator_8h_source}{}\label{lookback__payoff__evaluator_8h_source}\index{Barnicha/include/lookback/lookback\_payoff\_evaluator.h@{Barnicha/include/lookback/lookback\_payoff\_evaluator.h}}
+\doxymbox{\hyperlink{lookback__payoff__evaluator_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{market__data_8h}{market\_data.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{lookback__option_8h}{lookback\_option.h}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{one__step__bridge__sampler_8h}{one\_step\_bridge\_sampler.h}}"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_barnicha}{Barnicha}}\ }
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_barnicha_1_1_lookback_payoff_evaluator_a8c79b797a19ea467dfeaccc5953a37e2}{LookbackPayoffEvaluator}}\ }
+\DoxyCodeLine{00029\ \{}
+\DoxyCodeLine{00030\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00035\ \ \ \ \ \doxymbox{\hyperlink{class_barnicha_1_1_lookback_payoff_evaluator_a8c79b797a19ea467dfeaccc5953a37e2}{LookbackPayoffEvaluator}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_barnicha_1_1_market_data}{MarketData}}\&\ market,\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_barnicha_1_1_lookback_option}{LookbackOption}}\&\ option);}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_barnicha_1_1_lookback_payoff_evaluator_adeaf22aae4ebdfb909951de206d60373}{operator()}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_barnicha_1_1_one_step_sample}{OneStepSample}}\&\ sample)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00043\ \ \ \ \ \doxymbox{\hyperlink{struct_barnicha_1_1_market_data}{MarketData}}\ \doxymbox{\hyperlink{class_barnicha_1_1_lookback_payoff_evaluator_ab48232c8e5c6ed31e98ed43e18584b35}{market\_}};}
+\DoxyCodeLine{00044\ \ \ \ \ \doxymbox{\hyperlink{class_barnicha_1_1_lookback_option}{LookbackOption}}\ \doxymbox{\hyperlink{class_barnicha_1_1_lookback_payoff_evaluator_af45170bb5d3db7c1821b8cd9137b3417}{option\_}};}
+\DoxyCodeLine{00045\ \};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,45 @@
+\doxysection{bump\+\_\+and\+\_\+revalue\+\_\+greeks.\+h}
+\hypertarget{bump__and__revalue__greeks_8h_source}{}\label{bump__and__revalue__greeks_8h_source}\index{Barnicha/include/lookback/bump\_and\_revalue\_greeks.h@{Barnicha/include/lookback/bump\_and\_revalue\_greeks.h}}
+\doxymbox{\hyperlink{bump__and__revalue__greeks_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{greeks__calculator_8h}{greeks\_calculator.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <optional>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_barnicha}{Barnicha}}\ \{}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_barnicha_1_1_bump_and_revalue_greeks_ae5c2a6d785e3cbf095b4c63819e28fc2}{BumpAndRevalueGreeks}}\ final\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_barnicha_1_1_greeks_calculator}{GreeksCalculator}}\ \{}
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \doxymbox{\hyperlink{class_barnicha_1_1_bump_and_revalue_greeks_ae5c2a6d785e3cbf095b4c63819e28fc2}{BumpAndRevalueGreeks}}(\textcolor{keywordtype}{bool}\ compute\_price\ =\ \textcolor{keyword}{true},}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ compute\_delta\ =\ \textcolor{keyword}{true},}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ compute\_gamma\ =\ \textcolor{keyword}{true},}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ compute\_theta\ =\ \textcolor{keyword}{true},}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ compute\_rho\ \ \ =\ \textcolor{keyword}{true},}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ compute\_vega\ \ =\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \doxymbox{\hyperlink{class_barnicha_1_1_bump_and_revalue_greeks_ae5c2a6d785e3cbf095b4c63819e28fc2}{BumpAndRevalueGreeks}}\&\ \doxymbox{\hyperlink{class_barnicha_1_1_bump_and_revalue_greeks_af388986af05deb37fc1c6034dc27bf29}{set\_bumps}}(std::optional<double>\ d\_spot\_rel\ =\ std::nullopt,}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::optional<double>\ d\_rate\_abs\ =\ std::nullopt,}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::optional<double>\ d\_vol\_abs\ =\ std::nullopt,}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::optional<double>\ \ d\_t\_abs\ =\ std::nullopt);}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \doxymbox{\hyperlink{struct_barnicha_1_1_greeks_result}{GreeksResult}}\ \doxymbox{\hyperlink{class_barnicha_1_1_bump_and_revalue_greeks_a01ba730c5c330d3271f7517d22b93510}{compute}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_barnicha_1_1_pricing_engine}{PricingEngine}}\&\ engine,}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_barnicha_1_1_market_data}{MarketData}}\&\ market,}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_barnicha_1_1_lookback_option}{LookbackOption}}\&\ option)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_barnicha_1_1_bump_and_revalue_greeks_a3b1290043762c6142069390cf8102f40}{compute\_price\_}};}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_barnicha_1_1_bump_and_revalue_greeks_aa988bc14f6b57949ea6ee2a4de254baa}{compute\_delta\_}};}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_barnicha_1_1_bump_and_revalue_greeks_a6d56c69c7133e1775f9848b7edefff2e}{compute\_gamma\_}};}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_barnicha_1_1_bump_and_revalue_greeks_af9c50b56180a2ff0ec9758414fbbb60e}{compute\_theta\_}};}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_barnicha_1_1_bump_and_revalue_greeks_a3535d66bb27138e029fecfa1b8c66f68}{compute\_rho\_}};}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_barnicha_1_1_bump_and_revalue_greeks_ab4f2360d9226b590c0fe8c40e6162102}{compute\_vega\_}};}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_barnicha_1_1_bump_and_revalue_greeks_adff2b098bcab7307a6e05c9f355176ae}{d\_spot\_rel\_}}\ =\ 1e-\/4;}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_barnicha_1_1_bump_and_revalue_greeks_ae2182dcdd9245055d4f794a698797521}{d\_rate\_abs\_}}\ =\ 1e-\/4;}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_barnicha_1_1_bump_and_revalue_greeks_a5fe8dcd17ec58a6247e4a0f3bdc3419d}{d\_vol\_abs\_}}\ \ =\ 1e-\/4;}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_barnicha_1_1_bump_and_revalue_greeks_a754d5fd3abb49141d6b0bd6b9e3a3f59}{d\_t\_abs\_}}\ \ \ \ =\ 1e-\/4;}
+\DoxyCodeLine{00047\ \};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \}\ \textcolor{comment}{//\ namespace\ lookback}}
+
+\end{DoxyCode}

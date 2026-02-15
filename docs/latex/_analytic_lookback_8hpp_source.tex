@@ -1,0 +1,47 @@
+\doxysection{Analytic\+Lookback.\+hpp}
+\hypertarget{_analytic_lookback_8hpp_source}{}\label{_analytic_lookback_8hpp_source}\index{Chivet/include/AnalyticLookback.hpp@{Chivet/include/AnalyticLookback.hpp}}
+\doxymbox{\hyperlink{_analytic_lookback_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ ANALYTIC\_LOOKBACK\_HPP}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ ANALYTIC\_LOOKBACK\_HPP}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_option_parameters_8hpp}{OptionParameters.hpp}}"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_chivet}{Chivet}}\ }
+\DoxyCodeLine{00014\ \{}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_chivet_1_1_lookback_analytic_solution}{LookbackAnalyticSolution}}\ \{}
+\DoxyCodeLine{00025\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00035\ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_chivet_1_1_lookback_analytic_solution_a6b9186c0f33271b099b69498381aa329}{price}}(\doxymbox{\hyperlink{namespace_chivet_a3b2090f5176dce254e4ab67a0a803837}{OptionType}}\ option,\ \textcolor{keywordtype}{double}\ S0,\ \textcolor{keywordtype}{double}\ T,\ \textcolor{keywordtype}{double}\ sigma,}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ r);}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00042\ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_chivet_1_1_lookback_analytic_solution_a739f11af2e83aaa22cc34c0fe2d8cbe6}{delta}}(\doxymbox{\hyperlink{namespace_chivet_a3b2090f5176dce254e4ab67a0a803837}{OptionType}}\ option,\ \textcolor{keywordtype}{double}\ S0,\ \textcolor{keywordtype}{double}\ T,\ \textcolor{keywordtype}{double}\ sigma,}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ r);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00050\ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_chivet_1_1_lookback_analytic_solution_a9a4c93e4c438933d1fa90260805d8a16}{gamma}}(\doxymbox{\hyperlink{namespace_chivet_a3b2090f5176dce254e4ab67a0a803837}{OptionType}}\ option,\ \textcolor{keywordtype}{double}\ S0,\ \textcolor{keywordtype}{double}\ T,\ \textcolor{keywordtype}{double}\ sigma,}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ r);}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00058\ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_chivet_1_1_lookback_analytic_solution_aeea77942e2b18ae7b4f890f1ed4b020e}{vega}}(\doxymbox{\hyperlink{namespace_chivet_a3b2090f5176dce254e4ab67a0a803837}{OptionType}}\ option,\ \textcolor{keywordtype}{double}\ S0,\ \textcolor{keywordtype}{double}\ T,\ \textcolor{keywordtype}{double}\ sigma,}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ r);}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00065\ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_chivet_1_1_lookback_analytic_solution_ae10a54efe3afde08fecf2a70cd0a823e}{theta}}(\doxymbox{\hyperlink{namespace_chivet_a3b2090f5176dce254e4ab67a0a803837}{OptionType}}\ option,\ \textcolor{keywordtype}{double}\ S0,\ \textcolor{keywordtype}{double}\ T,\ \textcolor{keywordtype}{double}\ sigma,}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ r);}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00072\ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_chivet_1_1_lookback_analytic_solution_a14469c952d98376debcf41175637201f}{rho}}(\doxymbox{\hyperlink{namespace_chivet_a3b2090f5176dce254e4ab67a0a803837}{OptionType}}\ option,\ \textcolor{keywordtype}{double}\ S0,\ \textcolor{keywordtype}{double}\ T,\ \textcolor{keywordtype}{double}\ sigma,}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ r);}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00084\ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_chivet_1_1_lookback_analytic_solution_a9e320b55f8dabac6a8c9b813ad533aff}{delta\_plus}}(\textcolor{keywordtype}{double}\ tau,\ \textcolor{keywordtype}{double}\ s,\ \textcolor{keywordtype}{double}\ r,\ \textcolor{keywordtype}{double}\ sigma);}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00094\ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_chivet_1_1_lookback_analytic_solution_ad8370fdb82083f4fa979aaca33e9c02e}{delta\_minus}}(\textcolor{keywordtype}{double}\ tau,\ \textcolor{keywordtype}{double}\ s,\ \textcolor{keywordtype}{double}\ r,\ \textcolor{keywordtype}{double}\ sigma);}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00101\ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_chivet_1_1_lookback_analytic_solution_a04b82edeee4dfec0dca8eabb17d96fcf}{normalCDF}}(\textcolor{keywordtype}{double}\ x);}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00108\ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_chivet_1_1_lookback_analytic_solution_ac65ff430a94c8d2afe4bfdcf53726141}{normalPDF}}(\textcolor{keywordtype}{double}\ x);}
+\DoxyCodeLine{00109\ \};}
+\DoxyCodeLine{00110\ \}}
+\DoxyCodeLine{00111\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,63 @@
+\doxysection{Barnicha::\+Analytic\+Engine Class Reference}
+\hypertarget{class_barnicha_1_1_analytic_engine}{}\label{class_barnicha_1_1_analytic_engine}\index{Barnicha::AnalyticEngine@{Barnicha::AnalyticEngine}}
+
+
+Analytic pricing engine (deterministic).  
+
+
+
+
+{\ttfamily \+\#include $<$analytic\+\_\+engine.\+h$>$}
+
+Inheritance diagram for Barnicha::\+Analytic\+Engine:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_barnicha_1_1_analytic_engine}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std::\+vector$<$ double $>$ \doxymbox{\hyperlink{class_barnicha_1_1_analytic_engine_a0ce2df64db49c93593c9c0573eb12a0f}{discounted\+\_\+payoff\+\_\+samples}} (const \doxymbox{\hyperlink{struct_barnicha_1_1_market_data}{Market\+Data}} \&market, const \doxymbox{\hyperlink{class_barnicha_1_1_lookback_option}{Lookback\+Option}} \&option) const override
+\begin{DoxyCompactList}\small\item\em Discounted samples defining the estimator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_barnicha_1_1_pricing_engine}{Barnicha::\+\+Pricing\+Engine}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \doxymbox{\hyperlink{class_barnicha_1_1_pricing_engine_a7e29b8dc84fbdd360dd48f52f0bed38d}{\texorpdfstring{$\sim$}{\string~}\+Pricing\+Engine}} ()=default
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Public Member Functions inherited from \doxymbox{\hyperlink{class_barnicha_1_1_pricing_engine}{Barnicha::\+\+Pricing\+Engine}}}
+\begin{DoxyCompactItemize}
+\item 
+static \doxymbox{\hyperlink{struct_barnicha_1_1_estimate_stats}{Estimate\+Stats}} \doxymbox{\hyperlink{class_barnicha_1_1_pricing_engine_a18fd6e32e86983477482d60d8923acb3}{stats\+\_\+from\+\_\+samples}} (const std::\+vector$<$ double $>$ \&xs)
+\begin{DoxyCompactList}\small\item\em Computes stats (e.\+g mean, stdev, IC) from discounted payoffd. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Analytic pricing engine (deterministic). 
+
+discounted\+\_\+payoffs() returns a single sample \{exact price\}, hence std\+\_\+dev = 0 and CI is degenerate. 
+
+\label{doc-func-members}
+\Hypertarget{class_barnicha_1_1_analytic_engine_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_barnicha_1_1_analytic_engine_a0ce2df64db49c93593c9c0573eb12a0f}\index{Barnicha::AnalyticEngine@{Barnicha::AnalyticEngine}!discounted\_payoff\_samples@{discounted\_payoff\_samples}}
+\index{discounted\_payoff\_samples@{discounted\_payoff\_samples}!Barnicha::AnalyticEngine@{Barnicha::AnalyticEngine}}
+\doxysubsubsection{\texorpdfstring{discounted\_payoff\_samples()}{discounted\_payoff\_samples()}}
+{\footnotesize\ttfamily \label{class_barnicha_1_1_analytic_engine_a0ce2df64db49c93593c9c0573eb12a0f} 
+std::\+vector$<$ double $>$ Barnicha::\+\+Analytic\+Engine::\+discounted\+\_\+payoff\+\_\+samples (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{struct_barnicha_1_1_market_data}{Market\+Data}} \&}]{market}{, }\item[{const \doxymbox{\hyperlink{class_barnicha_1_1_lookback_option}{Lookback\+Option}} \&}]{option}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Discounted samples defining the estimator. 
+
+
+
+Implements \doxymbox{\hyperlink{class_barnicha_1_1_pricing_engine_a3f23b550669344dbc6c97f21762e6f30}{Barnicha::\+\+Pricing\+Engine}}.
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+Barnicha/\+include/\+lookback/\+\doxymbox{\hyperlink{analytic__engine_8h}{analytic\+\_\+engine.\+h}}\item 
+Barnicha/\+src/\+\doxymbox{\hyperlink{analytic__engine_8cpp}{analytic\+\_\+engine.\+cpp}}\end{DoxyCompactItemize}

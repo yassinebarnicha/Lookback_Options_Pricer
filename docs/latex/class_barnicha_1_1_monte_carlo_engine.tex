@@ -1,0 +1,108 @@
+\doxysection{Barnicha::\+Monte\+Carlo\+Engine Class Reference}
+\hypertarget{class_barnicha_1_1_monte_carlo_engine}{}\label{class_barnicha_1_1_monte_carlo_engine}\index{Barnicha::MonteCarloEngine@{Barnicha::MonteCarloEngine}}
+
+
+One-\/step Monte Carlo engine reusing stored samples (CRN).  
+
+
+
+
+{\ttfamily \+\#include $<$monte\+\_\+carlo\+\_\+engine.\+h$>$}
+
+Inheritance diagram for Barnicha::\+Monte\+Carlo\+Engine:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_barnicha_1_1_monte_carlo_engine}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_barnicha_1_1_monte_carlo_engine_ac91318a86d3db9722d3a1c30d5ac6924}{Monte\+Carlo\+Engine}} (const \doxymbox{\hyperlink{class_barnicha_1_1_one_step_bridge_sampler}{One\+Step\+Bridge\+Sampler}} \&sampler, std::\+size\+\_\+t n\+\_\+paths, bool antithetic\+\_\+on\+\_\+normal=true)
+\item 
+std::\+vector$<$ double $>$ \doxymbox{\hyperlink{class_barnicha_1_1_monte_carlo_engine_af869789542038ab35345d17f29edb7d1}{discounted\+\_\+payoff\+\_\+samples}} (const \doxymbox{\hyperlink{struct_barnicha_1_1_market_data}{Market\+Data}} \&market, const \doxymbox{\hyperlink{class_barnicha_1_1_lookback_option}{Lookback\+Option}} \&option) const override
+\begin{DoxyCompactList}\small\item\em Discounted samples defining the estimator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_barnicha_1_1_pricing_engine}{Barnicha::\+\+Pricing\+Engine}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \doxymbox{\hyperlink{class_barnicha_1_1_pricing_engine_a7e29b8dc84fbdd360dd48f52f0bed38d}{\texorpdfstring{$\sim$}{\string~}\+Pricing\+Engine}} ()=default
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const \doxymbox{\hyperlink{class_barnicha_1_1_one_step_bridge_sampler}{One\+Step\+Bridge\+Sampler}} \& \doxymbox{\hyperlink{class_barnicha_1_1_monte_carlo_engine_a65bb7fc0119d6a37aa9bb53dcab95f35}{sampler\+\_\+}}
+\item 
+std::\+size\+\_\+t \doxymbox{\hyperlink{class_barnicha_1_1_monte_carlo_engine_a76c96ddebfe9a34eeeb0c41754e5308f}{n\+\_\+paths\+\_\+}}
+\item 
+bool \doxymbox{\hyperlink{class_barnicha_1_1_monte_carlo_engine_ae7a06260c6c2a0602b169d63feeb8b3d}{antithetic\+\_\+on\+\_\+normal\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Public Member Functions inherited from \doxymbox{\hyperlink{class_barnicha_1_1_pricing_engine}{Barnicha::\+\+Pricing\+Engine}}}
+\begin{DoxyCompactItemize}
+\item 
+static \doxymbox{\hyperlink{struct_barnicha_1_1_estimate_stats}{Estimate\+Stats}} \doxymbox{\hyperlink{class_barnicha_1_1_pricing_engine_a18fd6e32e86983477482d60d8923acb3}{stats\+\_\+from\+\_\+samples}} (const std::\+vector$<$ double $>$ \&xs)
+\begin{DoxyCompactList}\small\item\em Computes stats (e.\+g mean, stdev, IC) from discounted payoffd. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+One-\/step Monte Carlo engine reusing stored samples (CRN). 
+
+discounted\+\_\+payoffs() returns one discounted payoff per path (optionally antithetic-\/averaged on z). price() uses the default \doxylink{class_barnicha_1_1_pricing_engine}{Pricing\+Engine} implementation to compute \doxylink{struct_barnicha_1_1_estimate_stats}{Estimate\+Stats}. 
+
+\label{doc-constructors}
+\Hypertarget{class_barnicha_1_1_monte_carlo_engine_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_barnicha_1_1_monte_carlo_engine_ac91318a86d3db9722d3a1c30d5ac6924}\index{Barnicha::MonteCarloEngine@{Barnicha::MonteCarloEngine}!MonteCarloEngine@{MonteCarloEngine}}
+\index{MonteCarloEngine@{MonteCarloEngine}!Barnicha::MonteCarloEngine@{Barnicha::MonteCarloEngine}}
+\doxysubsubsection{\texorpdfstring{MonteCarloEngine()}{MonteCarloEngine()}}
+{\footnotesize\ttfamily \label{class_barnicha_1_1_monte_carlo_engine_ac91318a86d3db9722d3a1c30d5ac6924} 
+Barnicha::\+\+Monte\+Carlo\+Engine::\+\+Monte\+Carlo\+Engine (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_barnicha_1_1_one_step_bridge_sampler}{One\+Step\+Bridge\+Sampler}} \&}]{sampler}{, }\item[{std::\+size\+\_\+t}]{n\+\_\+paths}{, }\item[{bool}]{antithetic\+\_\+on\+\_\+normal}{ = {\ttfamily true}}\end{DoxyParamCaption})}
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_barnicha_1_1_monte_carlo_engine_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_barnicha_1_1_monte_carlo_engine_af869789542038ab35345d17f29edb7d1}\index{Barnicha::MonteCarloEngine@{Barnicha::MonteCarloEngine}!discounted\_payoff\_samples@{discounted\_payoff\_samples}}
+\index{discounted\_payoff\_samples@{discounted\_payoff\_samples}!Barnicha::MonteCarloEngine@{Barnicha::MonteCarloEngine}}
+\doxysubsubsection{\texorpdfstring{discounted\_payoff\_samples()}{discounted\_payoff\_samples()}}
+{\footnotesize\ttfamily \label{class_barnicha_1_1_monte_carlo_engine_af869789542038ab35345d17f29edb7d1} 
+std::\+vector$<$ double $>$ Barnicha::\+\+Monte\+Carlo\+Engine::\+discounted\+\_\+payoff\+\_\+samples (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{struct_barnicha_1_1_market_data}{Market\+Data}} \&}]{market}{, }\item[{const \doxymbox{\hyperlink{class_barnicha_1_1_lookback_option}{Lookback\+Option}} \&}]{option}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Discounted samples defining the estimator. 
+
+
+
+Implements \doxymbox{\hyperlink{class_barnicha_1_1_pricing_engine_a3f23b550669344dbc6c97f21762e6f30}{Barnicha::\+\+Pricing\+Engine}}.
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_barnicha_1_1_monte_carlo_engine_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_barnicha_1_1_monte_carlo_engine_ae7a06260c6c2a0602b169d63feeb8b3d}\index{Barnicha::MonteCarloEngine@{Barnicha::MonteCarloEngine}!antithetic\_on\_normal\_@{antithetic\_on\_normal\_}}
+\index{antithetic\_on\_normal\_@{antithetic\_on\_normal\_}!Barnicha::MonteCarloEngine@{Barnicha::MonteCarloEngine}}
+\doxysubsubsection{\texorpdfstring{antithetic\_on\_normal\_}{antithetic\_on\_normal\_}}
+{\footnotesize\ttfamily \label{class_barnicha_1_1_monte_carlo_engine_ae7a06260c6c2a0602b169d63feeb8b3d} 
+bool Barnicha::\+\+Monte\+Carlo\+Engine::\+antithetic\+\_\+on\+\_\+normal\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_barnicha_1_1_monte_carlo_engine_a76c96ddebfe9a34eeeb0c41754e5308f}\index{Barnicha::MonteCarloEngine@{Barnicha::MonteCarloEngine}!n\_paths\_@{n\_paths\_}}
+\index{n\_paths\_@{n\_paths\_}!Barnicha::MonteCarloEngine@{Barnicha::MonteCarloEngine}}
+\doxysubsubsection{\texorpdfstring{n\_paths\_}{n\_paths\_}}
+{\footnotesize\ttfamily \label{class_barnicha_1_1_monte_carlo_engine_a76c96ddebfe9a34eeeb0c41754e5308f} 
+std::\+size\+\_\+t Barnicha::\+\+Monte\+Carlo\+Engine::\+n\+\_\+paths\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_barnicha_1_1_monte_carlo_engine_a65bb7fc0119d6a37aa9bb53dcab95f35}\index{Barnicha::MonteCarloEngine@{Barnicha::MonteCarloEngine}!sampler\_@{sampler\_}}
+\index{sampler\_@{sampler\_}!Barnicha::MonteCarloEngine@{Barnicha::MonteCarloEngine}}
+\doxysubsubsection{\texorpdfstring{sampler\_}{sampler\_}}
+{\footnotesize\ttfamily \label{class_barnicha_1_1_monte_carlo_engine_a65bb7fc0119d6a37aa9bb53dcab95f35} 
+const \doxymbox{\hyperlink{class_barnicha_1_1_one_step_bridge_sampler}{One\+Step\+Bridge\+Sampler}}\& Barnicha::\+\+Monte\+Carlo\+Engine::\+sampler\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+Barnicha/\+include/\+lookback/\+\doxymbox{\hyperlink{monte__carlo__engine_8h}{monte\+\_\+carlo\+\_\+engine.\+h}}\item 
+Barnicha/\+src/\+\doxymbox{\hyperlink{monte__carlo__engine_8cpp}{monte\+\_\+carlo\+\_\+engine.\+cpp}}\end{DoxyCompactItemize}

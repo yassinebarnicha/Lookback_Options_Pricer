@@ -1,0 +1,30 @@
+\doxysection{Chivet/\+include/\+\+Pricer.hpp File Reference}
+\hypertarget{_pricer_8hpp}{}\label{_pricer_8hpp}\index{Chivet/include/Pricer.hpp@{Chivet/include/Pricer.hpp}}
+
+
+Main pricing engine for floating-\/strike lookback options using Monte Carlo simulation with finite-\/difference Greeks.  
+
+
+{\ttfamily \+\#include "{}Market\+Parameters.\+hpp"{}}\newline
+{\ttfamily \+\#include "{}Monte\+Carlo\+Simulator.\+hpp"{}}\newline
+{\ttfamily \+\#include "{}Option\+Parameters.\+hpp"{}}\newline
+{\ttfamily \+\#include $<$vector$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{struct_chivet_1_1_price_and_delta}{Chivet::\+\+Price\+And\+Delta}}
+\begin{DoxyCompactList}\small\item\em Lightweight result holding price and delta for a single spot value. \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{struct_chivet_1_1_pricing_result}{Chivet::\+\+Pricing\+Result}}
+\begin{DoxyCompactList}\small\item\em Full set of Monte Carlo pricing results including all first-\/order Greeks and their standard errors. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_chivet_1_1_pricer_lookback_option}{Chivet::\+\+Pricer\+Lookback\+Option}}
+\begin{DoxyCompactList}\small\item\em Prices a floating-\/strike lookback option via Monte Carlo and computes Greeks using central finite differences with common random numbers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \doxymbox{\hyperlink{namespace_chivet}{Chivet}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Main pricing engine for floating-\/strike lookback options using Monte Carlo simulation with finite-\/difference Greeks. 
+

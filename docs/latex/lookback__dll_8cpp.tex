@@ -1,0 +1,63 @@
+\doxysection{Barnicha/\+src/\+lookback\+\_\+dll.cpp File Reference}
+\hypertarget{lookback__dll_8cpp}{}\label{lookback__dll_8cpp}\index{Barnicha/src/lookback\_dll.cpp@{Barnicha/src/lookback\_dll.cpp}}
+
+
+Implementation of the price\+\_\+lookback\+\_\+cond function.  
+
+
+{\ttfamily \+\#include $<$cstddef$>$}\newline
+{\ttfamily \+\#include "{}lookback/\+one\+\_\+step\+\_\+bridge\+\_\+sampler.\+h"{}}\newline
+{\ttfamily \+\#include "{}lookback/\+monte\+\_\+carlo\+\_\+engine.\+h"{}}\newline
+{\ttfamily \+\#include "{}lookback/\+analytic\+\_\+engine.\+h"{}}\newline
+{\ttfamily \+\#include "{}lookback/\+bump\+\_\+and\+\_\+revalue\+\_\+greeks.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{lookback__dll_8cpp_a2f9d43016b5717063dcb156fc4fd48e4}{price\+\_\+lookback\+\_\+cond}} (double ttm, int option\+Type, double spot, double rate, double vol, long paths, long seed, double \texorpdfstring{$\ast$}{*}out\+\_\+values, int \texorpdfstring{$\ast$}{*}out\+\_\+size)
+\begin{DoxyCompactList}\small\item\em Prices a lookback option using the conditional expectation method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of the price\+\_\+lookback\+\_\+cond function. 
+
+Unified DLL entry point for pricing lookback options.
+
+\label{doc-func-members}
+\Hypertarget{lookback__dll_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{lookback__dll_8cpp_a2f9d43016b5717063dcb156fc4fd48e4}\index{lookback\_dll.cpp@{lookback\_dll.cpp}!price\_lookback\_cond@{price\_lookback\_cond}}
+\index{price\_lookback\_cond@{price\_lookback\_cond}!lookback\_dll.cpp@{lookback\_dll.cpp}}
+\doxysubsubsection{\texorpdfstring{price\_lookback\_cond()}{price\_lookback\_cond()}}
+{\footnotesize\ttfamily \label{lookback__dll_8cpp_a2f9d43016b5717063dcb156fc4fd48e4} 
+int price\+\_\+lookback\+\_\+cond (\begin{DoxyParamCaption}\item[{double}]{ttm}{, }\item[{int}]{option\+Type}{, }\item[{double}]{spot}{, }\item[{double}]{rate}{, }\item[{double}]{vol}{, }\item[{long}]{paths}{, }\item[{long}]{seed}{, }\item[{double \texorpdfstring{$\ast$}{*}}]{out\+\_\+values}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{out\+\_\+size}{}\end{DoxyParamCaption})}
+
+
+
+Prices a lookback option using the conditional expectation method. 
+
+Uses Monte Carlo simulation of the terminal asset price and applies the conditional distribution of the maximum/\+minimum to compute the payoff. Results are written into the output buffer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ttm} & Time to maturity (years). \\
+\hline
+{\em option\+Type} & Option type (0 = Call, 1 = Put). \\
+\hline
+{\em spot} & Current spot price. \\
+\hline
+{\em rate} & Risk-\/free rate. \\
+\hline
+{\em vol} & Volatility. \\
+\hline
+{\em paths} & Number of Monte Carlo paths. \\
+\hline
+{\em seed} & RNG seed. \\
+\hline
+{\em out\+\_\+values} & Output buffer for results. \\
+\hline
+{\em out\+\_\+size} & Number of values written.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, non-\/zero on error. 
+\end{DoxyReturn}

@@ -1,0 +1,26 @@
+\doxysection{Chivet/\+src/\+\+Pricer.cpp File Reference}
+\hypertarget{_pricer_8cpp}{}\label{_pricer_8cpp}\index{Chivet/src/Pricer.cpp@{Chivet/src/Pricer.cpp}}
+
+
+Implementation of the Pricer\+Lookback\+Option class.  
+
+
+{\ttfamily \+\#include "{}../\+include/\+\+Pricer.\+hpp"{}}\newline
+{\ttfamily \+\#include $<$cmath$>$}\newline
+{\ttfamily \+\#include $<$numeric$>$}\newline
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \doxymbox{\hyperlink{namespace_chivet}{Chivet}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static double \doxymbox{\hyperlink{namespace_chivet_af71b3e37f7b7e723fb187ecce4bfaf1c}{Chivet::\+compute\+Std\+Error}} (const std::\+vector$<$ double $>$ \&values)
+\begin{DoxyCompactList}\small\item\em Compute the standard error of the mean from a sample of values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of the Pricer\+Lookback\+Option class. 
+
+Prices floating-\/strike lookback options via Monte Carlo simulation and computes Greeks using central finite differences with common random numbers. 

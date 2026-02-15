@@ -1,0 +1,107 @@
+\doxysection{unified/\+unified\+\_\+dll.cpp File Reference}
+\hypertarget{unified__dll_8cpp}{}\label{unified__dll_8cpp}\index{unified/unified\_dll.cpp@{unified/unified\_dll.cpp}}
+{\ttfamily \+\#include "{}lookback/\+lookback\+\_\+dll.\+h"{}}\newline
+{\ttfamily \+\#include "{}Lookback\+DLL.\+hpp"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{unified__dll_8cpp_a1ca888bd091694c05472e1b91df1a97b}{DLL\+\_\+\+EXPORT}}
+\begin{DoxyCompactList}\small\item\em Empty export macro for non-\/\+Windows platforms. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{unified__dll_8cpp_a1ca888bd091694c05472e1b91df1a97b}{DLL\+\_\+\+EXPORT}} int \+\_\+\+\_\+stdcall \doxymbox{\hyperlink{unified__dll_8cpp_a5c887e7c4f9f960f5b6e7b657fe95c96}{price\+\_\+lookback}} (int method, double ttm, int option\+Type, double spot, double rate, double vol, long paths, long steps, long seed, int with\+Std\+Errors, int use\+BGK, double \texorpdfstring{$\ast$}{*}out\+\_\+values, int \texorpdfstring{$\ast$}{*}out\+\_\+size)
+\begin{DoxyCompactList}\small\item\em Exported DLL function to price a lookback option. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{unified__dll_8cpp_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{unified__dll_8cpp_a1ca888bd091694c05472e1b91df1a97b}\index{unified\_dll.cpp@{unified\_dll.cpp}!DLL\_EXPORT@{DLL\_EXPORT}}
+\index{DLL\_EXPORT@{DLL\_EXPORT}!unified\_dll.cpp@{unified\_dll.cpp}}
+\doxysubsubsection{\texorpdfstring{DLL\_EXPORT}{DLL\_EXPORT}}
+{\footnotesize\ttfamily \label{unified__dll_8cpp_a1ca888bd091694c05472e1b91df1a97b} 
+\+\#define DLL\+\_\+\+EXPORT}
+
+
+
+Empty export macro for non-\/\+Windows platforms. 
+
+
+
+\label{doc-func-members}
+\Hypertarget{unified__dll_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{unified__dll_8cpp_a5c887e7c4f9f960f5b6e7b657fe95c96}\index{unified\_dll.cpp@{unified\_dll.cpp}!price\_lookback@{price\_lookback}}
+\index{price\_lookback@{price\_lookback}!unified\_dll.cpp@{unified\_dll.cpp}}
+\doxysubsubsection{\texorpdfstring{price\_lookback()}{price\_lookback()}}
+{\footnotesize\ttfamily \label{unified__dll_8cpp_a5c887e7c4f9f960f5b6e7b657fe95c96} 
+\doxymbox{\hyperlink{unified__dll_8cpp_a1ca888bd091694c05472e1b91df1a97b}{DLL\+\_\+\+EXPORT}} int \+\_\+\+\_\+stdcall price\+\_\+lookback (\begin{DoxyParamCaption}\item[{int}]{method}{, }\item[{double}]{ttm}{, }\item[{int}]{option\+Type}{, }\item[{double}]{spot}{, }\item[{double}]{rate}{, }\item[{double}]{vol}{, }\item[{long}]{paths}{, }\item[{long}]{steps}{, }\item[{long}]{seed}{, }\item[{int}]{with\+Std\+Errors}{, }\item[{int}]{use\+BGK}{, }\item[{double \texorpdfstring{$\ast$}{*}}]{out\+\_\+values}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{out\+\_\+size}{}\end{DoxyParamCaption})}
+
+
+
+Exported DLL function to price a lookback option. 
+
+This function serves as the main external interface of the lookback pricing DLL. It selects the appropriate pricing method based on the input parameter {\ttfamily method} and delegates computation to the corresponding implementation function.
+
+Supported pricing methods:\+
+\begin{DoxyItemize}
+\item method = 0 → Monte Carlo pricing with optional BGK correction
+\item method = 1 → Conditional expectation pricing method
+\end{DoxyItemize}
+
+The computed results (price and optionally standard errors or Greeks) are written into the provided output buffer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em method} & Pricing method selector.
+\begin{DoxyItemize}
+\item 0:\+ Monte Carlo with optional BGK correction
+\item 1:\+ Conditional expectation method
+\end{DoxyItemize}\\
+\hline
+{\em ttm} & Time to maturity (in years).\\
+\hline
+{\em option\+Type} & Option type identifier. Typically:\+
+\begin{DoxyItemize}
+\item 0:\+ Call lookback option
+\item 1:\+ Put lookback option
+\end{DoxyItemize}\\
+\hline
+{\em spot} & Current underlying asset price.\\
+\hline
+{\em rate} & Risk-\/free interest rate (annualized).\\
+\hline
+{\em vol} & Volatility of the underlying asset (annualized).\\
+\hline
+{\em paths} & Number of Monte Carlo simulation paths.\\
+\hline
+{\em steps} & Number of time steps per path (used in Monte Carlo method).\\
+\hline
+{\em seed} & \doxylink{namespace_random}{Random} number generator seed.\\
+\hline
+{\em with\+Std\+Errors} & Flag indicating whether standard errors should be computed.
+\begin{DoxyItemize}
+\item 0:\+ No standard errors
+\item 1:\+ Compute standard errors
+\end{DoxyItemize}\\
+\hline
+{\em use\+BGK} & Flag indicating whether BGK correction should be applied.
+\begin{DoxyItemize}
+\item 0:\+ Disabled
+\item 1:\+ Enabled
+\end{DoxyItemize}\\
+\hline
+{\em out\+\_\+values} & Pointer to the output buffer where results will be written. The buffer must be allocated by the caller.\\
+\hline
+{\em out\+\_\+size} & Pointer to an integer that will receive the number of values written.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Status code:\+
+\begin{DoxyItemize}
+\item 0:\+ Success
+\item negative value:\+ Error code
+\item -\/999:\+ Invalid method specified 
+\end{DoxyItemize}
+\end{DoxyReturn}

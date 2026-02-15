@@ -1,0 +1,28 @@
+var searchData=
+[
+  ['path_0',['Pricing estimator (per path)',['../index.html#autotoc_md8',1,'']]],
+  ['path_20simulation_1',['Core idea (path simulation)',['../index.html#autotoc_md16',1,'']]],
+  ['payoff_2',['payoff',['../class_chivet_1_1_lookback_option.html#a788d6440e8f4ab6acaf098446f85bac8',1,'Chivet::LookbackOption::payoff()'],['../class_barnicha_1_1_lookback_option.html#ad5b28a89219faf2c1be13a96308fbc7e',1,'Barnicha::LookbackOption::payoff()']]],
+  ['per_20path_3',['Pricing estimator (per path)',['../index.html#autotoc_md8',1,'']]],
+  ['price_4',['price',['../struct_chivet_1_1_price_and_delta.html#ae97c83f9b39cff5083c93e8ff59aecf8',1,'Chivet::PriceAndDelta::price'],['../struct_chivet_1_1_pricing_result.html#a2ce783d1b0c2e3e960ae2c7ea31bb6ed',1,'Chivet::PricingResult::price'],['../struct_barnicha_1_1_greeks_result.html#a58a710cd1599c058bbed74294731ed93',1,'Barnicha::GreeksResult::price'],['../class_chivet_1_1_lookback_analytic_solution.html#a6b9186c0f33271b099b69498381aa329',1,'Chivet::LookbackAnalyticSolution::price()'],['../class_barnicha_1_1_analytic_lookback.html#ac50b3d292507cd6606192b7c75e9a352',1,'Barnicha::AnalyticLookback::price()']]],
+  ['price_5flookback_5',['price_lookback',['../unified__dll_8cpp.html#a5c887e7c4f9f960f5b6e7b657fe95c96',1,'unified_dll.cpp']]],
+  ['price_5flookback_5fbgk_6',['price_lookback_bgk',['../_lookback_d_l_l_8hpp.html#ae57d9ef270c98f3193067a614f919729',1,'price_lookback_bgk(double ttm, int optionType, double spot, double rate, double vol, long paths, long steps, long seed, int withStdErrors, int useBGK, double *out_values, int *out_size):&#160;LookbackDLL.cpp'],['../_lookback_d_l_l_8cpp.html#ae57d9ef270c98f3193067a614f919729',1,'price_lookback_bgk(double ttm, int optionType, double spot, double rate, double vol, long paths, long steps, long seed, int withStdErrors, int useBGK, double *out_values, int *out_size):&#160;LookbackDLL.cpp']]],
+  ['price_5flookback_5fcond_7',['price_lookback_cond',['../lookback__dll_8h.html#a2f9d43016b5717063dcb156fc4fd48e4',1,'price_lookback_cond(double ttm, int optionType, double spot, double rate, double vol, long paths, long seed, double *out_values, int *out_size):&#160;lookback_dll.cpp'],['../lookback__dll_8cpp.html#a2f9d43016b5717063dcb156fc4fd48e4',1,'price_lookback_cond(double ttm, int optionType, double spot, double rate, double vol, long paths, long seed, double *out_values, int *out_size):&#160;lookback_dll.cpp']]],
+  ['price_5fr_5fnonzero_8',['price_r_nonzero',['../class_barnicha_1_1_analytic_lookback.html#a0d7e7c5b91374a673fd1a6e57140ae4c',1,'Barnicha::AnalyticLookback']]],
+  ['price_5fr_5fzero_5flimit_9',['price_r_zero_limit',['../class_barnicha_1_1_analytic_lookback.html#a45d1d7f52bce584233ac332a1608bfcf',1,'Barnicha::AnalyticLookback']]],
+  ['priceanddelta_10',['PriceAndDelta',['../struct_chivet_1_1_price_and_delta.html',1,'Chivet']]],
+  ['priceanddeltaforspot_11',['priceAndDeltaForSpot',['../class_chivet_1_1_pricer_lookback_option.html#aab0b45aaf4ee831ea8429709890339ad',1,'Chivet::PricerLookbackOption']]],
+  ['pricer_2ecpp_12',['Pricer.cpp',['../_pricer_8cpp.html',1,'']]],
+  ['pricer_2ehpp_13',['Pricer.hpp',['../_pricer_8hpp.html',1,'']]],
+  ['pricerlookbackoption_14',['PricerLookbackOption',['../class_chivet_1_1_pricer_lookback_option.html',1,'Chivet::PricerLookbackOption'],['../class_chivet_1_1_pricer_lookback_option.html#aa61054933ae977d47d3d4cb0aef1ba18',1,'Chivet::PricerLookbackOption::PricerLookbackOption()'],['../class_chivet_1_1_pricer_lookback_option.html#a8ed94a408e0502bae23b3dee4981fc42',1,'Chivet::PricerLookbackOption::PricerLookbackOption(LookbackOption option, MarketParameters marketParameters, MonteCarloSimulator simulator)']]],
+  ['pricestd_15',['priceStd',['../struct_chivet_1_1_price_and_delta.html#ab44a44265761d09592370c8e7d74a433',1,'Chivet::PriceAndDelta::priceStd'],['../struct_chivet_1_1_pricing_result.html#add8d7a03a50ef8e04c62a48d3b2e8dbd',1,'Chivet::PricingResult::priceStd']]],
+  ['pricing_16',['BGK correction (optional, used for pricing)',['../index.html#autotoc_md20',1,'']]],
+  ['pricing_20estimator_20per_20path_17',['Pricing estimator (per path)',['../index.html#autotoc_md8',1,'']]],
+  ['pricing_20estimator_20without_20bgk_18',['Pricing estimator (without BGK)',['../index.html#autotoc_md18',1,'']]],
+  ['pricing_20library_20c_19',['Unified Lookback Options Pricing Library (C++)',['../index.html',1,'']]],
+  ['pricing_5fengine_2ecpp_20',['pricing_engine.cpp',['../pricing__engine_8cpp.html',1,'']]],
+  ['pricing_5fengine_2eh_21',['pricing_engine.h',['../pricing__engine_8h.html',1,'']]],
+  ['pricingengine_22',['PricingEngine',['../class_barnicha_1_1_pricing_engine.html',1,'Barnicha']]],
+  ['pricingresult_23',['PricingResult',['../struct_chivet_1_1_pricing_result.html',1,'Chivet']]],
+  ['put_24',['Put',['../namespace_chivet.html#a3b2090f5176dce254e4ab67a0a803837ad0bf1810982e9728fcf3ac444a015373',1,'Chivet::Put'],['../namespace_barnicha.html#a6e8767d591b9a3eb31aab69bd44c0ff1ad0bf1810982e9728fcf3ac444a015373',1,'Barnicha::Put']]]
+];

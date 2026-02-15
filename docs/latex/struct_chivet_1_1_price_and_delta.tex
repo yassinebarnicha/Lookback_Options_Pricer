@@ -1,0 +1,65 @@
+\doxysection{Chivet::\+Price\+And\+Delta Struct Reference}
+\hypertarget{struct_chivet_1_1_price_and_delta}{}\label{struct_chivet_1_1_price_and_delta}\index{Chivet::PriceAndDelta@{Chivet::PriceAndDelta}}
+
+
+Lightweight result holding price and delta for a single spot value.  
+
+
+
+
+{\ttfamily \+\#include $<$Pricer.\+hpp$>$}
+
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \doxymbox{\hyperlink{struct_chivet_1_1_price_and_delta_ae97c83f9b39cff5083c93e8ff59aecf8}{price}}
+\begin{DoxyCompactList}\small\item\em Monte Carlo estimated option price. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{struct_chivet_1_1_price_and_delta_ab44a44265761d09592370c8e7d74a433}{price\+Std}}
+\begin{DoxyCompactList}\small\item\em Standard error of the price estimate. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{struct_chivet_1_1_price_and_delta_a00ec142b4eb20a98e8f4f63ac9bc7b98}{delta}}
+\begin{DoxyCompactList}\small\item\em Finite-\/difference delta $\partial V/\partial S$. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Lightweight result holding price and delta for a single spot value. 
+
+Used by \doxylink{class_chivet_1_1_pricer_lookback_option_aab0b45aaf4ee831ea8429709890339ad}{Pricer\+Lookback\+Option::\+price\+And\+Delta\+For\+Spot()} for graph generation. 
+
+\label{doc-variable-members}
+\Hypertarget{struct_chivet_1_1_price_and_delta_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_chivet_1_1_price_and_delta_a00ec142b4eb20a98e8f4f63ac9bc7b98}\index{Chivet::PriceAndDelta@{Chivet::PriceAndDelta}!delta@{delta}}
+\index{delta@{delta}!Chivet::PriceAndDelta@{Chivet::PriceAndDelta}}
+\doxysubsubsection{\texorpdfstring{delta}{delta}}
+{\footnotesize\ttfamily \label{struct_chivet_1_1_price_and_delta_a00ec142b4eb20a98e8f4f63ac9bc7b98} 
+double Chivet::\+\+Price\+And\+Delta::\+delta}
+
+
+
+Finite-\/difference delta $\partial V/\partial S$. 
+
+\Hypertarget{struct_chivet_1_1_price_and_delta_ae97c83f9b39cff5083c93e8ff59aecf8}\index{Chivet::PriceAndDelta@{Chivet::PriceAndDelta}!price@{price}}
+\index{price@{price}!Chivet::PriceAndDelta@{Chivet::PriceAndDelta}}
+\doxysubsubsection{\texorpdfstring{price}{price}}
+{\footnotesize\ttfamily \label{struct_chivet_1_1_price_and_delta_ae97c83f9b39cff5083c93e8ff59aecf8} 
+double Chivet::\+\+Price\+And\+Delta::\+price}
+
+
+
+Monte Carlo estimated option price. 
+
+\Hypertarget{struct_chivet_1_1_price_and_delta_ab44a44265761d09592370c8e7d74a433}\index{Chivet::PriceAndDelta@{Chivet::PriceAndDelta}!priceStd@{priceStd}}
+\index{priceStd@{priceStd}!Chivet::PriceAndDelta@{Chivet::PriceAndDelta}}
+\doxysubsubsection{\texorpdfstring{priceStd}{priceStd}}
+{\footnotesize\ttfamily \label{struct_chivet_1_1_price_and_delta_ab44a44265761d09592370c8e7d74a433} 
+double Chivet::\+\+Price\+And\+Delta::\+price\+Std}
+
+
+
+Standard error of the price estimate. 
+
+
+
+The documentation for this struct was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+Chivet/\+include/\+\doxymbox{\hyperlink{_pricer_8hpp}{Pricer.\+hpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,27 @@
+\doxysection{pricing\+\_\+engine.\+h}
+\hypertarget{pricing__engine_8h_source}{}\label{pricing__engine_8h_source}\index{Barnicha/include/lookback/pricing\_engine.h@{Barnicha/include/lookback/pricing\_engine.h}}
+\doxymbox{\hyperlink{pricing__engine_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{market__data_8h}{market\_data.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{lookback__option_8h}{lookback\_option.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{estimate__stats_8h}{estimate\_stats.h}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_barnicha}{Barnicha}}\ }
+\DoxyCodeLine{00012\ \{}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_barnicha_1_1_pricing_engine}{PricingEngine}}\ }
+\DoxyCodeLine{00025\ \{}
+\DoxyCodeLine{00026\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{virtual}\ \doxymbox{\hyperlink{class_barnicha_1_1_pricing_engine_a7e29b8dc84fbdd360dd48f52f0bed38d}{\string~PricingEngine}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{virtual}\ std::vector<double>\ \doxymbox{\hyperlink{class_barnicha_1_1_pricing_engine_a3f23b550669344dbc6c97f21762e6f30}{discounted\_payoff\_samples}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_barnicha_1_1_market_data}{MarketData}}\&\ market,}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_barnicha_1_1_lookback_option}{LookbackOption}}\&\ option)\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{static}\ \doxymbox{\hyperlink{struct_barnicha_1_1_estimate_stats}{EstimateStats}}\ \doxymbox{\hyperlink{class_barnicha_1_1_pricing_engine_a18fd6e32e86983477482d60d8923acb3}{stats\_from\_samples}}(\textcolor{keyword}{const}\ std::vector<double>\&\ xs);\ }
+\DoxyCodeLine{00039\ \};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \}}
+
+\end{DoxyCode}

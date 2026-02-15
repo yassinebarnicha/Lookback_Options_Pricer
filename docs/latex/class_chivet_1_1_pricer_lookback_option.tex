@@ -1,0 +1,391 @@
+\doxysection{Chivet::\+Pricer\+Lookback\+Option Class Reference}
+\hypertarget{class_chivet_1_1_pricer_lookback_option}{}\label{class_chivet_1_1_pricer_lookback_option}\index{Chivet::PricerLookbackOption@{Chivet::PricerLookbackOption}}
+
+
+Prices a floating-\/strike lookback option via Monte Carlo and computes Greeks using central finite differences with common random numbers.  
+
+
+
+
+{\ttfamily \+\#include $<$Pricer.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_chivet_1_1_pricer_lookback_option_aa61054933ae977d47d3d4cb0aef1ba18}{Pricer\+Lookback\+Option}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_chivet_1_1_pricer_lookback_option_a8ed94a408e0502bae23b3dee4981fc42}{Pricer\+Lookback\+Option}} (\doxymbox{\hyperlink{class_chivet_1_1_lookback_option}{Lookback\+Option}} option, \doxymbox{\hyperlink{class_chivet_1_1_market_parameters}{Market\+Parameters}} market\+Parameters, \doxymbox{\hyperlink{class_chivet_1_1_monte_carlo_simulator}{Monte\+Carlo\+Simulator}} simulator)
+\begin{DoxyCompactList}\small\item\em Construct a fully-\/specified pricer. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_chivet_1_1_pricer_lookback_option_a497db8951a9f050e2e5e0f477e58273a}{set\+Option}} (\doxymbox{\hyperlink{class_chivet_1_1_lookback_option}{Lookback\+Option}} option)
+\begin{DoxyCompactList}\small\item\em Set the option from an existing \doxylink{class_chivet_1_1_lookback_option}{Lookback\+Option} object. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_chivet_1_1_pricer_lookback_option_a81eae9ef9493590401e275d7c65fe968}{set\+Option}} (\doxymbox{\hyperlink{namespace_chivet_a3b2090f5176dce254e4ab67a0a803837}{Option\+Type}} type, double maturity)
+\begin{DoxyCompactList}\small\item\em Set the option by type and maturity. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_chivet_1_1_pricer_lookback_option_a44d705e94c89aa59d3f55085a2173292}{set\+Market\+Parameters}} (\doxymbox{\hyperlink{class_chivet_1_1_market_parameters}{Market\+Parameters}} market\+Parameters)
+\begin{DoxyCompactList}\small\item\em Set market parameters from an existing object. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_chivet_1_1_pricer_lookback_option_a88f8acce40d11a4976ed1aa7da8f648b}{set\+Market\+Parameters}} (double spot, double rate, double volatility)
+\begin{DoxyCompactList}\small\item\em Set market parameters individually. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_chivet_1_1_pricer_lookback_option_ad42ef8233a887b25b71986941a7b2e04}{set\+Monte\+Carlo\+Simulator}} (unsigned long num\+Simulations, unsigned long num\+Time\+Steps, unsigned long seed=0)
+\begin{DoxyCompactList}\small\item\em Configure the Monte Carlo simulator. \end{DoxyCompactList}\item 
+const \doxymbox{\hyperlink{class_chivet_1_1_lookback_option}{Lookback\+Option}} \& \doxymbox{\hyperlink{class_chivet_1_1_pricer_lookback_option_a66bc6a361c4b8e54fb7404061de0f6b9}{get\+Option}} () const
+\begin{DoxyCompactList}\small\item\em Get a const reference to the option. \end{DoxyCompactList}\item 
+const \doxymbox{\hyperlink{class_chivet_1_1_market_parameters}{Market\+Parameters}} \& \doxymbox{\hyperlink{class_chivet_1_1_pricer_lookback_option_a5e732dcadf48e464fc25a126a7f9b974}{get\+Market\+Parameters}} () const
+\begin{DoxyCompactList}\small\item\em Get a const reference to the market parameters. \end{DoxyCompactList}\item 
+const \doxymbox{\hyperlink{class_chivet_1_1_monte_carlo_simulator}{Monte\+Carlo\+Simulator}} \& \doxymbox{\hyperlink{class_chivet_1_1_pricer_lookback_option_a3e8b8f1bb8ec90a3735fc79e5abff9f0}{get\+Simulator}} () const
+\begin{DoxyCompactList}\small\item\em Get a const reference to the simulator. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_chivet_1_1_pricer_lookback_option_aec7b9c904932157a881b57d806672807}{set\+Bgk\+Correction}} (bool enabled)
+\begin{DoxyCompactList}\small\item\em Enable or disable the Broadie-\/\+Glasserman-\/\+Kou continuity correction. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{struct_chivet_1_1_pricing_result}{Pricing\+Result}} \doxymbox{\hyperlink{class_chivet_1_1_pricer_lookback_option_af3cee0d4b0ebaa643c418cafa8b54193}{compute}} (bool with\+Greek\+Std\+Errors=false)
+\begin{DoxyCompactList}\small\item\em Price the option and compute all Greeks via Monte Carlo. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{struct_chivet_1_1_price_and_delta}{Price\+And\+Delta}} \doxymbox{\hyperlink{class_chivet_1_1_pricer_lookback_option_aab0b45aaf4ee831ea8429709890339ad}{price\+And\+Delta\+For\+Spot}} (double spot)
+\begin{DoxyCompactList}\small\item\em Compute price and delta for a specific spot value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \doxymbox{\hyperlink{class_chivet_1_1_pricer_lookback_option_ac30ce3d66728d7090f4f64240d8d6201}{compute\+Raw\+Price}} (double spot, double rate, double volatility, double maturity, double \&std\+Error, unsigned int seed, std::\+vector$<$ double $>$ \&values, bool store\+Values=false)
+\begin{DoxyCompactList}\small\item\em Compute the discounted Monte Carlo price for given parameters. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_chivet_1_1_lookback_option}{Lookback\+Option}} \doxymbox{\hyperlink{class_chivet_1_1_pricer_lookback_option_a0e70a3d30e397d19c8a64eedc8d52f70}{option\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The lookback option contract. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_chivet_1_1_market_parameters}{Market\+Parameters}} \doxymbox{\hyperlink{class_chivet_1_1_pricer_lookback_option_a5afa5df331a757980762d8bb8b32c03b}{Market\+Parameters\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Market data (spot, rate, vol). \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_chivet_1_1_monte_carlo_simulator}{Monte\+Carlo\+Simulator}} \doxymbox{\hyperlink{class_chivet_1_1_pricer_lookback_option_a46d5702e4b3bd27855c7ed924e232543}{simulator\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Monte Carlo simulation engine. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Attributes}
+\begin{Indent}\textbf{ Bump sizes for central finite differences}\par
+\begin{DoxyCompactItemize}
+\item 
+static constexpr double \doxymbox{\hyperlink{class_chivet_1_1_pricer_lookback_option_a2b1ec01c486c4e02f718deaf6f370bd9}{SPOT\+\_\+\+BUMP}}
+\begin{DoxyCompactList}\small\item\em Relative bump for Delta /\+ Gamma. \end{DoxyCompactList}\item 
+static constexpr double \doxymbox{\hyperlink{class_chivet_1_1_pricer_lookback_option_ae092dd8759471c444bec91c8dc289e76}{VOL\+\_\+\+BUMP}} = 0.\+001
+\begin{DoxyCompactList}\small\item\em Relative bump for Vega. \end{DoxyCompactList}\item 
+static constexpr double \doxymbox{\hyperlink{class_chivet_1_1_pricer_lookback_option_ad8eb25ea79c56eafb75df235516e56eb}{RATE\+\_\+\+BUMP}} = 0.\+0001
+\begin{DoxyCompactList}\small\item\em Relative bump for Rho. \end{DoxyCompactList}\item 
+static constexpr double \doxymbox{\hyperlink{class_chivet_1_1_pricer_lookback_option_a6b0f8d7939d90b8a760580a7cdc54981}{TIME\+\_\+\+BUMP}}
+\begin{DoxyCompactList}\small\item\em Relative bump for Theta (1 day). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+
+
+\doxysubsection{Detailed Description}
+Prices a floating-\/strike lookback option via Monte Carlo and computes Greeks using central finite differences with common random numbers. 
+
+The pricer re-\/seeds the RNG before each price evaluation so that bumped and base scenarios share the same Brownian paths, reducing noise in the finite-\/difference Greek estimates.
+
+Remark :\+ Giving a seed as the user to the program is useless and broken in our implementation, as the seed is re-\/set before each price evaluation. To get reproducible results, set the seed in the \doxylink{class_chivet_1_1_monte_carlo_simulator}{Monte\+Carlo\+Simulator} configuration. 
+
+\label{doc-constructors}
+\Hypertarget{class_chivet_1_1_pricer_lookback_option_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_chivet_1_1_pricer_lookback_option_aa61054933ae977d47d3d4cb0aef1ba18}\index{Chivet::PricerLookbackOption@{Chivet::PricerLookbackOption}!PricerLookbackOption@{PricerLookbackOption}}
+\index{PricerLookbackOption@{PricerLookbackOption}!Chivet::PricerLookbackOption@{Chivet::PricerLookbackOption}}
+\doxysubsubsection{\texorpdfstring{PricerLookbackOption()}{PricerLookbackOption()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_chivet_1_1_pricer_lookback_option_aa61054933ae977d47d3d4cb0aef1ba18} 
+Chivet::\+\+Pricer\+Lookback\+Option::\+\+Pricer\+Lookback\+Option (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Default constructor. 
+
+\Hypertarget{class_chivet_1_1_pricer_lookback_option_a8ed94a408e0502bae23b3dee4981fc42}\index{Chivet::PricerLookbackOption@{Chivet::PricerLookbackOption}!PricerLookbackOption@{PricerLookbackOption}}
+\index{PricerLookbackOption@{PricerLookbackOption}!Chivet::PricerLookbackOption@{Chivet::PricerLookbackOption}}
+\doxysubsubsection{\texorpdfstring{PricerLookbackOption()}{PricerLookbackOption()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_chivet_1_1_pricer_lookback_option_a8ed94a408e0502bae23b3dee4981fc42} 
+Chivet::\+\+Pricer\+Lookback\+Option::\+\+Pricer\+Lookback\+Option (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_chivet_1_1_lookback_option}{Lookback\+Option}}}]{option}{, }\item[{\doxymbox{\hyperlink{class_chivet_1_1_market_parameters}{Market\+Parameters}}}]{market\+Parameters}{, }\item[{\doxymbox{\hyperlink{class_chivet_1_1_monte_carlo_simulator}{Monte\+Carlo\+Simulator}}}]{simulator}{}\end{DoxyParamCaption})}
+
+
+
+Construct a fully-\/specified pricer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em option} & The lookback option to price. \\
+\hline
+{\em market\+Parameters} & Market data (spot, rate, vol). \\
+\hline
+{\em simulator} & Configured Monte Carlo engine. \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_chivet_1_1_pricer_lookback_option_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_chivet_1_1_pricer_lookback_option_af3cee0d4b0ebaa643c418cafa8b54193}\index{Chivet::PricerLookbackOption@{Chivet::PricerLookbackOption}!compute@{compute}}
+\index{compute@{compute}!Chivet::PricerLookbackOption@{Chivet::PricerLookbackOption}}
+\doxysubsubsection{\texorpdfstring{compute()}{compute()}}
+{\footnotesize\ttfamily \label{class_chivet_1_1_pricer_lookback_option_af3cee0d4b0ebaa643c418cafa8b54193} 
+\doxymbox{\hyperlink{struct_chivet_1_1_pricing_result}{Pricing\+Result}} Chivet::\+\+Pricer\+Lookback\+Option::\+compute (\begin{DoxyParamCaption}\item[{bool}]{with\+Greek\+Std\+Errors}{ = {\ttfamily false}}\end{DoxyParamCaption})}
+
+
+
+Price the option and compute all Greeks via Monte Carlo. 
+
+Uses central finite differences with common random numbers. 
+\begin{DoxyParams}{Parameters}
+{\em with\+Greek\+Std\+Errors} & If true, store per-\/simulation discounted payoffs for every bumped evaluation and compute standard errors for each Greek. This roughly doubles memory usage and adds overhead. When false (default), Greek std-\/error fields are set to 0. The price standard error is always computed regardless of this flag. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A \doxylink{struct_chivet_1_1_pricing_result}{Pricing\+Result} containing price, Greeks, and their standard errors. 
+\end{DoxyReturn}
+\Hypertarget{class_chivet_1_1_pricer_lookback_option_ac30ce3d66728d7090f4f64240d8d6201}\index{Chivet::PricerLookbackOption@{Chivet::PricerLookbackOption}!computeRawPrice@{computeRawPrice}}
+\index{computeRawPrice@{computeRawPrice}!Chivet::PricerLookbackOption@{Chivet::PricerLookbackOption}}
+\doxysubsubsection{\texorpdfstring{computeRawPrice()}{computeRawPrice()}}
+{\footnotesize\ttfamily \label{class_chivet_1_1_pricer_lookback_option_ac30ce3d66728d7090f4f64240d8d6201} 
+double Chivet::\+\+Pricer\+Lookback\+Option::\+compute\+Raw\+Price (\begin{DoxyParamCaption}\item[{double}]{spot}{, }\item[{double}]{rate}{, }\item[{double}]{volatility}{, }\item[{double}]{maturity}{, }\item[{double \&}]{std\+Error}{, }\item[{unsigned int}]{seed}{, }\item[{std::\+vector$<$ double $>$ \&}]{values}{, }\item[{bool}]{store\+Values}{ = {\ttfamily false}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Compute the discounted Monte Carlo price for given parameters. 
+
+This is the core pricing routine used internally by \doxylink{class_chivet_1_1_pricer_lookback_option_af3cee0d4b0ebaa643c418cafa8b54193}{compute()} and \doxylink{class_chivet_1_1_pricer_lookback_option_aab0b45aaf4ee831ea8429709890339ad}{price\+And\+Delta\+For\+Spot()}. It re-\/seeds the RNG with {\ttfamily seed} before simulating, ensuring reproducible paths across bumped evaluations.
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em spot} & Spot price $S_0$. \\
+\hline
+ & {\em rate} & Risk-\/free rate $r$. \\
+\hline
+ & {\em volatility} & Volatility $\sigma$. \\
+\hline
+ & {\em maturity} & Time to maturity $T$. \\
+\hline
+\doxymbox{\texttt{out}}  & {\em std\+Error} & Standard error of the price estimate. \\
+\hline
+ & {\em seed} & \doxylink{namespace_chivet_1_1_random}{Random} seed for reproducibility. \\
+\hline
+\doxymbox{\texttt{out}}  & {\em values} & Per-\/simulation discounted payoffs (populated if {\ttfamily store\+Values} is true). \\
+\hline
+ & {\em store\+Values} & If true, individual discounted payoffs are stored in {\ttfamily values} for subsequent Greek standard-\/error computation. Since this is memory-\/intensive, it is optional and only used when computing Greeks. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The Monte Carlo estimated option price. 
+\end{DoxyReturn}
+\Hypertarget{class_chivet_1_1_pricer_lookback_option_a5e732dcadf48e464fc25a126a7f9b974}\index{Chivet::PricerLookbackOption@{Chivet::PricerLookbackOption}!getMarketParameters@{getMarketParameters}}
+\index{getMarketParameters@{getMarketParameters}!Chivet::PricerLookbackOption@{Chivet::PricerLookbackOption}}
+\doxysubsubsection{\texorpdfstring{getMarketParameters()}{getMarketParameters()}}
+{\footnotesize\ttfamily \label{class_chivet_1_1_pricer_lookback_option_a5e732dcadf48e464fc25a126a7f9b974} 
+const \doxymbox{\hyperlink{class_chivet_1_1_market_parameters}{Market\+Parameters}} \& Chivet::\+\+Pricer\+Lookback\+Option::\+get\+Market\+Parameters (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get a const reference to the market parameters. 
+
+\Hypertarget{class_chivet_1_1_pricer_lookback_option_a66bc6a361c4b8e54fb7404061de0f6b9}\index{Chivet::PricerLookbackOption@{Chivet::PricerLookbackOption}!getOption@{getOption}}
+\index{getOption@{getOption}!Chivet::PricerLookbackOption@{Chivet::PricerLookbackOption}}
+\doxysubsubsection{\texorpdfstring{getOption()}{getOption()}}
+{\footnotesize\ttfamily \label{class_chivet_1_1_pricer_lookback_option_a66bc6a361c4b8e54fb7404061de0f6b9} 
+const \doxymbox{\hyperlink{class_chivet_1_1_lookback_option}{Lookback\+Option}} \& Chivet::\+\+Pricer\+Lookback\+Option::\+get\+Option (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get a const reference to the option. 
+
+\Hypertarget{class_chivet_1_1_pricer_lookback_option_a3e8b8f1bb8ec90a3735fc79e5abff9f0}\index{Chivet::PricerLookbackOption@{Chivet::PricerLookbackOption}!getSimulator@{getSimulator}}
+\index{getSimulator@{getSimulator}!Chivet::PricerLookbackOption@{Chivet::PricerLookbackOption}}
+\doxysubsubsection{\texorpdfstring{getSimulator()}{getSimulator()}}
+{\footnotesize\ttfamily \label{class_chivet_1_1_pricer_lookback_option_a3e8b8f1bb8ec90a3735fc79e5abff9f0} 
+const \doxymbox{\hyperlink{class_chivet_1_1_monte_carlo_simulator}{Monte\+Carlo\+Simulator}} \& Chivet::\+\+Pricer\+Lookback\+Option::\+get\+Simulator (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get a const reference to the simulator. 
+
+\Hypertarget{class_chivet_1_1_pricer_lookback_option_aab0b45aaf4ee831ea8429709890339ad}\index{Chivet::PricerLookbackOption@{Chivet::PricerLookbackOption}!priceAndDeltaForSpot@{priceAndDeltaForSpot}}
+\index{priceAndDeltaForSpot@{priceAndDeltaForSpot}!Chivet::PricerLookbackOption@{Chivet::PricerLookbackOption}}
+\doxysubsubsection{\texorpdfstring{priceAndDeltaForSpot()}{priceAndDeltaForSpot()}}
+{\footnotesize\ttfamily \label{class_chivet_1_1_pricer_lookback_option_aab0b45aaf4ee831ea8429709890339ad} 
+\doxymbox{\hyperlink{struct_chivet_1_1_price_and_delta}{Price\+And\+Delta}} Chivet::\+\+Pricer\+Lookback\+Option::\+price\+And\+Delta\+For\+Spot (\begin{DoxyParamCaption}\item[{double}]{spot}{}\end{DoxyParamCaption})}
+
+
+
+Compute price and delta for a specific spot value. 
+
+Useful for generating Price(\+S) and Delta(\+S) graphs. 
+\begin{DoxyParams}{Parameters}
+{\em spot} & The spot price to evaluate at. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{struct_chivet_1_1_price_and_delta}{Price\+And\+Delta} containing MC price, its std error, and delta. 
+\end{DoxyReturn}
+\Hypertarget{class_chivet_1_1_pricer_lookback_option_aec7b9c904932157a881b57d806672807}\index{Chivet::PricerLookbackOption@{Chivet::PricerLookbackOption}!setBgkCorrection@{setBgkCorrection}}
+\index{setBgkCorrection@{setBgkCorrection}!Chivet::PricerLookbackOption@{Chivet::PricerLookbackOption}}
+\doxysubsubsection{\texorpdfstring{setBgkCorrection()}{setBgkCorrection()}}
+{\footnotesize\ttfamily \label{class_chivet_1_1_pricer_lookback_option_aec7b9c904932157a881b57d806672807} 
+void Chivet::\+\+Pricer\+Lookback\+Option::\+set\+Bgk\+Correction (\begin{DoxyParamCaption}\item[{bool}]{enabled}{}\end{DoxyParamCaption})}
+
+
+
+Enable or disable the Broadie-\/\+Glasserman-\/\+Kou continuity correction. 
+
+\Hypertarget{class_chivet_1_1_pricer_lookback_option_a88f8acce40d11a4976ed1aa7da8f648b}\index{Chivet::PricerLookbackOption@{Chivet::PricerLookbackOption}!setMarketParameters@{setMarketParameters}}
+\index{setMarketParameters@{setMarketParameters}!Chivet::PricerLookbackOption@{Chivet::PricerLookbackOption}}
+\doxysubsubsection{\texorpdfstring{setMarketParameters()}{setMarketParameters()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_chivet_1_1_pricer_lookback_option_a88f8acce40d11a4976ed1aa7da8f648b} 
+void Chivet::\+\+Pricer\+Lookback\+Option::\+set\+Market\+Parameters (\begin{DoxyParamCaption}\item[{double}]{spot}{, }\item[{double}]{rate}{, }\item[{double}]{volatility}{}\end{DoxyParamCaption})}
+
+
+
+Set market parameters individually. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em spot} & Spot price. \\
+\hline
+{\em rate} & Risk-\/free rate. \\
+\hline
+{\em volatility} & Volatility. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_chivet_1_1_pricer_lookback_option_a44d705e94c89aa59d3f55085a2173292}\index{Chivet::PricerLookbackOption@{Chivet::PricerLookbackOption}!setMarketParameters@{setMarketParameters}}
+\index{setMarketParameters@{setMarketParameters}!Chivet::PricerLookbackOption@{Chivet::PricerLookbackOption}}
+\doxysubsubsection{\texorpdfstring{setMarketParameters()}{setMarketParameters()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_chivet_1_1_pricer_lookback_option_a44d705e94c89aa59d3f55085a2173292} 
+void Chivet::\+\+Pricer\+Lookback\+Option::\+set\+Market\+Parameters (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_chivet_1_1_market_parameters}{Market\+Parameters}}}]{market\+Parameters}{}\end{DoxyParamCaption})}
+
+
+
+Set market parameters from an existing object. 
+
+\Hypertarget{class_chivet_1_1_pricer_lookback_option_ad42ef8233a887b25b71986941a7b2e04}\index{Chivet::PricerLookbackOption@{Chivet::PricerLookbackOption}!setMonteCarloSimulator@{setMonteCarloSimulator}}
+\index{setMonteCarloSimulator@{setMonteCarloSimulator}!Chivet::PricerLookbackOption@{Chivet::PricerLookbackOption}}
+\doxysubsubsection{\texorpdfstring{setMonteCarloSimulator()}{setMonteCarloSimulator()}}
+{\footnotesize\ttfamily \label{class_chivet_1_1_pricer_lookback_option_ad42ef8233a887b25b71986941a7b2e04} 
+void Chivet::\+\+Pricer\+Lookback\+Option::\+set\+Monte\+Carlo\+Simulator (\begin{DoxyParamCaption}\item[{unsigned long}]{num\+Simulations}{, }\item[{unsigned long}]{num\+Time\+Steps}{, }\item[{unsigned long}]{seed}{ = {\ttfamily 0}}\end{DoxyParamCaption})}
+
+
+
+Configure the Monte Carlo simulator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em num\+Simulations} & Number of paths. \\
+\hline
+{\em num\+Time\+Steps} & Discrete time steps per path. \\
+\hline
+{\em seed} & \doxylink{namespace_chivet_1_1_random}{Random} seed (0 = random). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_chivet_1_1_pricer_lookback_option_a497db8951a9f050e2e5e0f477e58273a}\index{Chivet::PricerLookbackOption@{Chivet::PricerLookbackOption}!setOption@{setOption}}
+\index{setOption@{setOption}!Chivet::PricerLookbackOption@{Chivet::PricerLookbackOption}}
+\doxysubsubsection{\texorpdfstring{setOption()}{setOption()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_chivet_1_1_pricer_lookback_option_a497db8951a9f050e2e5e0f477e58273a} 
+void Chivet::\+\+Pricer\+Lookback\+Option::\+set\+Option (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_chivet_1_1_lookback_option}{Lookback\+Option}}}]{option}{}\end{DoxyParamCaption})}
+
+
+
+Set the option from an existing \doxylink{class_chivet_1_1_lookback_option}{Lookback\+Option} object. 
+
+\Hypertarget{class_chivet_1_1_pricer_lookback_option_a81eae9ef9493590401e275d7c65fe968}\index{Chivet::PricerLookbackOption@{Chivet::PricerLookbackOption}!setOption@{setOption}}
+\index{setOption@{setOption}!Chivet::PricerLookbackOption@{Chivet::PricerLookbackOption}}
+\doxysubsubsection{\texorpdfstring{setOption()}{setOption()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_chivet_1_1_pricer_lookback_option_a81eae9ef9493590401e275d7c65fe968} 
+void Chivet::\+\+Pricer\+Lookback\+Option::\+set\+Option (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{namespace_chivet_a3b2090f5176dce254e4ab67a0a803837}{Option\+Type}}}]{type}{, }\item[{double}]{maturity}{}\end{DoxyParamCaption})}
+
+
+
+Set the option by type and maturity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & Call or Put. \\
+\hline
+{\em maturity} & Time to maturity in years. \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_chivet_1_1_pricer_lookback_option_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_chivet_1_1_pricer_lookback_option_a5afa5df331a757980762d8bb8b32c03b}\index{Chivet::PricerLookbackOption@{Chivet::PricerLookbackOption}!MarketParameters\_@{MarketParameters\_}}
+\index{MarketParameters\_@{MarketParameters\_}!Chivet::PricerLookbackOption@{Chivet::PricerLookbackOption}}
+\doxysubsubsection{\texorpdfstring{MarketParameters\_}{MarketParameters\_}}
+{\footnotesize\ttfamily \label{class_chivet_1_1_pricer_lookback_option_a5afa5df331a757980762d8bb8b32c03b} 
+\doxymbox{\hyperlink{class_chivet_1_1_market_parameters}{Market\+Parameters}} Chivet::\+\+Pricer\+Lookback\+Option::\+\+Market\+Parameters\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Market data (spot, rate, vol). 
+
+\Hypertarget{class_chivet_1_1_pricer_lookback_option_a0e70a3d30e397d19c8a64eedc8d52f70}\index{Chivet::PricerLookbackOption@{Chivet::PricerLookbackOption}!option\_@{option\_}}
+\index{option\_@{option\_}!Chivet::PricerLookbackOption@{Chivet::PricerLookbackOption}}
+\doxysubsubsection{\texorpdfstring{option\_}{option\_}}
+{\footnotesize\ttfamily \label{class_chivet_1_1_pricer_lookback_option_a0e70a3d30e397d19c8a64eedc8d52f70} 
+\doxymbox{\hyperlink{class_chivet_1_1_lookback_option}{Lookback\+Option}} Chivet::\+\+Pricer\+Lookback\+Option::\+option\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The lookback option contract. 
+
+\Hypertarget{class_chivet_1_1_pricer_lookback_option_ad8eb25ea79c56eafb75df235516e56eb}\index{Chivet::PricerLookbackOption@{Chivet::PricerLookbackOption}!RATE\_BUMP@{RATE\_BUMP}}
+\index{RATE\_BUMP@{RATE\_BUMP}!Chivet::PricerLookbackOption@{Chivet::PricerLookbackOption}}
+\doxysubsubsection{\texorpdfstring{RATE\_BUMP}{RATE\_BUMP}}
+{\footnotesize\ttfamily \label{class_chivet_1_1_pricer_lookback_option_ad8eb25ea79c56eafb75df235516e56eb} 
+double Chivet::\+\+Pricer\+Lookback\+Option::\+\+RATE\+\_\+\+BUMP = 0.\+0001\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}, {\ttfamily [private]}}
+
+
+
+Relative bump for Rho. 
+
+\Hypertarget{class_chivet_1_1_pricer_lookback_option_a46d5702e4b3bd27855c7ed924e232543}\index{Chivet::PricerLookbackOption@{Chivet::PricerLookbackOption}!simulator\_@{simulator\_}}
+\index{simulator\_@{simulator\_}!Chivet::PricerLookbackOption@{Chivet::PricerLookbackOption}}
+\doxysubsubsection{\texorpdfstring{simulator\_}{simulator\_}}
+{\footnotesize\ttfamily \label{class_chivet_1_1_pricer_lookback_option_a46d5702e4b3bd27855c7ed924e232543} 
+\doxymbox{\hyperlink{class_chivet_1_1_monte_carlo_simulator}{Monte\+Carlo\+Simulator}} Chivet::\+\+Pricer\+Lookback\+Option::\+simulator\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Monte Carlo simulation engine. 
+
+\Hypertarget{class_chivet_1_1_pricer_lookback_option_a2b1ec01c486c4e02f718deaf6f370bd9}\index{Chivet::PricerLookbackOption@{Chivet::PricerLookbackOption}!SPOT\_BUMP@{SPOT\_BUMP}}
+\index{SPOT\_BUMP@{SPOT\_BUMP}!Chivet::PricerLookbackOption@{Chivet::PricerLookbackOption}}
+\doxysubsubsection{\texorpdfstring{SPOT\_BUMP}{SPOT\_BUMP}}
+{\footnotesize\ttfamily \label{class_chivet_1_1_pricer_lookback_option_a2b1ec01c486c4e02f718deaf6f370bd9} 
+double Chivet::\+\+Pricer\+Lookback\+Option::\+\+SPOT\+\_\+\+BUMP\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}, {\ttfamily [private]}}
+
+{\bfseries Initial value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =}
+\DoxyCodeLine{0.001}
+
+\end{DoxyCode}
+
+
+Relative bump for Delta /\+ Gamma. 
+
+\Hypertarget{class_chivet_1_1_pricer_lookback_option_a6b0f8d7939d90b8a760580a7cdc54981}\index{Chivet::PricerLookbackOption@{Chivet::PricerLookbackOption}!TIME\_BUMP@{TIME\_BUMP}}
+\index{TIME\_BUMP@{TIME\_BUMP}!Chivet::PricerLookbackOption@{Chivet::PricerLookbackOption}}
+\doxysubsubsection{\texorpdfstring{TIME\_BUMP}{TIME\_BUMP}}
+{\footnotesize\ttfamily \label{class_chivet_1_1_pricer_lookback_option_a6b0f8d7939d90b8a760580a7cdc54981} 
+double Chivet::\+\+Pricer\+Lookback\+Option::\+\+TIME\+\_\+\+BUMP\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}, {\ttfamily [private]}}
+
+{\bfseries Initial value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =}
+\DoxyCodeLine{1.0\ /\ 365.0}
+
+\end{DoxyCode}
+
+
+Relative bump for Theta (1 day). 
+
+\Hypertarget{class_chivet_1_1_pricer_lookback_option_ae092dd8759471c444bec91c8dc289e76}\index{Chivet::PricerLookbackOption@{Chivet::PricerLookbackOption}!VOL\_BUMP@{VOL\_BUMP}}
+\index{VOL\_BUMP@{VOL\_BUMP}!Chivet::PricerLookbackOption@{Chivet::PricerLookbackOption}}
+\doxysubsubsection{\texorpdfstring{VOL\_BUMP}{VOL\_BUMP}}
+{\footnotesize\ttfamily \label{class_chivet_1_1_pricer_lookback_option_ae092dd8759471c444bec91c8dc289e76} 
+double Chivet::\+\+Pricer\+Lookback\+Option::\+\+VOL\+\_\+\+BUMP = 0.\+001\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}, {\ttfamily [private]}}
+
+
+
+Relative bump for Vega. 
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+Chivet/\+include/\+\doxymbox{\hyperlink{_pricer_8hpp}{Pricer.\+hpp}}\item 
+Chivet/\+src/\+\doxymbox{\hyperlink{_pricer_8cpp}{Pricer.\+cpp}}\end{DoxyCompactItemize}

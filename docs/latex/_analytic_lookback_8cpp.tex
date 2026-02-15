@@ -1,0 +1,44 @@
+\doxysection{Chivet/\+src/\+\+Analytic\+Lookback.cpp File Reference}
+\hypertarget{_analytic_lookback_8cpp}{}\label{_analytic_lookback_8cpp}\index{Chivet/src/AnalyticLookback.cpp@{Chivet/src/AnalyticLookback.cpp}}
+
+
+Implementation of the Lookback\+Analytic\+Solution class.  
+
+
+{\ttfamily \+\#include "{}../\+include/\+\+Analytic\+Lookback.\+hpp"{}}\newline
+{\ttfamily \+\#include $<$cassert$>$}\newline
+{\ttfamily \+\#include $<$cmath$>$}\newline
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \doxymbox{\hyperlink{namespace_chivet}{Chivet}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{_analytic_lookback_8cpp_ae71449b1cc6e6250b91f539153a7a0d3}{M\+\_\+\+PI}}~3.\+14159265358979323846
+\item 
+\+\#define \doxymbox{\hyperlink{_analytic_lookback_8cpp_acdbb2c2f9429f08916f03c8786d2d2d7}{M\+\_\+\+SQRT1\+\_\+2}}~0.\+70710678118654752440
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of the Lookback\+Analytic\+Solution class. 
+
+Contains closed-\/form pricing for floating-\/strike lookback options and finite-\/difference Greeks computed from the analytic price. 
+
+\label{doc-define-members}
+\Hypertarget{_analytic_lookback_8cpp_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{_analytic_lookback_8cpp_ae71449b1cc6e6250b91f539153a7a0d3}\index{AnalyticLookback.cpp@{AnalyticLookback.cpp}!M\_PI@{M\_PI}}
+\index{M\_PI@{M\_PI}!AnalyticLookback.cpp@{AnalyticLookback.cpp}}
+\doxysubsubsection{\texorpdfstring{M\_PI}{M\_PI}}
+{\footnotesize\ttfamily \label{_analytic_lookback_8cpp_ae71449b1cc6e6250b91f539153a7a0d3} 
+\+\#define M\+\_\+\+PI~3.\+14159265358979323846}
+
+\Hypertarget{_analytic_lookback_8cpp_acdbb2c2f9429f08916f03c8786d2d2d7}\index{AnalyticLookback.cpp@{AnalyticLookback.cpp}!M\_SQRT1\_2@{M\_SQRT1\_2}}
+\index{M\_SQRT1\_2@{M\_SQRT1\_2}!AnalyticLookback.cpp@{AnalyticLookback.cpp}}
+\doxysubsubsection{\texorpdfstring{M\_SQRT1\_2}{M\_SQRT1\_2}}
+{\footnotesize\ttfamily \label{_analytic_lookback_8cpp_acdbb2c2f9429f08916f03c8786d2d2d7} 
+\+\#define M\+\_\+\+SQRT1\+\_\+2~0.\+70710678118654752440}
+

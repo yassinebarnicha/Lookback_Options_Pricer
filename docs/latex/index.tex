@@ -1,0 +1,246 @@
+\chapter{Unified Lookback Options Pricing Library (C++) }
+\hypertarget{index}{}\label{index}\index{Unified Lookback Options Pricing Library (C++)@{Unified Lookback Options Pricing Library (C++)}}
+\label{index_md__r_e_a_d_m_e}%
+\Hypertarget{index_md__r_e_a_d_m_e}%
+\hypertarget{index_autotoc_md1}{}\doxysection{\texorpdfstring{Overview}{Overview}}\label{index_autotoc_md1}
+This project provides a {\bfseries{unified pricing DLL}} for {\bfseries{European floating-\/strike lookback options}} under the {\bfseries{Black–\+Scholes}} model.
+
+The library integrates {\bfseries{two independent Monte Carlo approaches}} developed separately and compiled into a {\bfseries{single shared library}}:\+
+
+
+\begin{DoxyItemize}
+\item {\bfseries{\doxylink{namespace_barnicha}{Barnicha} Engine}} ~\newline
+ One-\/step Monte Carlo with exact extremum sampling ({\bfseries{continuous monitoring}}, {\bfseries{no discretization bias}})
+\item {\bfseries{\doxylink{namespace_chivet}{Chivet} Engine}} ~\newline
+ Time-\/stepping Monte Carlo with optional {\bfseries{BGK}} bias correction
+\end{DoxyItemize}
+
+Both engines are accessible through a {\bfseries{single unified DLL interface}} and can be used interchangeably for pricing and Greeks computation.
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md3}{}\doxysection{\texorpdfstring{Contract Specification}{Contract Specification}}\label{index_autotoc_md3}
+European floating-\/strike lookback options:\+
+
+
+\begin{DoxyItemize}
+\item {\bfseries{Call payoff}} ~\newline
+ \$\$ ( S\+\_\+T -\/ \textbackslash{}min\+\_\+\{0\textbackslash{}le t\textbackslash{}le T\} S\+\_\+t ) \$\$
+\item {\bfseries{Put payoff}} ~\newline
+ \$\$ ( \textbackslash{}max\+\_\+\{0\textbackslash{}le t\textbackslash{}le T\} S\+\_\+t -\/ S\+\_\+T ) \$\$
+\end{DoxyItemize}
+
+Model assumptions:\+
+
+
+\begin{DoxyItemize}
+\item Black–\+Scholes dynamics
+\item Constant volatility \$\$ ( \textbackslash{}sigma ) \$\$
+\item Constant risk-\/free rate \$\$ ( r ) \$\$
+\item Continuous monitoring (exact in \doxylink{namespace_barnicha}{Barnicha} engine)
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md5}{}\doxysection{\texorpdfstring{Engine A — Barnicha (Exact One-\/\+Step Monte Carlo)}{Engine A — Barnicha (Exact One-\/\+Step Monte Carlo)}}\label{index_autotoc_md5}
+\hypertarget{index_autotoc_md6}{}\doxysubsection{\texorpdfstring{Core idea (no discretization bias)}{Core idea (no discretization bias)}}\label{index_autotoc_md6}
+Let \$\$ ( X\+\_\+t = \textbackslash{}log S\+\_\+t ) \$\$. Under Black–\+Scholes:\+
+
+\$\$ X\+\_\+t = \textbackslash{}log S\+\_\+0 + \textbackslash{}left(r-\/\textbackslash{}frac\{1\}\{2\}\textbackslash{}sigma\texorpdfstring{$^\wedge$}{\string^}2\textbackslash{}right)t + \textbackslash{}sigma W\+\_\+t. \$\$
+
+We simulate the terminal value exactly:\+
+
+\$\$ X\+\_\+T = \textbackslash{}log S\+\_\+0 + \textbackslash{}left(r-\/\textbackslash{}frac\{1\}\{2\}\textbackslash{}sigma\texorpdfstring{$^\wedge$}{\string^}2\textbackslash{}right)T + \textbackslash{}sigma \textbackslash{}sqrt\{T\}\textbackslash{},Z, \textbackslash{}qquad Z\textbackslash{}sim\textbackslash{}mathcal N(0,1). \$\$
+
+Conditional on \$\$ ( (X\+\_\+0, X\+\_\+T) ) \$\$ , the process is a Brownian bridge; the conditional distribution of its running maximum is:\+
+
+\$\$ \textbackslash{}mathbb P\textbackslash{}left(\textbackslash{}max\+\_\+\{0\textbackslash{}le t\textbackslash{}le T\}X\+\_\+t \textbackslash{}le m \textbackslash{}mid X\+\_\+0=x\+\_\+0, X\+\_\+T=x\+\_\+T\textbackslash{}right) = 1-\/\textbackslash{}exp\textbackslash{}left(-\/\textbackslash{}frac\{2(m-\/x\+\_\+0)(m-\/x\+\_\+T)\}\{\textbackslash{}sigma\texorpdfstring{$^\wedge$}{\string^}2T\}\textbackslash{}right),\textbackslash{}quad m\textbackslash{}ge\textbackslash{}max(x\+\_\+0,x\+\_\+T). \$\$
+
+Inversion gives a quadratic equation; we take the root \$\$( m\textbackslash{}ge \textbackslash{}max(x\+\_\+0,x\+\_\+T) )\$\$. ~\newline
+ The minimum is obtained by symmetry (the other root \$\$ ( \textbackslash{}le \textbackslash{}min(x\+\_\+0,x\+\_\+T) )\$\$).
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md8}{}\doxysubsection{\texorpdfstring{Pricing estimator (per path)}{Pricing estimator (per path)}}\label{index_autotoc_md8}
+Once \$\$( S\+\_\+\+T ), ( S\+\_\+\{\textbackslash{}max\} ), ( S\+\_\+\{\textbackslash{}min\} ) \$\$ are sampled for a path:\+
+
+
+\begin{DoxyItemize}
+\item {\bfseries{Call price estimator}} \$\$ \textbackslash{}hat V\+\_\+\{\textbackslash{}text\{call\}\} = e\texorpdfstring{$^\wedge$}{\string^}\{-\/rT\}\textbackslash{}bigl(S\+\_\+T -\/ S\+\_\+\{\textbackslash{}min\}\textbackslash{}bigr) \$\$
+\item {\bfseries{Put price estimator}} \$\$ \textbackslash{}hat V\+\_\+\{\textbackslash{}text\{put\}\} = e\texorpdfstring{$^\wedge$}{\string^}\{-\/rT\}\textbackslash{}bigl(S\+\_\+\{\textbackslash{}max\} -\/ S\+\_\+T\textbackslash{}bigr) \$\$
+\end{DoxyItemize}
+
+The final price is the Monte Carlo average of the discounted payoff estimators.
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md10}{}\doxysubsection{\texorpdfstring{Architecture (Barnicha engine)}{Architecture (Barnicha engine)}}\label{index_autotoc_md10}
+
+\begin{DoxyItemize}
+\item {\ttfamily Barnicha/\+include/\+lookback/\+} public headers
+\item {\ttfamily Barnicha/\+src/\+} implementation
+\item {\ttfamily Barnicha/\+app/\+} example executable
+\end{DoxyItemize}
+
+Main classes:\+
+
+
+\begin{DoxyItemize}
+\item {\bfseries{{\ttfamily One\+Step\+Bridge\+Sampler}}} ~\newline
+ Generates and stores random draws once (common random numbers), including:\+
+\begin{DoxyItemize}
+\item terminal draw for \$\$( X\+\_\+\+T )\$\$
+\item uniforms (or equivalent) used to invert the bridge extremum distribution
+\end{DoxyItemize}
+\item {\bfseries{{\ttfamily Monte\+Carlo\+Engine}}} ~\newline
+ Prices using stored draws; supports variance reduction
+\item {\bfseries{{\ttfamily Analytic\+Lookback}}} ~\newline
+ Closed-\/form benchmark engine (special handling when {\ttfamily rate == 0} if applicable)
+\item {\bfseries{{\ttfamily Pricing\+Engine}}} (interface /\+ base) ~\newline
+ Common interface for pricing engines
+\item {\bfseries{{\ttfamily Greeks\+Calculator}}} (abstract) ~\newline
+ Interface for computing requested Greeks
+\item {\bfseries{{\ttfamily Bump\+And\+Revalue\+Greeks}}} ~\newline
+ Finite-\/difference Greeks computed using CRN, controlled by boolean flags:\+ {\ttfamily compute\+\_\+price}, {\ttfamily compute\+\_\+delta}, {\ttfamily compute\+\_\+gamma}, {\ttfamily compute\+\_\+theta}, {\ttfamily compute\+\_\+rho}, {\ttfamily compute\+\_\+vega}
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md12}{}\doxysubsection{\texorpdfstring{Variance reduction (Barnicha engine)}{Variance reduction (Barnicha engine)}}\label{index_autotoc_md12}
+Antithetic variates are applied {\bfseries{only}} to the normal draw used for the terminal value:\+
+
+For each sample \$\$( (Z, U\+\_\+\{\textbackslash{}max\}, U\+\_\+\{\textbackslash{}min\}) )\$\$, we also evaluate ~\newline
+ \$\$( (-\/Z, U\+\_\+\{\textbackslash{}max\}, U\+\_\+\{\textbackslash{}min\}) ) \$\$and average the payoffs.
+
+This reduces variance while preserving {\bfseries{exact}} extremum sampling conditional on endpoints.
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md14}{}\doxysubsection{\texorpdfstring{Monte Carlo uncertainty (reported outputs)}{Monte Carlo uncertainty (reported outputs)}}\label{index_autotoc_md14}
+Monte Carlo results can be reported with:\+
+
+
+\begin{DoxyItemize}
+\item standard error
+\item 95\% confidence interval
+\end{DoxyItemize}
+
+Greeks also have uncertainty because they are computed {\bfseries{per path}} using CRN. \hypertarget{index_autotoc_md15}{}\doxysection{\texorpdfstring{Engine B — Chivet (Time-\/\+Stepping Monte Carlo + BGK)}{Engine B — Chivet (Time-\/\+Stepping Monte Carlo + BGK)}}\label{index_autotoc_md15}
+\hypertarget{index_autotoc_md16}{}\doxysubsection{\texorpdfstring{Core idea (path simulation)}{Core idea (path simulation)}}\label{index_autotoc_md16}
+This approach simulates the asset price on a discrete grid:\+
+
+\$\$ 0=t\+\_\+0 \texorpdfstring{$<$}{<} t\+\_\+1 \texorpdfstring{$<$}{<} \textbackslash{}dots \texorpdfstring{$<$}{<} t\+\_\+N = T, \textbackslash{}qquad \textbackslash{}\+Delta t = \textbackslash{}frac\{T\}\{N\}. \$\$
+
+The Black–\+Scholes time stepping scheme used is:\+
+
+\$\$ S\+\_\+\{t\+\_\+\{i+1\}\} = S\+\_\+\{t\+\_\+i\}\textbackslash{}exp!\textbackslash{}left(\textbackslash{}left(r-\/\textbackslash{}frac\{1\}\{2\}\textbackslash{}sigma\texorpdfstring{$^\wedge$}{\string^}2\textbackslash{}right)\textbackslash{}\+Delta t + \textbackslash{}sigma\textbackslash{}sqrt\{\textbackslash{}\+Delta t\}\textbackslash{},Z\+\_\+i\textbackslash{}right), \textbackslash{}qquad Z\+\_\+i\textbackslash{}sim\textbackslash{}mathcal N(0,1). \$\$
+
+For each simulated path, we compute:\+
+
+
+\begin{DoxyItemize}
+\item terminal value ( S\+\_\+T )
+\item discrete running extrema:\+ \$\$ S\+\_\+\{\textbackslash{}max\}\texorpdfstring{$^\wedge$}{\string^}\{\textbackslash{}text\{disc\}\}=\textbackslash{}max\+\_\+\{0\textbackslash{}le i\textbackslash{}le N\} S\+\_\+\{t\+\_\+i\}, \textbackslash{}qquad S\+\_\+\{\textbackslash{}min\}\texorpdfstring{$^\wedge$}{\string^}\{\textbackslash{}text\{disc\}\}=\textbackslash{}min\+\_\+\{0\textbackslash{}le i\textbackslash{}le N\} S\+\_\+\{t\+\_\+i\}. \$\$
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md18}{}\doxysubsection{\texorpdfstring{Pricing estimator (without BGK)}{Pricing estimator (without BGK)}}\label{index_autotoc_md18}
+
+\begin{DoxyItemize}
+\item {\bfseries{Call estimator}} \$\$ \textbackslash{}hat V\+\_\+\{\textbackslash{}text\{call\}\} = e\texorpdfstring{$^\wedge$}{\string^}\{-\/rT\}\textbackslash{}bigl(S\+\_\+T -\/ S\+\_\+\{\textbackslash{}min\}\texorpdfstring{$^\wedge$}{\string^}\{\textbackslash{}text\{disc\}\}\textbackslash{}bigr) \$\$
+\item {\bfseries{Put estimator}} \$\$ \textbackslash{}hat V\+\_\+\{\textbackslash{}text\{put\}\} = e\texorpdfstring{$^\wedge$}{\string^}\{-\/rT\}\textbackslash{}bigl(S\+\_\+\{\textbackslash{}max\}\texorpdfstring{$^\wedge$}{\string^}\{\textbackslash{}text\{disc\}\} -\/ S\+\_\+T\textbackslash{}bigr) \$\$
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md20}{}\doxysubsection{\texorpdfstring{BGK correction (optional, used for pricing)}{BGK correction (optional, used for pricing)}}\label{index_autotoc_md20}
+Discrete monitoring misses extrema between grid points. ~\newline
+ With BGK enabled, the observed extrema are adjusted before computing the payoff:\+
+
+Minimum (BGK correction):\+
+
+\$\$ S\+\_\+\{\textbackslash{}min\}\texorpdfstring{$^\wedge$}{\string^}\{\textbackslash{}mathrm\{corr\}\} = S\+\_\+\{\textbackslash{}min\}\texorpdfstring{$^\wedge$}{\string^}\{\textbackslash{}mathrm\{disc\}\} \textbackslash{}exp\textbackslash{}left(-\/\textbackslash{}beta \textbackslash{}sigma \textbackslash{}sqrt\{\textbackslash{}\+Delta t\}\textbackslash{}right) \$\$
+
+Maximum (BGK correction):\+
+
+\$\$ S\+\_\+\{\textbackslash{}max\}\texorpdfstring{$^\wedge$}{\string^}\{\textbackslash{}mathrm\{corr\}\} = S\+\_\+\{\textbackslash{}max\}\texorpdfstring{$^\wedge$}{\string^}\{\textbackslash{}mathrm\{disc\}\} \textbackslash{}exp\textbackslash{}left(\textbackslash{}beta \textbackslash{}sigma \textbackslash{}sqrt\{\textbackslash{}\+Delta t\}\textbackslash{}right) \$\$
+
+where the constant is:\+
+
+\$\$ \textbackslash{}beta \textbackslash{}approx 0.\+5826. \$\$
+
+Then the payoff uses the corrected extrema:\+
+
+
+\begin{DoxyItemize}
+\item {\bfseries{Call (BGK)}} \$\$ \textbackslash{}hat V\+\_\+\{\textbackslash{}text\{call\}\}\texorpdfstring{$^\wedge$}{\string^}\{\textbackslash{}text\{BGK\}\} = e\texorpdfstring{$^\wedge$}{\string^}\{-\/rT\}\textbackslash{}bigl(S\+\_\+T -\/ S\+\_\+\{\textbackslash{}min\}\texorpdfstring{$^\wedge$}{\string^}\{\textbackslash{}text\{corr\}\}\textbackslash{}bigr) \$\$
+\item {\bfseries{Put (BGK)}} \$\$ \textbackslash{}hat V\+\_\+\{\textbackslash{}text\{put\}\}\texorpdfstring{$^\wedge$}{\string^}\{\textbackslash{}text\{BGK\}\} = e\texorpdfstring{$^\wedge$}{\string^}\{-\/rT\}\textbackslash{}bigl(S\+\_\+\{\textbackslash{}max\}\texorpdfstring{$^\wedge$}{\string^}\{\textbackslash{}text\{corr\}\} -\/ S\+\_\+T\textbackslash{}bigr) \$\$
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md22}{}\doxysection{\texorpdfstring{Greeks (common to both engines)}{Greeks (common to both engines)}}\label{index_autotoc_md22}
+Greeks are computed with {\bfseries{bump-\/and-\/revalue}}.
+
+Example (central differences):\+
+
+
+\begin{DoxyItemize}
+\item {\bfseries{Delta}} \$\$ \textbackslash{}\+Delta = \textbackslash{}frac\{V(S+\textbackslash{}varepsilon)-\/V(S-\/\textbackslash{}varepsilon)\}\{2\textbackslash{}varepsilon\} \$\$
+\item {\bfseries{Gamma}} \$\$ \textbackslash{}\+Gamma = \textbackslash{}frac\{V(S+\textbackslash{}varepsilon)-\/2V(\+S)+V(S-\/\textbackslash{}varepsilon)\}\{\textbackslash{}varepsilon\texorpdfstring{$^\wedge$}{\string^}2\} \$\$
+\item {\bfseries{Vega}} \$\$ \textbackslash{}nu = \textbackslash{}frac\{V(\textbackslash{}sigma+\textbackslash{}varepsilon)-\/V(\textbackslash{}sigma-\/\textbackslash{}varepsilon)\}\{2\textbackslash{}varepsilon\} \$\$
+\end{DoxyItemize}
+
+Common \doxylink{namespace_random}{Random} Numbers (CRN) are used between bumped evaluations to reduce variance.
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md24}{}\doxysection{\texorpdfstring{Monte Carlo uncertainty}{Monte Carlo uncertainty}}\label{index_autotoc_md24}
+Reported metrics typically include:\+
+
+
+\begin{DoxyItemize}
+\item standard error
+\item 95\% confidence interval
+\end{DoxyItemize}
+
+Greeks also report uncertainty since they are computed from Monte Carlo pathwise estimates.\hypertarget{index_autotoc_md25}{}\doxysection{\texorpdfstring{Build system}{Build system}}\label{index_autotoc_md25}
+The project uses CMake to compile a single unified shared library.
+
+Minimum required version:\+
+
+CMake ≥ 3.\+16
+
+C++ standard:\+
+
+C++17\hypertarget{index_autotoc_md26}{}\doxysection{\texorpdfstring{Build instructions (Windows)}{Build instructions (Windows)}}\label{index_autotoc_md26}
+Step 1 — Create build directory
+
+mkdir build cd build
+
+Step 2 — Configure project
+
+cmake ..
+
+Step 3 — Build shared library
+
+cmake --build . --config Release
+
+Output generated:\+
+
+Unified\+Lookback.\+dll\hypertarget{index_autotoc_md27}{}\doxysection{\texorpdfstring{Unified DLL architecture}{Unified DLL architecture}}\label{index_autotoc_md27}
+The unified DLL combines both pricing engines into a single binary.
+
+Logical structure:\+
+
+Excel /\+ External program ↓ \doxylink{unified__dll_8cpp}{unified/\+unified\+\_\+dll.\+cpp} ↓ \doxylink{namespace_barnicha}{Barnicha} engine OR \doxylink{namespace_chivet}{Chivet} engine
+
+The unified export layer isolates both implementations.\hypertarget{index_autotoc_md28}{}\doxysection{\texorpdfstring{Unified export layer}{Unified export layer}}\label{index_autotoc_md28}
+File:\+
+
+\doxylink{unified__dll_8cpp}{unified/\+unified\+\_\+dll.\+cpp}
+
+Role:\+
+
+• provides exported functions ~\newline
+ • dispatches pricing calls to the correct engine ~\newline
+ • prevents symbol conflicts ~\newline
+ • ensures a stable external interface ~\newline
+
+
+Typical exported functions:\+
+
+Price\+Lookback\+Barnicha(...) Price\+Lookback\+Chivet(...)
+
+These functions internally construct the appropriate engine objects.\hypertarget{index_autotoc_md29}{}\doxysection{\texorpdfstring{End of file}{End of file}}\label{index_autotoc_md29}

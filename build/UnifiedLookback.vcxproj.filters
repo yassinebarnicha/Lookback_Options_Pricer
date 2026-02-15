@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\Chivet\src\AnalyticLookback.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\Chivet\src\MarketParameters.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\Chivet\src\MonteCarloSimulator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\Chivet\src\OptionParameters.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\Chivet\src\Pricer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\Chivet\src\LookbackDLL.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\Barnicha\src\analytic_engine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\Barnicha\src\analytic_lookback.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\Barnicha\src\bump_and_revalue_greeks.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\Barnicha\src\lookback_option.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\Barnicha\src\lookback_payoff_evaluator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\Barnicha\src\math.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\Barnicha\src\monte_carlo_engine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\Barnicha\src\one_step_bridge_sampler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\Barnicha\src\pricing_engine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\Barnicha\src\random.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\Barnicha\src\lookback_dll.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\unified\unified_dll.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{87690B8B-90F9-3845-B59F-1D7184468D93}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

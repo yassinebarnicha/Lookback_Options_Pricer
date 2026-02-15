@@ -1,0 +1,54 @@
+\doxysection{Chivet/\+include/\+\+Lookback\+DLL.hpp File Reference}
+\hypertarget{_lookback_d_l_l_8hpp}{}\label{_lookback_d_l_l_8hpp}\index{Chivet/include/LookbackDLL.hpp@{Chivet/include/LookbackDLL.hpp}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{_lookback_d_l_l_8hpp_ae57d9ef270c98f3193067a614f919729}{price\+\_\+lookback\+\_\+bgk}} (double ttm, int option\+Type, double spot, double rate, double vol, long paths, long steps, long seed, int with\+Std\+Errors, int use\+BGK, double \texorpdfstring{$\ast$}{*}out\+\_\+values, int \texorpdfstring{$\ast$}{*}out\+\_\+size)
+\begin{DoxyCompactList}\small\item\em Prices a lookback option using Monte Carlo simulation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{_lookback_d_l_l_8hpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_lookback_d_l_l_8hpp_ae57d9ef270c98f3193067a614f919729}\index{LookbackDLL.hpp@{LookbackDLL.hpp}!price\_lookback\_bgk@{price\_lookback\_bgk}}
+\index{price\_lookback\_bgk@{price\_lookback\_bgk}!LookbackDLL.hpp@{LookbackDLL.hpp}}
+\doxysubsubsection{\texorpdfstring{price\_lookback\_bgk()}{price\_lookback\_bgk()}}
+{\footnotesize\ttfamily \label{_lookback_d_l_l_8hpp_ae57d9ef270c98f3193067a614f919729} 
+int price\+\_\+lookback\+\_\+bgk (\begin{DoxyParamCaption}\item[{double}]{ttm}{, }\item[{int}]{option\+Type}{, }\item[{double}]{spot}{, }\item[{double}]{rate}{, }\item[{double}]{vol}{, }\item[{long}]{paths}{, }\item[{long}]{steps}{, }\item[{long}]{seed}{, }\item[{int}]{with\+Std\+Errors}{, }\item[{int}]{use\+BGK}{, }\item[{double \texorpdfstring{$\ast$}{*}}]{out\+\_\+values}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{out\+\_\+size}{}\end{DoxyParamCaption})}
+
+
+
+Prices a lookback option using Monte Carlo simulation. 
+
+Optionally applies Broadie-\/\+Glasserman-\/\+Kou (BGK) correction to reduce discretization bias. Results are written into the output buffer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ttm} & Time to maturity (years). \\
+\hline
+{\em option\+Type} & Option type (call or put). \\
+\hline
+{\em spot} & Current spot price. \\
+\hline
+{\em rate} & Risk-\/free rate. \\
+\hline
+{\em vol} & Volatility. \\
+\hline
+{\em paths} & Number of Monte Carlo paths. \\
+\hline
+{\em steps} & Number of time steps per path. \\
+\hline
+{\em seed} & RNG seed. \\
+\hline
+{\em with\+Std\+Errors} & Flag to compute standard errors. \\
+\hline
+{\em use\+BGK} & Flag to enable BGK correction. \\
+\hline
+{\em out\+\_\+values} & Output buffer for results. \\
+\hline
+{\em out\+\_\+size} & Number of values written.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, non-\/zero on error. 
+\end{DoxyReturn}

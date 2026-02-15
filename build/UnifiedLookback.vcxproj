@@ -1,0 +1,391 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{69C13F2D-E3A8-3784-8150-EF3F78C7F53E}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22000.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>UnifiedLookback</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\build\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UnifiedLookback.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UnifiedLookback</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\build\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UnifiedLookback.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UnifiedLookback</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\build\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">UnifiedLookback.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">UnifiedLookback</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\build\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">UnifiedLookback.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">UnifiedLookback</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\Chivet\include;C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\Barnicha\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;CMAKE_INTDIR="Debug";UnifiedLookback_EXPORTS</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;CMAKE_INTDIR=\"Debug\";UnifiedLookback_EXPORTS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\Chivet\include;C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\Barnicha\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\Chivet\include;C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\Barnicha\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <DataExecutionPrevention></DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImageHasSafeExceptionHandlers></ImageHasSafeExceptionHandlers>
+      <ImportLibrary>C:/Users/busta/OneDrive/Documents/Bureau/lateeee/hahomacvyat/BARNICHA_CHIVET/build/Debug/UnifiedLookback.lib</ImportLibrary>
+      <LinkErrorReporting></LinkErrorReporting>
+      <ProgramDataBaseFile>C:/Users/busta/OneDrive/Documents/Bureau/lateeee/hahomacvyat/BARNICHA_CHIVET/build/Debug/UnifiedLookback.pdb</ProgramDataBaseFile>
+      <RandomizedBaseAddress></RandomizedBaseAddress>
+      <SubSystem></SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\Chivet\include;C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\Barnicha\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="Release";UnifiedLookback_EXPORTS</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"Release\";UnifiedLookback_EXPORTS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\Chivet\include;C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\Barnicha\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\Chivet\include;C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\Barnicha\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <DataExecutionPrevention></DataExecutionPrevention>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImageHasSafeExceptionHandlers></ImageHasSafeExceptionHandlers>
+      <ImportLibrary>C:/Users/busta/OneDrive/Documents/Bureau/lateeee/hahomacvyat/BARNICHA_CHIVET/build/Release/UnifiedLookback.lib</ImportLibrary>
+      <LinkErrorReporting></LinkErrorReporting>
+      <ProgramDataBaseFile>C:/Users/busta/OneDrive/Documents/Bureau/lateeee/hahomacvyat/BARNICHA_CHIVET/build/Release/UnifiedLookback.pdb</ProgramDataBaseFile>
+      <RandomizedBaseAddress></RandomizedBaseAddress>
+      <SubSystem></SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\Chivet\include;C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\Barnicha\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="MinSizeRel";UnifiedLookback_EXPORTS</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\";UnifiedLookback_EXPORTS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\Chivet\include;C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\Barnicha\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\Chivet\include;C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\Barnicha\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <DataExecutionPrevention></DataExecutionPrevention>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImageHasSafeExceptionHandlers></ImageHasSafeExceptionHandlers>
+      <ImportLibrary>C:/Users/busta/OneDrive/Documents/Bureau/lateeee/hahomacvyat/BARNICHA_CHIVET/build/MinSizeRel/UnifiedLookback.lib</ImportLibrary>
+      <LinkErrorReporting></LinkErrorReporting>
+      <ProgramDataBaseFile>C:/Users/busta/OneDrive/Documents/Bureau/lateeee/hahomacvyat/BARNICHA_CHIVET/build/MinSizeRel/UnifiedLookback.pdb</ProgramDataBaseFile>
+      <RandomizedBaseAddress></RandomizedBaseAddress>
+      <SubSystem></SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\Chivet\include;C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\Barnicha\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="RelWithDebInfo";UnifiedLookback_EXPORTS</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\";UnifiedLookback_EXPORTS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\Chivet\include;C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\Barnicha\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\Chivet\include;C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\Barnicha\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <DataExecutionPrevention></DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImageHasSafeExceptionHandlers></ImageHasSafeExceptionHandlers>
+      <ImportLibrary>C:/Users/busta/OneDrive/Documents/Bureau/lateeee/hahomacvyat/BARNICHA_CHIVET/build/RelWithDebInfo/UnifiedLookback.lib</ImportLibrary>
+      <LinkErrorReporting></LinkErrorReporting>
+      <ProgramDataBaseFile>C:/Users/busta/OneDrive/Documents/Bureau/lateeee/hahomacvyat/BARNICHA_CHIVET/build/RelWithDebInfo/UnifiedLookback.pdb</ProgramDataBaseFile>
+      <RandomizedBaseAddress></RandomizedBaseAddress>
+      <SubSystem></SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/busta/OneDrive/Documents/Bureau/lateeee/hahomacvyat/BARNICHA_CHIVET/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+C:\msys64\ucrt64\bin\cmake.exe -SC:/Users/busta/OneDrive/Documents/Bureau/lateeee/hahomacvyat/BARNICHA_CHIVET -BC:/Users/busta/OneDrive/Documents/Bureau/lateeee/hahomacvyat/BARNICHA_CHIVET/build --check-stamp-file C:/Users/busta/OneDrive/Documents/Bureau/lateeee/hahomacvyat/BARNICHA_CHIVET/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\build\CMakeFiles\4.1.0\CMakeCXXCompiler.cmake;C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\build\CMakeFiles\4.1.0\CMakeRCCompiler.cmake;C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\build\CMakeFiles\4.1.0\CMakeSystem.cmake;C:\msys64\ucrt64\share\cmake\Modules\CMakeCXXInformation.cmake;C:\msys64\ucrt64\share\cmake\Modules\CMakeCommonLanguageInclude.cmake;C:\msys64\ucrt64\share\cmake\Modules\CMakeGenericSystem.cmake;C:\msys64\ucrt64\share\cmake\Modules\CMakeInitializeConfigs.cmake;C:\msys64\ucrt64\share\cmake\Modules\CMakeLanguageInformation.cmake;C:\msys64\ucrt64\share\cmake\Modules\CMakeRCInformation.cmake;C:\msys64\ucrt64\share\cmake\Modules\CMakeSystemSpecificInformation.cmake;C:\msys64\ucrt64\share\cmake\Modules\CMakeSystemSpecificInitialize.cmake;C:\msys64\ucrt64\share\cmake\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\msys64\ucrt64\share\cmake\Modules\Compiler\MSVC-CXX.cmake;C:\msys64\ucrt64\share\cmake\Modules\Compiler\MSVC.cmake;C:\msys64\ucrt64\share\cmake\Modules\Internal\CMakeCXXLinkerInformation.cmake;C:\msys64\ucrt64\share\cmake\Modules\Internal\CMakeCommonLinkerInformation.cmake;C:\msys64\ucrt64\share\cmake\Modules\Linker\MSVC-CXX.cmake;C:\msys64\ucrt64\share\cmake\Modules\Linker\MSVC.cmake;C:\msys64\ucrt64\share\cmake\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;C:\msys64\ucrt64\share\cmake\Modules\Platform\Linker\Windows-MSVC.cmake;C:\msys64\ucrt64\share\cmake\Modules\Platform\Windows-Initialize.cmake;C:\msys64\ucrt64\share\cmake\Modules\Platform\Windows-MSVC-CXX.cmake;C:\msys64\ucrt64\share\cmake\Modules\Platform\Windows-MSVC.cmake;C:\msys64\ucrt64\share\cmake\Modules\Platform\Windows.cmake;C:\msys64\ucrt64\share\cmake\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/busta/OneDrive/Documents/Bureau/lateeee/hahomacvyat/BARNICHA_CHIVET/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+C:\msys64\ucrt64\bin\cmake.exe -SC:/Users/busta/OneDrive/Documents/Bureau/lateeee/hahomacvyat/BARNICHA_CHIVET -BC:/Users/busta/OneDrive/Documents/Bureau/lateeee/hahomacvyat/BARNICHA_CHIVET/build --check-stamp-file C:/Users/busta/OneDrive/Documents/Bureau/lateeee/hahomacvyat/BARNICHA_CHIVET/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\build\CMakeFiles\4.1.0\CMakeCXXCompiler.cmake;C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\build\CMakeFiles\4.1.0\CMakeRCCompiler.cmake;C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\build\CMakeFiles\4.1.0\CMakeSystem.cmake;C:\msys64\ucrt64\share\cmake\Modules\CMakeCXXInformation.cmake;C:\msys64\ucrt64\share\cmake\Modules\CMakeCommonLanguageInclude.cmake;C:\msys64\ucrt64\share\cmake\Modules\CMakeGenericSystem.cmake;C:\msys64\ucrt64\share\cmake\Modules\CMakeInitializeConfigs.cmake;C:\msys64\ucrt64\share\cmake\Modules\CMakeLanguageInformation.cmake;C:\msys64\ucrt64\share\cmake\Modules\CMakeRCInformation.cmake;C:\msys64\ucrt64\share\cmake\Modules\CMakeSystemSpecificInformation.cmake;C:\msys64\ucrt64\share\cmake\Modules\CMakeSystemSpecificInitialize.cmake;C:\msys64\ucrt64\share\cmake\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\msys64\ucrt64\share\cmake\Modules\Compiler\MSVC-CXX.cmake;C:\msys64\ucrt64\share\cmake\Modules\Compiler\MSVC.cmake;C:\msys64\ucrt64\share\cmake\Modules\Internal\CMakeCXXLinkerInformation.cmake;C:\msys64\ucrt64\share\cmake\Modules\Internal\CMakeCommonLinkerInformation.cmake;C:\msys64\ucrt64\share\cmake\Modules\Linker\MSVC-CXX.cmake;C:\msys64\ucrt64\share\cmake\Modules\Linker\MSVC.cmake;C:\msys64\ucrt64\share\cmake\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;C:\msys64\ucrt64\share\cmake\Modules\Platform\Linker\Windows-MSVC.cmake;C:\msys64\ucrt64\share\cmake\Modules\Platform\Windows-Initialize.cmake;C:\msys64\ucrt64\share\cmake\Modules\Platform\Windows-MSVC-CXX.cmake;C:\msys64\ucrt64\share\cmake\Modules\Platform\Windows-MSVC.cmake;C:\msys64\ucrt64\share\cmake\Modules\Platform\Windows.cmake;C:\msys64\ucrt64\share\cmake\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/busta/OneDrive/Documents/Bureau/lateeee/hahomacvyat/BARNICHA_CHIVET/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+C:\msys64\ucrt64\bin\cmake.exe -SC:/Users/busta/OneDrive/Documents/Bureau/lateeee/hahomacvyat/BARNICHA_CHIVET -BC:/Users/busta/OneDrive/Documents/Bureau/lateeee/hahomacvyat/BARNICHA_CHIVET/build --check-stamp-file C:/Users/busta/OneDrive/Documents/Bureau/lateeee/hahomacvyat/BARNICHA_CHIVET/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\build\CMakeFiles\4.1.0\CMakeCXXCompiler.cmake;C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\build\CMakeFiles\4.1.0\CMakeRCCompiler.cmake;C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\build\CMakeFiles\4.1.0\CMakeSystem.cmake;C:\msys64\ucrt64\share\cmake\Modules\CMakeCXXInformation.cmake;C:\msys64\ucrt64\share\cmake\Modules\CMakeCommonLanguageInclude.cmake;C:\msys64\ucrt64\share\cmake\Modules\CMakeGenericSystem.cmake;C:\msys64\ucrt64\share\cmake\Modules\CMakeInitializeConfigs.cmake;C:\msys64\ucrt64\share\cmake\Modules\CMakeLanguageInformation.cmake;C:\msys64\ucrt64\share\cmake\Modules\CMakeRCInformation.cmake;C:\msys64\ucrt64\share\cmake\Modules\CMakeSystemSpecificInformation.cmake;C:\msys64\ucrt64\share\cmake\Modules\CMakeSystemSpecificInitialize.cmake;C:\msys64\ucrt64\share\cmake\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\msys64\ucrt64\share\cmake\Modules\Compiler\MSVC-CXX.cmake;C:\msys64\ucrt64\share\cmake\Modules\Compiler\MSVC.cmake;C:\msys64\ucrt64\share\cmake\Modules\Internal\CMakeCXXLinkerInformation.cmake;C:\msys64\ucrt64\share\cmake\Modules\Internal\CMakeCommonLinkerInformation.cmake;C:\msys64\ucrt64\share\cmake\Modules\Linker\MSVC-CXX.cmake;C:\msys64\ucrt64\share\cmake\Modules\Linker\MSVC.cmake;C:\msys64\ucrt64\share\cmake\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;C:\msys64\ucrt64\share\cmake\Modules\Platform\Linker\Windows-MSVC.cmake;C:\msys64\ucrt64\share\cmake\Modules\Platform\Windows-Initialize.cmake;C:\msys64\ucrt64\share\cmake\Modules\Platform\Windows-MSVC-CXX.cmake;C:\msys64\ucrt64\share\cmake\Modules\Platform\Windows-MSVC.cmake;C:\msys64\ucrt64\share\cmake\Modules\Platform\Windows.cmake;C:\msys64\ucrt64\share\cmake\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/busta/OneDrive/Documents/Bureau/lateeee/hahomacvyat/BARNICHA_CHIVET/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+C:\msys64\ucrt64\bin\cmake.exe -SC:/Users/busta/OneDrive/Documents/Bureau/lateeee/hahomacvyat/BARNICHA_CHIVET -BC:/Users/busta/OneDrive/Documents/Bureau/lateeee/hahomacvyat/BARNICHA_CHIVET/build --check-stamp-file C:/Users/busta/OneDrive/Documents/Bureau/lateeee/hahomacvyat/BARNICHA_CHIVET/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\build\CMakeFiles\4.1.0\CMakeCXXCompiler.cmake;C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\build\CMakeFiles\4.1.0\CMakeRCCompiler.cmake;C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\build\CMakeFiles\4.1.0\CMakeSystem.cmake;C:\msys64\ucrt64\share\cmake\Modules\CMakeCXXInformation.cmake;C:\msys64\ucrt64\share\cmake\Modules\CMakeCommonLanguageInclude.cmake;C:\msys64\ucrt64\share\cmake\Modules\CMakeGenericSystem.cmake;C:\msys64\ucrt64\share\cmake\Modules\CMakeInitializeConfigs.cmake;C:\msys64\ucrt64\share\cmake\Modules\CMakeLanguageInformation.cmake;C:\msys64\ucrt64\share\cmake\Modules\CMakeRCInformation.cmake;C:\msys64\ucrt64\share\cmake\Modules\CMakeSystemSpecificInformation.cmake;C:\msys64\ucrt64\share\cmake\Modules\CMakeSystemSpecificInitialize.cmake;C:\msys64\ucrt64\share\cmake\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\msys64\ucrt64\share\cmake\Modules\Compiler\MSVC-CXX.cmake;C:\msys64\ucrt64\share\cmake\Modules\Compiler\MSVC.cmake;C:\msys64\ucrt64\share\cmake\Modules\Internal\CMakeCXXLinkerInformation.cmake;C:\msys64\ucrt64\share\cmake\Modules\Internal\CMakeCommonLinkerInformation.cmake;C:\msys64\ucrt64\share\cmake\Modules\Linker\MSVC-CXX.cmake;C:\msys64\ucrt64\share\cmake\Modules\Linker\MSVC.cmake;C:\msys64\ucrt64\share\cmake\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;C:\msys64\ucrt64\share\cmake\Modules\Platform\Linker\Windows-MSVC.cmake;C:\msys64\ucrt64\share\cmake\Modules\Platform\Windows-Initialize.cmake;C:\msys64\ucrt64\share\cmake\Modules\Platform\Windows-MSVC-CXX.cmake;C:\msys64\ucrt64\share\cmake\Modules\Platform\Windows-MSVC.cmake;C:\msys64\ucrt64\share\cmake\Modules\Platform\Windows.cmake;C:\msys64\ucrt64\share\cmake\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\Chivet\src\AnalyticLookback.cpp" />
+    <ClCompile Include="C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\Chivet\src\MarketParameters.cpp" />
+    <ClCompile Include="C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\Chivet\src\MonteCarloSimulator.cpp" />
+    <ClCompile Include="C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\Chivet\src\OptionParameters.cpp" />
+    <ClCompile Include="C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\Chivet\src\Pricer.cpp" />
+    <ClCompile Include="C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\Chivet\src\LookbackDLL.cpp" />
+    <ClCompile Include="C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\Barnicha\src\analytic_engine.cpp" />
+    <ClCompile Include="C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\Barnicha\src\analytic_lookback.cpp" />
+    <ClCompile Include="C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\Barnicha\src\bump_and_revalue_greeks.cpp" />
+    <ClCompile Include="C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\Barnicha\src\lookback_option.cpp" />
+    <ClCompile Include="C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\Barnicha\src\lookback_payoff_evaluator.cpp" />
+    <ClCompile Include="C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\Barnicha\src\math.cpp" />
+    <ClCompile Include="C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\Barnicha\src\monte_carlo_engine.cpp" />
+    <ClCompile Include="C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\Barnicha\src\one_step_bridge_sampler.cpp" />
+    <ClCompile Include="C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\Barnicha\src\pricing_engine.cpp" />
+    <ClCompile Include="C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\Barnicha\src\random.cpp" />
+    <ClCompile Include="C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\Barnicha\src\lookback_dll.cpp" />
+    <ClCompile Include="C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\unified\unified_dll.cpp" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\busta\OneDrive\Documents\Bureau\lateeee\hahomacvyat\BARNICHA_CHIVET\build\ZERO_CHECK.vcxproj">
+      <Project>{D324515D-5F07-34FF-820F-ACD5CAC61F2A}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,67 @@
+\doxysection{Monte\+Carlo\+Simulator.\+hpp}
+\hypertarget{_monte_carlo_simulator_8hpp_source}{}\label{_monte_carlo_simulator_8hpp_source}\index{Chivet/include/MonteCarloSimulator.hpp@{Chivet/include/MonteCarloSimulator.hpp}}
+\doxymbox{\hyperlink{_monte_carlo_simulator_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ MONTE\_CARLO\_SIMULATOR\_HPP}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ MONTE\_CARLO\_SIMULATOR\_HPP}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <random>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00011\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_chivet}{Chivet}}\ }
+\DoxyCodeLine{00012\ \{}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_chivet_1_1_spot_results}{SpotResults}}\ \{}
+\DoxyCodeLine{00019\ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{struct_chivet_1_1_spot_results_ad91b5fbbdb7670c506800c5a65891548}{spotAtMaturity}};\ }
+\DoxyCodeLine{00020\ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{struct_chivet_1_1_spot_results_ade37874c1d5a48f0594c11a5b1324c05}{maximumSpot}};\ \ \ \ }
+\DoxyCodeLine{00021\ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{struct_chivet_1_1_spot_results_acb20c44d5adb3fe2b079bd593ad17ad6}{minimumSpot}};\ \ \ \ }
+\DoxyCodeLine{00022\ \};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00037\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_chivet_1_1_monte_carlo_simulator_aec81998af333bb81f96d34f8d08246ba}{MonteCarloSimulator}}\ \{}
+\DoxyCodeLine{00038\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00039\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \doxymbox{\hyperlink{class_chivet_1_1_monte_carlo_simulator_ae524fa673a79e96e28f3b861bab4c218}{numSimulations\_}};\ }
+\DoxyCodeLine{00040\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \doxymbox{\hyperlink{class_chivet_1_1_monte_carlo_simulator_ac03953f3be81f35943987224eb59c3b1}{numTimeSteps\_}};\ \ \ }
+\DoxyCodeLine{00041\ \ \ \textcolor{keyword}{mutable}\ std::mt19937\ \doxymbox{\hyperlink{class_chivet_1_1_monte_carlo_simulator_a65d357189649ca1fedf631fe9fb540ba}{rng\_}};\ \ \ \ \ }
+\DoxyCodeLine{00042\ \ \ \textcolor{keyword}{mutable}\ std::normal\_distribution<double>}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \doxymbox{\hyperlink{class_chivet_1_1_monte_carlo_simulator_a11c626d9caab4548934687ea871dc73f}{normDist\_}};\ }
+\DoxyCodeLine{00044\ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_chivet_1_1_monte_carlo_simulator_a4e16c1a71c054e9b46801d9b6188a57d}{bgkCorrection\_}}\ =\ \textcolor{keyword}{false};\ }
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00047\ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_chivet_1_1_monte_carlo_simulator_a87f0cc19e236dca5e174ceae2985e62b}{BGK\_BETA1}}\ =\ 0.5826;}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00056\ \ \ \doxymbox{\hyperlink{class_chivet_1_1_monte_carlo_simulator_aec81998af333bb81f96d34f8d08246ba}{MonteCarloSimulator}}();}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00064\ \ \ \doxymbox{\hyperlink{class_chivet_1_1_monte_carlo_simulator_aec81998af333bb81f96d34f8d08246ba}{MonteCarloSimulator}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ numSimulations,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ numTimeSteps,}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ seed\ =\ 0);}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00068\ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_chivet_1_1_monte_carlo_simulator_a77f69db92bace6bf2df0ccf400aae843}{setNumSimulations}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ numSimulations);}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00071\ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_chivet_1_1_monte_carlo_simulator_a33e2fe78d0fc4e7df6641166310cf42a}{setNumTimeSteps}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ numTimeSteps);}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00074\ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_chivet_1_1_monte_carlo_simulator_afe1f632e03488fb3a87345c7edc6d8e3}{setRandomSeed}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ seed);}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00077\ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_chivet_1_1_monte_carlo_simulator_a89117c4c23569e50a0855abcf36897dd}{setBgkCorrection}}(\textcolor{keywordtype}{bool}\ enabled);}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00080\ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_chivet_1_1_monte_carlo_simulator_a1bcf7a151ca05bca10bb5537a0705798}{getBgkCorrection}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00083\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \doxymbox{\hyperlink{class_chivet_1_1_monte_carlo_simulator_acd0108278b368b982ef7c216d873dd35}{getNumSimulations}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00086\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \doxymbox{\hyperlink{class_chivet_1_1_monte_carlo_simulator_ab99923f4a033b784e4fc6e8f77e52b62}{getNumTimeSteps}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00089\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_chivet_1_1_monte_carlo_simulator_a2c6f1ac8d157d1cfc023a61607e0e5ea}{getRandomSeed}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00099\ \ \ \doxymbox{\hyperlink{struct_chivet_1_1_spot_results}{SpotResults}}\ \doxymbox{\hyperlink{class_chivet_1_1_monte_carlo_simulator_a9830b12470aa5308f08fd7b0261f1238}{simulateSinglePath}}(\textcolor{keywordtype}{double}\ initialSpot,\ \textcolor{keywordtype}{double}\ rate,}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ volatility,}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ timeToMaturity)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00111\ \ \ std::vector<SpotResults>\ \doxymbox{\hyperlink{class_chivet_1_1_monte_carlo_simulator_a9aa088e990599af10ea011cef52173f5}{simulatePaths}}(\textcolor{keywordtype}{double}\ initialSpot,\ \textcolor{keywordtype}{double}\ rate,}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ volatility,}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ timeToMaturity)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00119\ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_chivet_1_1_monte_carlo_simulator_a06ac78377d8a8bc93012d4f5644a1dd7}{generateStandardNormal}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00120\ \};}
+\DoxyCodeLine{00121\ \}}
+\DoxyCodeLine{00122\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ !MONTE\_CARLO\_SIMULATOR\_HPP}}
+
+\end{DoxyCode}

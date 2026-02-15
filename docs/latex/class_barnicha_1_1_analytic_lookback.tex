@@ -1,0 +1,65 @@
+\doxysection{Barnicha::\+Analytic\+Lookback Class Reference}
+\hypertarget{class_barnicha_1_1_analytic_lookback}{}\label{class_barnicha_1_1_analytic_lookback}\index{Barnicha::AnalyticLookback@{Barnicha::AnalyticLookback}}
+
+
+Closed-\/form price for floating-\/strike lookback options (continuous monitoring).  
+
+
+
+
+{\ttfamily \+\#include $<$analytic\+\_\+lookback.\+h$>$}
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static double \doxymbox{\hyperlink{class_barnicha_1_1_analytic_lookback_ac50b3d292507cd6606192b7c75e9a352}{price}} (const \doxymbox{\hyperlink{struct_barnicha_1_1_market_data}{Market\+Data}} \&market, const \doxymbox{\hyperlink{class_barnicha_1_1_lookback_option}{Lookback\+Option}} \&option)
+\begin{DoxyCompactList}\small\item\em Analytic lookback price under Black–\+Scholes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static double \doxymbox{\hyperlink{class_barnicha_1_1_analytic_lookback_a0d7e7c5b91374a673fd1a6e57140ae4c}{price\+\_\+r\+\_\+nonzero}} (const \doxymbox{\hyperlink{struct_barnicha_1_1_market_data}{Market\+Data}} \&market, const \doxymbox{\hyperlink{class_barnicha_1_1_lookback_option}{Lookback\+Option}} \&option)
+\item 
+static double \doxymbox{\hyperlink{class_barnicha_1_1_analytic_lookback_a45d1d7f52bce584233ac332a1608bfcf}{price\+\_\+r\+\_\+zero\+\_\+limit}} (const \doxymbox{\hyperlink{struct_barnicha_1_1_market_data}{Market\+Data}} \&market, const \doxymbox{\hyperlink{class_barnicha_1_1_lookback_option}{Lookback\+Option}} \&option)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Closed-\/form price for floating-\/strike lookback options (continuous monitoring). 
+
+Includes a dedicated {\ttfamily rate == 0} limit to avoid numerical issues when the standard formula contains terms proportional to 1/\+r. 
+
+\label{doc-func-members}
+\Hypertarget{class_barnicha_1_1_analytic_lookback_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_barnicha_1_1_analytic_lookback_ac50b3d292507cd6606192b7c75e9a352}\index{Barnicha::AnalyticLookback@{Barnicha::AnalyticLookback}!price@{price}}
+\index{price@{price}!Barnicha::AnalyticLookback@{Barnicha::AnalyticLookback}}
+\doxysubsubsection{\texorpdfstring{price()}{price()}}
+{\footnotesize\ttfamily \label{class_barnicha_1_1_analytic_lookback_ac50b3d292507cd6606192b7c75e9a352} 
+double Barnicha::\+\+Analytic\+Lookback::\+price (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{struct_barnicha_1_1_market_data}{Market\+Data}} \&}]{market}{, }\item[{const \doxymbox{\hyperlink{class_barnicha_1_1_lookback_option}{Lookback\+Option}} \&}]{option}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Analytic lookback price under Black–\+Scholes. 
+
+Dispatches to:\+
+\begin{DoxyItemize}
+\item {\ttfamily \doxylink{class_barnicha_1_1_analytic_lookback_a0d7e7c5b91374a673fd1a6e57140ae4c}{price\+\_\+r\+\_\+nonzero}} if \texorpdfstring{$\vert$}{|}r\texorpdfstring{$\vert$}{|} is not tiny,
+\item {\ttfamily \doxylink{class_barnicha_1_1_analytic_lookback_a45d1d7f52bce584233ac332a1608bfcf}{price\+\_\+r\+\_\+zero\+\_\+limit}} otherwise. 
+\end{DoxyItemize}\Hypertarget{class_barnicha_1_1_analytic_lookback_a0d7e7c5b91374a673fd1a6e57140ae4c}\index{Barnicha::AnalyticLookback@{Barnicha::AnalyticLookback}!price\_r\_nonzero@{price\_r\_nonzero}}
+\index{price\_r\_nonzero@{price\_r\_nonzero}!Barnicha::AnalyticLookback@{Barnicha::AnalyticLookback}}
+\doxysubsubsection{\texorpdfstring{price\_r\_nonzero()}{price\_r\_nonzero()}}
+{\footnotesize\ttfamily \label{class_barnicha_1_1_analytic_lookback_a0d7e7c5b91374a673fd1a6e57140ae4c} 
+double Barnicha::\+\+Analytic\+Lookback::\+price\+\_\+r\+\_\+nonzero (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{struct_barnicha_1_1_market_data}{Market\+Data}} \&}]{market}{, }\item[{const \doxymbox{\hyperlink{class_barnicha_1_1_lookback_option}{Lookback\+Option}} \&}]{option}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\Hypertarget{class_barnicha_1_1_analytic_lookback_a45d1d7f52bce584233ac332a1608bfcf}\index{Barnicha::AnalyticLookback@{Barnicha::AnalyticLookback}!price\_r\_zero\_limit@{price\_r\_zero\_limit}}
+\index{price\_r\_zero\_limit@{price\_r\_zero\_limit}!Barnicha::AnalyticLookback@{Barnicha::AnalyticLookback}}
+\doxysubsubsection{\texorpdfstring{price\_r\_zero\_limit()}{price\_r\_zero\_limit()}}
+{\footnotesize\ttfamily \label{class_barnicha_1_1_analytic_lookback_a45d1d7f52bce584233ac332a1608bfcf} 
+double Barnicha::\+\+Analytic\+Lookback::\+price\+\_\+r\+\_\+zero\+\_\+limit (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{struct_barnicha_1_1_market_data}{Market\+Data}} \&}]{market}{, }\item[{const \doxymbox{\hyperlink{class_barnicha_1_1_lookback_option}{Lookback\+Option}} \&}]{option}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+Barnicha/\+include/\+lookback/\+\doxymbox{\hyperlink{analytic__lookback_8h}{analytic\+\_\+lookback.\+h}}\item 
+Barnicha/\+src/\+\doxymbox{\hyperlink{analytic__lookback_8cpp}{analytic\+\_\+lookback.\+cpp}}\end{DoxyCompactItemize}

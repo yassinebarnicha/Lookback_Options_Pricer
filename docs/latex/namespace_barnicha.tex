@@ -1,0 +1,71 @@
+\doxysection{Barnicha Namespace Reference}
+\hypertarget{namespace_barnicha}{}\label{namespace_barnicha}\index{Barnicha@{Barnicha}}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \doxymbox{\hyperlink{class_barnicha_1_1_analytic_engine}{Analytic\+Engine}}
+\begin{DoxyCompactList}\small\item\em Analytic pricing engine (deterministic). \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_barnicha_1_1_analytic_lookback}{Analytic\+Lookback}}
+\begin{DoxyCompactList}\small\item\em Closed-\/form price for floating-\/strike lookback options (continuous monitoring). \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_barnicha_1_1_bump_and_revalue_greeks}{Bump\+And\+Revalue\+Greeks}}
+\begin{DoxyCompactList}\small\item\em Bump-\/and-\/revalue Greeks with uncertainty reporting. \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{struct_barnicha_1_1_estimate_stats}{Estimate\+Stats}}
+\begin{DoxyCompactList}\small\item\em Statistics for an estimate (typically Monte Carlo). \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_barnicha_1_1_greeks_calculator}{Greeks\+Calculator}}
+\begin{DoxyCompactList}\small\item\em Abstract interface for Greeks computation. \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{struct_barnicha_1_1_greeks_result}{Greeks\+Result}}
+\begin{DoxyCompactList}\small\item\em Price and Greeks container with uncertainty information. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_barnicha_1_1_lookback_option}{Lookback\+Option}}
+\begin{DoxyCompactList}\small\item\em European floating-\/strike lookback option (continuous monitoring). \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_barnicha_1_1_lookback_payoff_evaluator}{Lookback\+Payoff\+Evaluator}}
+\begin{DoxyCompactList}\small\item\em Computes one payoff using exact one-\/step sampling (no time grid). \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{struct_barnicha_1_1_market_data}{Market\+Data}}
+\begin{DoxyCompactList}\small\item\em Black–\+Scholes market inputs. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_barnicha_1_1_math}{Math}}
+\begin{DoxyCompactList}\small\item\em Small math helpers (standard normal PDF/\+\+CDF). \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_barnicha_1_1_monte_carlo_engine}{Monte\+Carlo\+Engine}}
+\begin{DoxyCompactList}\small\item\em One-\/step Monte Carlo engine reusing stored samples (CRN). \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{struct_barnicha_1_1_one_step_sample}{One\+Step\+Sample}}
+\begin{DoxyCompactList}\small\item\em \doxylink{namespace_random}{Random} draws needed for one one-\/step lookback path. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_barnicha_1_1_one_step_bridge_sampler}{One\+Step\+Bridge\+Sampler}}
+\begin{DoxyCompactList}\small\item\em Generates and stores samples once (CRN across bumps). \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_barnicha_1_1_pricing_engine}{Pricing\+Engine}}
+\begin{DoxyCompactList}\small\item\em Pricing engine interface (Strategy pattern). \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_barnicha_1_1_rng}{Rng}}
+\begin{DoxyCompactList}\small\item\em RNG wrapper providing N(0,1) and U(0,1). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \doxymbox{\hyperlink{namespace_barnicha_a6e8767d591b9a3eb31aab69bd44c0ff1}{Lookback\+Type}} \{ \doxymbox{\hyperlink{namespace_barnicha_a6e8767d591b9a3eb31aab69bd44c0ff1ac3755e61202abd74da5885d2e9c9160e}{Call}}
+, \doxymbox{\hyperlink{namespace_barnicha_a6e8767d591b9a3eb31aab69bd44c0ff1ad0bf1810982e9728fcf3ac444a015373}{Put}}
+ \}
+\begin{DoxyCompactList}\small\item\em Lookback option type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-enum-members}
+\Hypertarget{namespace_barnicha_doc-enum-members}
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{namespace_barnicha_a6e8767d591b9a3eb31aab69bd44c0ff1}\index{Barnicha@{Barnicha}!LookbackType@{LookbackType}}
+\index{LookbackType@{LookbackType}!Barnicha@{Barnicha}}
+\doxysubsubsection{\texorpdfstring{LookbackType}{LookbackType}}
+{\footnotesize\ttfamily \label{namespace_barnicha_a6e8767d591b9a3eb31aab69bd44c0ff1} 
+enum class \doxymbox{\hyperlink{namespace_barnicha_a6e8767d591b9a3eb31aab69bd44c0ff1}{Barnicha::\+\+Lookback\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Lookback option type. 
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Call@{Call}!Barnicha@{Barnicha}}
+\index{Barnicha@{Barnicha}!Call@{Call}}
+}\Hypertarget{namespace_barnicha_a6e8767d591b9a3eb31aab69bd44c0ff1ac3755e61202abd74da5885d2e9c9160e}\label{namespace_barnicha_a6e8767d591b9a3eb31aab69bd44c0ff1ac3755e61202abd74da5885d2e9c9160e} 
+Call&floating-\/strike call:\+ payoff = s\+\_\+T -\/ min\+\_\+\{t\texorpdfstring{$<$}{<}=T\} s\+\_\+t \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Put@{Put}!Barnicha@{Barnicha}}
+\index{Barnicha@{Barnicha}!Put@{Put}}
+}\Hypertarget{namespace_barnicha_a6e8767d591b9a3eb31aab69bd44c0ff1ad0bf1810982e9728fcf3ac444a015373}\label{namespace_barnicha_a6e8767d591b9a3eb31aab69bd44c0ff1ad0bf1810982e9728fcf3ac444a015373} 
+Put&floating-\/strike put :\+ payoff = max\+\_\+\{t\texorpdfstring{$<$}{<}=T\} s\+\_\+t -\/ s\+\_\+T \\
+\hline
+
+\end{DoxyEnumFields}

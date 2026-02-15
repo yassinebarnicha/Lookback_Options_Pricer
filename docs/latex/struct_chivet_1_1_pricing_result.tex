@@ -1,0 +1,171 @@
+\doxysection{Chivet::\+Pricing\+Result Struct Reference}
+\hypertarget{struct_chivet_1_1_pricing_result}{}\label{struct_chivet_1_1_pricing_result}\index{Chivet::PricingResult@{Chivet::PricingResult}}
+
+
+Full set of Monte Carlo pricing results including all first-\/order Greeks and their standard errors.  
+
+
+
+
+{\ttfamily \+\#include $<$Pricer.\+hpp$>$}
+
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \doxymbox{\hyperlink{struct_chivet_1_1_pricing_result_a2ce783d1b0c2e3e960ae2c7ea31bb6ed}{price}}
+\begin{DoxyCompactList}\small\item\em Option price $V$. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{struct_chivet_1_1_pricing_result_add8d7a03a50ef8e04c62a48d3b2e8dbd}{price\+Std}}
+\begin{DoxyCompactList}\small\item\em Standard error of the price. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{struct_chivet_1_1_pricing_result_a97466ace8d424b55a66b1df608a6a371}{delta}}
+\begin{DoxyCompactList}\small\item\em $\Delta = \partial V / \partial S$. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{struct_chivet_1_1_pricing_result_a7fc78b2698ef6f56eabff5bfdb41f072}{delta\+Std}}
+\begin{DoxyCompactList}\small\item\em Standard error of delta. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{struct_chivet_1_1_pricing_result_a33bf943cc2b262dfed73cc1a48d82c51}{gamma}}
+\begin{DoxyCompactList}\small\item\em $\Gamma = \partial^2 V / \partial S^2$. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{struct_chivet_1_1_pricing_result_a5f12572996836c6e63cbd5f464d7ba93}{gamma\+Std}}
+\begin{DoxyCompactList}\small\item\em Standard error of gamma. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{struct_chivet_1_1_pricing_result_a7314c57ae14a3c5944155e6c78425223}{theta}}
+\begin{DoxyCompactList}\small\item\em $\Theta = \partial V / \partial T$. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{struct_chivet_1_1_pricing_result_a424c5f6b62233ee03e325c81b84f44b5}{theta\+Std}}
+\begin{DoxyCompactList}\small\item\em Standard error of theta. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{struct_chivet_1_1_pricing_result_a59bcb93c3b4dd57e32b1c40f33188f58}{rho}}
+\begin{DoxyCompactList}\small\item\em $\rho = \partial V / \partial r$. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{struct_chivet_1_1_pricing_result_a85d13ae1df2b5545de04315c2f935cba}{rho\+Std}}
+\begin{DoxyCompactList}\small\item\em Standard error of rho. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{struct_chivet_1_1_pricing_result_a867bef700063af96d1aa09f6730b6314}{vega}}
+\begin{DoxyCompactList}\small\item\em $\nu = \partial V / \partial \sigma$. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{struct_chivet_1_1_pricing_result_a9bba33bac916e1b54f336cc463c521bb}{vega\+Std}}
+\begin{DoxyCompactList}\small\item\em Standard error of vega. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Full set of Monte Carlo pricing results including all first-\/order Greeks and their standard errors. 
+
+\label{doc-variable-members}
+\Hypertarget{struct_chivet_1_1_pricing_result_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_chivet_1_1_pricing_result_a97466ace8d424b55a66b1df608a6a371}\index{Chivet::PricingResult@{Chivet::PricingResult}!delta@{delta}}
+\index{delta@{delta}!Chivet::PricingResult@{Chivet::PricingResult}}
+\doxysubsubsection{\texorpdfstring{delta}{delta}}
+{\footnotesize\ttfamily \label{struct_chivet_1_1_pricing_result_a97466ace8d424b55a66b1df608a6a371} 
+double Chivet::\+\+Pricing\+Result::\+delta}
+
+
+
+$\Delta = \partial V / \partial S$. 
+
+\Hypertarget{struct_chivet_1_1_pricing_result_a7fc78b2698ef6f56eabff5bfdb41f072}\index{Chivet::PricingResult@{Chivet::PricingResult}!deltaStd@{deltaStd}}
+\index{deltaStd@{deltaStd}!Chivet::PricingResult@{Chivet::PricingResult}}
+\doxysubsubsection{\texorpdfstring{deltaStd}{deltaStd}}
+{\footnotesize\ttfamily \label{struct_chivet_1_1_pricing_result_a7fc78b2698ef6f56eabff5bfdb41f072} 
+double Chivet::\+\+Pricing\+Result::\+delta\+Std}
+
+
+
+Standard error of delta. 
+
+\Hypertarget{struct_chivet_1_1_pricing_result_a33bf943cc2b262dfed73cc1a48d82c51}\index{Chivet::PricingResult@{Chivet::PricingResult}!gamma@{gamma}}
+\index{gamma@{gamma}!Chivet::PricingResult@{Chivet::PricingResult}}
+\doxysubsubsection{\texorpdfstring{gamma}{gamma}}
+{\footnotesize\ttfamily \label{struct_chivet_1_1_pricing_result_a33bf943cc2b262dfed73cc1a48d82c51} 
+double Chivet::\+\+Pricing\+Result::\+gamma}
+
+
+
+$\Gamma = \partial^2 V / \partial S^2$. 
+
+\Hypertarget{struct_chivet_1_1_pricing_result_a5f12572996836c6e63cbd5f464d7ba93}\index{Chivet::PricingResult@{Chivet::PricingResult}!gammaStd@{gammaStd}}
+\index{gammaStd@{gammaStd}!Chivet::PricingResult@{Chivet::PricingResult}}
+\doxysubsubsection{\texorpdfstring{gammaStd}{gammaStd}}
+{\footnotesize\ttfamily \label{struct_chivet_1_1_pricing_result_a5f12572996836c6e63cbd5f464d7ba93} 
+double Chivet::\+\+Pricing\+Result::\+gamma\+Std}
+
+
+
+Standard error of gamma. 
+
+\Hypertarget{struct_chivet_1_1_pricing_result_a2ce783d1b0c2e3e960ae2c7ea31bb6ed}\index{Chivet::PricingResult@{Chivet::PricingResult}!price@{price}}
+\index{price@{price}!Chivet::PricingResult@{Chivet::PricingResult}}
+\doxysubsubsection{\texorpdfstring{price}{price}}
+{\footnotesize\ttfamily \label{struct_chivet_1_1_pricing_result_a2ce783d1b0c2e3e960ae2c7ea31bb6ed} 
+double Chivet::\+\+Pricing\+Result::\+price}
+
+
+
+Option price $V$. 
+
+\Hypertarget{struct_chivet_1_1_pricing_result_add8d7a03a50ef8e04c62a48d3b2e8dbd}\index{Chivet::PricingResult@{Chivet::PricingResult}!priceStd@{priceStd}}
+\index{priceStd@{priceStd}!Chivet::PricingResult@{Chivet::PricingResult}}
+\doxysubsubsection{\texorpdfstring{priceStd}{priceStd}}
+{\footnotesize\ttfamily \label{struct_chivet_1_1_pricing_result_add8d7a03a50ef8e04c62a48d3b2e8dbd} 
+double Chivet::\+\+Pricing\+Result::\+price\+Std}
+
+
+
+Standard error of the price. 
+
+\Hypertarget{struct_chivet_1_1_pricing_result_a59bcb93c3b4dd57e32b1c40f33188f58}\index{Chivet::PricingResult@{Chivet::PricingResult}!rho@{rho}}
+\index{rho@{rho}!Chivet::PricingResult@{Chivet::PricingResult}}
+\doxysubsubsection{\texorpdfstring{rho}{rho}}
+{\footnotesize\ttfamily \label{struct_chivet_1_1_pricing_result_a59bcb93c3b4dd57e32b1c40f33188f58} 
+double Chivet::\+\+Pricing\+Result::\+rho}
+
+
+
+$\rho = \partial V / \partial r$. 
+
+\Hypertarget{struct_chivet_1_1_pricing_result_a85d13ae1df2b5545de04315c2f935cba}\index{Chivet::PricingResult@{Chivet::PricingResult}!rhoStd@{rhoStd}}
+\index{rhoStd@{rhoStd}!Chivet::PricingResult@{Chivet::PricingResult}}
+\doxysubsubsection{\texorpdfstring{rhoStd}{rhoStd}}
+{\footnotesize\ttfamily \label{struct_chivet_1_1_pricing_result_a85d13ae1df2b5545de04315c2f935cba} 
+double Chivet::\+\+Pricing\+Result::\+rho\+Std}
+
+
+
+Standard error of rho. 
+
+\Hypertarget{struct_chivet_1_1_pricing_result_a7314c57ae14a3c5944155e6c78425223}\index{Chivet::PricingResult@{Chivet::PricingResult}!theta@{theta}}
+\index{theta@{theta}!Chivet::PricingResult@{Chivet::PricingResult}}
+\doxysubsubsection{\texorpdfstring{theta}{theta}}
+{\footnotesize\ttfamily \label{struct_chivet_1_1_pricing_result_a7314c57ae14a3c5944155e6c78425223} 
+double Chivet::\+\+Pricing\+Result::\+theta}
+
+
+
+$\Theta = \partial V / \partial T$. 
+
+\Hypertarget{struct_chivet_1_1_pricing_result_a424c5f6b62233ee03e325c81b84f44b5}\index{Chivet::PricingResult@{Chivet::PricingResult}!thetaStd@{thetaStd}}
+\index{thetaStd@{thetaStd}!Chivet::PricingResult@{Chivet::PricingResult}}
+\doxysubsubsection{\texorpdfstring{thetaStd}{thetaStd}}
+{\footnotesize\ttfamily \label{struct_chivet_1_1_pricing_result_a424c5f6b62233ee03e325c81b84f44b5} 
+double Chivet::\+\+Pricing\+Result::\+theta\+Std}
+
+
+
+Standard error of theta. 
+
+\Hypertarget{struct_chivet_1_1_pricing_result_a867bef700063af96d1aa09f6730b6314}\index{Chivet::PricingResult@{Chivet::PricingResult}!vega@{vega}}
+\index{vega@{vega}!Chivet::PricingResult@{Chivet::PricingResult}}
+\doxysubsubsection{\texorpdfstring{vega}{vega}}
+{\footnotesize\ttfamily \label{struct_chivet_1_1_pricing_result_a867bef700063af96d1aa09f6730b6314} 
+double Chivet::\+\+Pricing\+Result::\+vega}
+
+
+
+$\nu = \partial V / \partial \sigma$. 
+
+\Hypertarget{struct_chivet_1_1_pricing_result_a9bba33bac916e1b54f336cc463c521bb}\index{Chivet::PricingResult@{Chivet::PricingResult}!vegaStd@{vegaStd}}
+\index{vegaStd@{vegaStd}!Chivet::PricingResult@{Chivet::PricingResult}}
+\doxysubsubsection{\texorpdfstring{vegaStd}{vegaStd}}
+{\footnotesize\ttfamily \label{struct_chivet_1_1_pricing_result_a9bba33bac916e1b54f336cc463c521bb} 
+double Chivet::\+\+Pricing\+Result::\+vega\+Std}
+
+
+
+Standard error of vega. 
+
+
+
+The documentation for this struct was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+Chivet/\+include/\+\doxymbox{\hyperlink{_pricer_8hpp}{Pricer.\+hpp}}\end{DoxyCompactItemize}

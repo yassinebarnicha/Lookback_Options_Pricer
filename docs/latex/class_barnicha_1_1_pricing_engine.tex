@@ -1,0 +1,86 @@
+\doxysection{Barnicha::\+Pricing\+Engine Class Reference}
+\hypertarget{class_barnicha_1_1_pricing_engine}{}\label{class_barnicha_1_1_pricing_engine}\index{Barnicha::PricingEngine@{Barnicha::PricingEngine}}
+
+
+Pricing engine interface (Strategy pattern).  
+
+
+
+
+{\ttfamily \+\#include $<$pricing\+\_\+engine.\+h$>$}
+
+Inheritance diagram for Barnicha::\+Pricing\+Engine:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_barnicha_1_1_pricing_engine}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \doxymbox{\hyperlink{class_barnicha_1_1_pricing_engine_a7e29b8dc84fbdd360dd48f52f0bed38d}{\texorpdfstring{$\sim$}{\string~}\+Pricing\+Engine}} ()=default
+\item 
+virtual std::\+vector$<$ double $>$ \doxymbox{\hyperlink{class_barnicha_1_1_pricing_engine_a3f23b550669344dbc6c97f21762e6f30}{discounted\+\_\+payoff\+\_\+samples}} (const \doxymbox{\hyperlink{struct_barnicha_1_1_market_data}{Market\+Data}} \&market, const \doxymbox{\hyperlink{class_barnicha_1_1_lookback_option}{Lookback\+Option}} \&option) const =0
+\begin{DoxyCompactList}\small\item\em Discounted samples defining the estimator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \doxymbox{\hyperlink{struct_barnicha_1_1_estimate_stats}{Estimate\+Stats}} \doxymbox{\hyperlink{class_barnicha_1_1_pricing_engine_a18fd6e32e86983477482d60d8923acb3}{stats\+\_\+from\+\_\+samples}} (const std::\+vector$<$ double $>$ \&xs)
+\begin{DoxyCompactList}\small\item\em Computes stats (e.\+g mean, stdev, IC) from discounted payoffd. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Pricing engine interface (Strategy pattern). 
+
+Each engine exposes the {\itshape samples} of its estimator, via discounted\+\_\+payoffs():\+
+\begin{DoxyItemize}
+\item Monte Carlo:\+ one discounted payoff per path
+\item Analytic :\+ a single sample \{exact price\}
+\end{DoxyItemize}
+
+This lets Greeks and reporting compute standard errors uniformly, without branching on the concrete engine type. 
+
+\label{doc-constructors}
+\Hypertarget{class_barnicha_1_1_pricing_engine_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_barnicha_1_1_pricing_engine_a7e29b8dc84fbdd360dd48f52f0bed38d}\index{Barnicha::PricingEngine@{Barnicha::PricingEngine}!````~PricingEngine@{\texorpdfstring{$\sim$}{\string~}PricingEngine}}
+\index{````~PricingEngine@{\texorpdfstring{$\sim$}{\string~}PricingEngine}!Barnicha::PricingEngine@{Barnicha::PricingEngine}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}PricingEngine()}{\string~PricingEngine()}}
+{\footnotesize\ttfamily \label{class_barnicha_1_1_pricing_engine_a7e29b8dc84fbdd360dd48f52f0bed38d} 
+virtual Barnicha::\+\+Pricing\+Engine::\+\texorpdfstring{$\sim$}{\string~}\+Pricing\+Engine (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_barnicha_1_1_pricing_engine_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_barnicha_1_1_pricing_engine_a3f23b550669344dbc6c97f21762e6f30}\index{Barnicha::PricingEngine@{Barnicha::PricingEngine}!discounted\_payoff\_samples@{discounted\_payoff\_samples}}
+\index{discounted\_payoff\_samples@{discounted\_payoff\_samples}!Barnicha::PricingEngine@{Barnicha::PricingEngine}}
+\doxysubsubsection{\texorpdfstring{discounted\_payoff\_samples()}{discounted\_payoff\_samples()}}
+{\footnotesize\ttfamily \label{class_barnicha_1_1_pricing_engine_a3f23b550669344dbc6c97f21762e6f30} 
+virtual std::\+vector$<$ double $>$ Barnicha::\+\+Pricing\+Engine::\+discounted\+\_\+payoff\+\_\+samples (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{struct_barnicha_1_1_market_data}{Market\+Data}} \&}]{market}{, }\item[{const \doxymbox{\hyperlink{class_barnicha_1_1_lookback_option}{Lookback\+Option}} \&}]{option}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Discounted samples defining the estimator. 
+
+
+
+Implemented in \doxymbox{\hyperlink{class_barnicha_1_1_analytic_engine_a0ce2df64db49c93593c9c0573eb12a0f}{Barnicha::\+\+Analytic\+Engine}}, and \doxymbox{\hyperlink{class_barnicha_1_1_monte_carlo_engine_af869789542038ab35345d17f29edb7d1}{Barnicha::\+\+Monte\+Carlo\+Engine}}.
+
+\Hypertarget{class_barnicha_1_1_pricing_engine_a18fd6e32e86983477482d60d8923acb3}\index{Barnicha::PricingEngine@{Barnicha::PricingEngine}!stats\_from\_samples@{stats\_from\_samples}}
+\index{stats\_from\_samples@{stats\_from\_samples}!Barnicha::PricingEngine@{Barnicha::PricingEngine}}
+\doxysubsubsection{\texorpdfstring{stats\_from\_samples()}{stats\_from\_samples()}}
+{\footnotesize\ttfamily \label{class_barnicha_1_1_pricing_engine_a18fd6e32e86983477482d60d8923acb3} 
+\doxymbox{\hyperlink{struct_barnicha_1_1_estimate_stats}{Estimate\+Stats}} Barnicha::\+\+Pricing\+Engine::\+stats\+\_\+from\+\_\+samples (\begin{DoxyParamCaption}\item[{const std::\+vector$<$ double $>$ \&}]{xs}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Computes stats (e.\+g mean, stdev, IC) from discounted payoffd. 
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+Barnicha/\+include/\+lookback/\+\doxymbox{\hyperlink{pricing__engine_8h}{pricing\+\_\+engine.\+h}}\item 
+Barnicha/\+src/\+\doxymbox{\hyperlink{pricing__engine_8cpp}{pricing\+\_\+engine.\+cpp}}\end{DoxyCompactItemize}

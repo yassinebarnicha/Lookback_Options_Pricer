@@ -1,0 +1,35 @@
+\doxysection{one\+\_\+step\+\_\+bridge\+\_\+sampler.\+h}
+\hypertarget{one__step__bridge__sampler_8h_source}{}\label{one__step__bridge__sampler_8h_source}\index{Barnicha/include/lookback/one\_step\_bridge\_sampler.h@{Barnicha/include/lookback/one\_step\_bridge\_sampler.h}}
+\doxymbox{\hyperlink{one__step__bridge__sampler_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{random_8h}{random.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <cstddef>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_barnicha}{Barnicha}}\ \{}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_barnicha_1_1_one_step_sample}{OneStepSample}}\ }
+\DoxyCodeLine{00020\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{struct_barnicha_1_1_one_step_sample_a0de2e04369a20b9a1a230fdfefe98bd7}{z}};\ \ \ \ \ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{struct_barnicha_1_1_one_step_sample_a62ce18919a080a5d77e6c736e755bfc1}{u\_max}};\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{struct_barnicha_1_1_one_step_sample_afae6dfcda4419777031043e85d446152}{u\_min}};\ }
+\DoxyCodeLine{00024\ \};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_barnicha_1_1_one_step_bridge_sampler_a0a779290fea0cebc99ff3def71a30ba7}{OneStepBridgeSampler}}\ }
+\DoxyCodeLine{00030\ \{}
+\DoxyCodeLine{00031\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{explicit}\ \doxymbox{\hyperlink{class_barnicha_1_1_one_step_bridge_sampler_a0a779290fea0cebc99ff3def71a30ba7}{OneStepBridgeSampler}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ seed\ =\ 42);}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_barnicha_1_1_one_step_bridge_sampler_a7cf48550a4626f5e68755ef292437217}{generate}}(std::size\_t\ n\_samples);}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keyword}{const}\ std::vector<OneStepSample>\&\ \doxymbox{\hyperlink{class_barnicha_1_1_one_step_bridge_sampler_ae89c65190435ac34cd451f5578c02a4a}{samples}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00048\ \ \ \ \ \doxymbox{\hyperlink{class_barnicha_1_1_rng}{Rng}}\ \doxymbox{\hyperlink{class_barnicha_1_1_one_step_bridge_sampler_a25328bfd88b062189ce2405c18773ff7}{rng\_}};}
+\DoxyCodeLine{00049\ \ \ \ \ std::vector<OneStepSample>\ \doxymbox{\hyperlink{class_barnicha_1_1_one_step_bridge_sampler_aea7d724f1ced711949699bd054c2113b}{samples\_}};}
+\DoxyCodeLine{00050\ \};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \}}
+
+\end{DoxyCode}

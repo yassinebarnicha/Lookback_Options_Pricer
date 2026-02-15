@@ -1,0 +1,27 @@
+\doxysection{random.\+h}
+\hypertarget{random_8h_source}{}\label{random_8h_source}\index{Barnicha/include/lookback/random.h@{Barnicha/include/lookback/random.h}}
+\doxymbox{\hyperlink{random_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <random>}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_barnicha}{Barnicha}}\ }
+\DoxyCodeLine{00005\ \{}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_barnicha_1_1_rng_a8dd31a388b196250fed9a6d1d993da74}{Rng}}\ \{}
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{explicit}\ \doxymbox{\hyperlink{class_barnicha_1_1_rng_a8dd31a388b196250fed9a6d1d993da74}{Rng}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ seed\ =\ 42);}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_barnicha_1_1_rng_a386e0eb4174ba3a6eb7a726c027d857d}{next\_normal}}();}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_barnicha_1_1_rng_ad8a8cf8e56b9d725ff1776da4a90f1f2}{next\_uniform}}();}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00035\ \ \ \ \ std::mt19937\ \doxymbox{\hyperlink{class_barnicha_1_1_rng_ae611a0f28cc2ed34d0bfde4e01da6c64}{engine\_}};}
+\DoxyCodeLine{00036\ \ \ \ \ std::normal\_distribution<double>\ \doxymbox{\hyperlink{class_barnicha_1_1_rng_a335f8a018d6f5eb63c48b2700fca85e4}{normal\_}};}
+\DoxyCodeLine{00037\ \ \ \ \ std::uniform\_real\_distribution<double>\ \doxymbox{\hyperlink{class_barnicha_1_1_rng_a9a6f682c471b4e754bef9f6d53cb6763}{uniform\_}};}
+\DoxyCodeLine{00038\ \};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \}}
+
+\end{DoxyCode}

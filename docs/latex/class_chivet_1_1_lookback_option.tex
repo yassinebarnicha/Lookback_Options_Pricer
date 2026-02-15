@@ -1,0 +1,194 @@
+\doxysection{Chivet::\+Lookback\+Option Class Reference}
+\hypertarget{class_chivet_1_1_lookback_option}{}\label{class_chivet_1_1_lookback_option}\index{Chivet::LookbackOption@{Chivet::LookbackOption}}
+
+
+Represents a floating-\/strike lookback option.  
+
+
+
+
+{\ttfamily \+\#include $<$Option\+Parameters.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_chivet_1_1_lookback_option_a7bd787f9f390decd5b9213ae1ca4862b}{Lookback\+Option}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_chivet_1_1_lookback_option_a8110557d786c0fc74c466815d622687e}{Lookback\+Option}} (\doxymbox{\hyperlink{namespace_chivet_a3b2090f5176dce254e4ab67a0a803837}{Option\+Type}} option\+Type, double maturity)
+\begin{DoxyCompactList}\small\item\em Parameterised constructor. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_chivet_1_1_lookback_option_a4cf795601a20305f81f219d5bba61790}{set\+Type}} (\doxymbox{\hyperlink{namespace_chivet_a3b2090f5176dce254e4ab67a0a803837}{Option\+Type}} option\+Type)
+\begin{DoxyCompactList}\small\item\em Set the option type. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_chivet_1_1_lookback_option_a84bb3eb5cca9e166d3ef744f615bc4e0}{set\+Maturity}} (double maturity)
+\begin{DoxyCompactList}\small\item\em Set the time to maturity. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_chivet_1_1_lookback_option_a7bdda73ac038621279c34c19353d3615}{get\+Maturity}} () const
+\begin{DoxyCompactList}\small\item\em Get the time to maturity in years. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{namespace_chivet_a3b2090f5176dce254e4ab67a0a803837}{Option\+Type}} \doxymbox{\hyperlink{class_chivet_1_1_lookback_option_a25a947726b9ec52466cfab4e496e023f}{get\+Type}} () const
+\begin{DoxyCompactList}\small\item\em Get the option type. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_chivet_1_1_lookback_option_a788d6440e8f4ab6acaf098446f85bac8}{payoff}} (double extremum\+Of\+Spot, double Spot\+At\+Maturity) const
+\begin{DoxyCompactList}\small\item\em Compute the lookback option payoff. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{namespace_chivet_a3b2090f5176dce254e4ab67a0a803837}{Option\+Type}} \doxymbox{\hyperlink{class_chivet_1_1_lookback_option_aa63fddd52ce1db379aa24d2ec2db06f5}{option\+Type\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Call or Put. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_chivet_1_1_lookback_option_a566df51a1e6a7acc6d01898f359e4742}{maturity\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Time to maturity in years. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a floating-\/strike lookback option. 
+
+A lookback option\textquotesingle{}s payoff depends on the extremum (minimum or maximum) of the underlying spot price observed over the life of the option. 
+
+\label{doc-constructors}
+\Hypertarget{class_chivet_1_1_lookback_option_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_chivet_1_1_lookback_option_a7bd787f9f390decd5b9213ae1ca4862b}\index{Chivet::LookbackOption@{Chivet::LookbackOption}!LookbackOption@{LookbackOption}}
+\index{LookbackOption@{LookbackOption}!Chivet::LookbackOption@{Chivet::LookbackOption}}
+\doxysubsubsection{\texorpdfstring{LookbackOption()}{LookbackOption()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_chivet_1_1_lookback_option_a7bd787f9f390decd5b9213ae1ca4862b} 
+Chivet::\+\+Lookback\+Option::\+\+Lookback\+Option (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Default constructor. 
+
+Initialises as a Call with maturity = 1 year. \Hypertarget{class_chivet_1_1_lookback_option_a8110557d786c0fc74c466815d622687e}\index{Chivet::LookbackOption@{Chivet::LookbackOption}!LookbackOption@{LookbackOption}}
+\index{LookbackOption@{LookbackOption}!Chivet::LookbackOption@{Chivet::LookbackOption}}
+\doxysubsubsection{\texorpdfstring{LookbackOption()}{LookbackOption()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_chivet_1_1_lookback_option_a8110557d786c0fc74c466815d622687e} 
+Chivet::\+\+Lookback\+Option::\+\+Lookback\+Option (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{namespace_chivet_a3b2090f5176dce254e4ab67a0a803837}{Option\+Type}}}]{option\+Type}{, }\item[{double}]{maturity}{}\end{DoxyParamCaption})}
+
+
+
+Parameterised constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em option\+Type} & Call or Put. \\
+\hline
+{\em maturity} & Time to maturity in years (must be \texorpdfstring{$>$}{>} 0). \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std::\+invalid\+\_\+argument} & If maturity \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+
+
+\label{doc-func-members}
+\Hypertarget{class_chivet_1_1_lookback_option_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_chivet_1_1_lookback_option_a7bdda73ac038621279c34c19353d3615}\index{Chivet::LookbackOption@{Chivet::LookbackOption}!getMaturity@{getMaturity}}
+\index{getMaturity@{getMaturity}!Chivet::LookbackOption@{Chivet::LookbackOption}}
+\doxysubsubsection{\texorpdfstring{getMaturity()}{getMaturity()}}
+{\footnotesize\ttfamily \label{class_chivet_1_1_lookback_option_a7bdda73ac038621279c34c19353d3615} 
+double Chivet::\+\+Lookback\+Option::\+get\+Maturity (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the time to maturity in years. 
+
+\Hypertarget{class_chivet_1_1_lookback_option_a25a947726b9ec52466cfab4e496e023f}\index{Chivet::LookbackOption@{Chivet::LookbackOption}!getType@{getType}}
+\index{getType@{getType}!Chivet::LookbackOption@{Chivet::LookbackOption}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily \label{class_chivet_1_1_lookback_option_a25a947726b9ec52466cfab4e496e023f} 
+\doxymbox{\hyperlink{namespace_chivet_a3b2090f5176dce254e4ab67a0a803837}{Option\+Type}} Chivet::\+\+Lookback\+Option::\+get\+Type (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the option type. 
+
+\Hypertarget{class_chivet_1_1_lookback_option_a788d6440e8f4ab6acaf098446f85bac8}\index{Chivet::LookbackOption@{Chivet::LookbackOption}!payoff@{payoff}}
+\index{payoff@{payoff}!Chivet::LookbackOption@{Chivet::LookbackOption}}
+\doxysubsubsection{\texorpdfstring{payoff()}{payoff()}}
+{\footnotesize\ttfamily \label{class_chivet_1_1_lookback_option_a788d6440e8f4ab6acaf098446f85bac8} 
+double Chivet::\+\+Lookback\+Option::\+payoff (\begin{DoxyParamCaption}\item[{double}]{extremum\+Of\+Spot}{, }\item[{double}]{Spot\+At\+Maturity}{}\end{DoxyParamCaption}) const}
+
+
+
+Compute the lookback option payoff. 
+
+
+\begin{DoxyItemize}
+\item {\bfseries{Call}}:\+ max(0, Spot\+At\+Maturity -\/ min(\+Spot over life))
+\item {\bfseries{Put}}:\+ max(0, max(\+Spot over life) -\/ Spot\+At\+Maturity)
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em extremum\+Of\+Spot} & The path minimum (call) or maximum (put) of the underlying spot price during the option\textquotesingle{}s life. \\
+\hline
+{\em Spot\+At\+Maturity} & The spot price at maturity. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The non-\/negative payoff. 
+\end{DoxyReturn}
+\Hypertarget{class_chivet_1_1_lookback_option_a84bb3eb5cca9e166d3ef744f615bc4e0}\index{Chivet::LookbackOption@{Chivet::LookbackOption}!setMaturity@{setMaturity}}
+\index{setMaturity@{setMaturity}!Chivet::LookbackOption@{Chivet::LookbackOption}}
+\doxysubsubsection{\texorpdfstring{setMaturity()}{setMaturity()}}
+{\footnotesize\ttfamily \label{class_chivet_1_1_lookback_option_a84bb3eb5cca9e166d3ef744f615bc4e0} 
+void Chivet::\+\+Lookback\+Option::\+set\+Maturity (\begin{DoxyParamCaption}\item[{double}]{maturity}{}\end{DoxyParamCaption})}
+
+
+
+Set the time to maturity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em maturity} & Time to maturity in years (must be \texorpdfstring{$>$}{>} 0). \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std::\+invalid\+\_\+argument} & If maturity \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{class_chivet_1_1_lookback_option_a4cf795601a20305f81f219d5bba61790}\index{Chivet::LookbackOption@{Chivet::LookbackOption}!setType@{setType}}
+\index{setType@{setType}!Chivet::LookbackOption@{Chivet::LookbackOption}}
+\doxysubsubsection{\texorpdfstring{setType()}{setType()}}
+{\footnotesize\ttfamily \label{class_chivet_1_1_lookback_option_a4cf795601a20305f81f219d5bba61790} 
+void Chivet::\+\+Lookback\+Option::\+set\+Type (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{namespace_chivet_a3b2090f5176dce254e4ab67a0a803837}{Option\+Type}}}]{option\+Type}{}\end{DoxyParamCaption})}
+
+
+
+Set the option type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em option\+Type} & Call or Put. \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_chivet_1_1_lookback_option_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_chivet_1_1_lookback_option_a566df51a1e6a7acc6d01898f359e4742}\index{Chivet::LookbackOption@{Chivet::LookbackOption}!maturity\_@{maturity\_}}
+\index{maturity\_@{maturity\_}!Chivet::LookbackOption@{Chivet::LookbackOption}}
+\doxysubsubsection{\texorpdfstring{maturity\_}{maturity\_}}
+{\footnotesize\ttfamily \label{class_chivet_1_1_lookback_option_a566df51a1e6a7acc6d01898f359e4742} 
+double Chivet::\+\+Lookback\+Option::\+maturity\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Time to maturity in years. 
+
+\Hypertarget{class_chivet_1_1_lookback_option_aa63fddd52ce1db379aa24d2ec2db06f5}\index{Chivet::LookbackOption@{Chivet::LookbackOption}!optionType\_@{optionType\_}}
+\index{optionType\_@{optionType\_}!Chivet::LookbackOption@{Chivet::LookbackOption}}
+\doxysubsubsection{\texorpdfstring{optionType\_}{optionType\_}}
+{\footnotesize\ttfamily \label{class_chivet_1_1_lookback_option_aa63fddd52ce1db379aa24d2ec2db06f5} 
+\doxymbox{\hyperlink{namespace_chivet_a3b2090f5176dce254e4ab67a0a803837}{Option\+Type}} Chivet::\+\+Lookback\+Option::\+option\+Type\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Call or Put. 
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+Chivet/\+include/\+\doxymbox{\hyperlink{_option_parameters_8hpp}{Option\+Parameters.\+hpp}}\item 
+Chivet/\+src/\+\doxymbox{\hyperlink{_option_parameters_8cpp}{Option\+Parameters.\+cpp}}\end{DoxyCompactItemize}

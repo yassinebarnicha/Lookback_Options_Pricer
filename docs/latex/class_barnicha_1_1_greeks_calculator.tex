@@ -1,0 +1,68 @@
+\doxysection{Barnicha::\+Greeks\+Calculator Class Reference}
+\hypertarget{class_barnicha_1_1_greeks_calculator}{}\label{class_barnicha_1_1_greeks_calculator}\index{Barnicha::GreeksCalculator@{Barnicha::GreeksCalculator}}
+
+
+Abstract interface for Greeks computation.  
+
+
+
+
+{\ttfamily \+\#include $<$greeks\+\_\+calculator.\+h$>$}
+
+Inheritance diagram for Barnicha::\+Greeks\+Calculator:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_barnicha_1_1_greeks_calculator}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \doxymbox{\hyperlink{class_barnicha_1_1_greeks_calculator_ae39a43216abcda30ea957c7cab2dd3b1}{\texorpdfstring{$\sim$}{\string~}\+Greeks\+Calculator}} ()=default
+\item 
+virtual \doxymbox{\hyperlink{struct_barnicha_1_1_greeks_result}{Greeks\+Result}} \doxymbox{\hyperlink{class_barnicha_1_1_greeks_calculator_a7585896102b0c5a5265970105ccdc210}{compute}} (const \doxymbox{\hyperlink{class_barnicha_1_1_pricing_engine}{Pricing\+Engine}} \&engine, const \doxymbox{\hyperlink{struct_barnicha_1_1_market_data}{Market\+Data}} \&market, const \doxymbox{\hyperlink{class_barnicha_1_1_lookback_option}{Lookback\+Option}} \&option) const =0
+\begin{DoxyCompactList}\small\item\em Compute requested outputs using the provided pricing engine. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract interface for Greeks computation. 
+
+The engine is injected, so the same calculator can run on:\+
+\begin{DoxyItemize}
+\item \doxylink{class_barnicha_1_1_monte_carlo_engine}{Monte\+Carlo\+Engine} (CRN because it reuses stored samples),
+\item \doxylink{class_barnicha_1_1_analytic_engine}{Analytic\+Engine} (deterministic). 
+\end{DoxyItemize}
+
+\label{doc-constructors}
+\Hypertarget{class_barnicha_1_1_greeks_calculator_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_barnicha_1_1_greeks_calculator_ae39a43216abcda30ea957c7cab2dd3b1}\index{Barnicha::GreeksCalculator@{Barnicha::GreeksCalculator}!````~GreeksCalculator@{\texorpdfstring{$\sim$}{\string~}GreeksCalculator}}
+\index{````~GreeksCalculator@{\texorpdfstring{$\sim$}{\string~}GreeksCalculator}!Barnicha::GreeksCalculator@{Barnicha::GreeksCalculator}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}GreeksCalculator()}{\string~GreeksCalculator()}}
+{\footnotesize\ttfamily \label{class_barnicha_1_1_greeks_calculator_ae39a43216abcda30ea957c7cab2dd3b1} 
+virtual Barnicha::\+\+Greeks\+Calculator::\+\texorpdfstring{$\sim$}{\string~}\+Greeks\+Calculator (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_barnicha_1_1_greeks_calculator_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_barnicha_1_1_greeks_calculator_a7585896102b0c5a5265970105ccdc210}\index{Barnicha::GreeksCalculator@{Barnicha::GreeksCalculator}!compute@{compute}}
+\index{compute@{compute}!Barnicha::GreeksCalculator@{Barnicha::GreeksCalculator}}
+\doxysubsubsection{\texorpdfstring{compute()}{compute()}}
+{\footnotesize\ttfamily \label{class_barnicha_1_1_greeks_calculator_a7585896102b0c5a5265970105ccdc210} 
+virtual \doxymbox{\hyperlink{struct_barnicha_1_1_greeks_result}{Greeks\+Result}} Barnicha::\+\+Greeks\+Calculator::\+compute (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_barnicha_1_1_pricing_engine}{Pricing\+Engine}} \&}]{engine}{, }\item[{const \doxymbox{\hyperlink{struct_barnicha_1_1_market_data}{Market\+Data}} \&}]{market}{, }\item[{const \doxymbox{\hyperlink{class_barnicha_1_1_lookback_option}{Lookback\+Option}} \&}]{option}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Compute requested outputs using the provided pricing engine. 
+
+
+
+Implemented in \doxymbox{\hyperlink{class_barnicha_1_1_bump_and_revalue_greeks_a01ba730c5c330d3271f7517d22b93510}{Barnicha::\+\+Bump\+And\+Revalue\+Greeks}}.
+
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+Barnicha/\+include/\+lookback/\+\doxymbox{\hyperlink{greeks__calculator_8h}{greeks\+\_\+calculator.\+h}}\end{DoxyCompactItemize}

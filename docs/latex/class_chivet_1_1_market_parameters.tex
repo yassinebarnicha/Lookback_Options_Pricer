@@ -1,0 +1,220 @@
+\doxysection{Chivet::\+Market\+Parameters Class Reference}
+\hypertarget{class_chivet_1_1_market_parameters}{}\label{class_chivet_1_1_market_parameters}\index{Chivet::MarketParameters@{Chivet::MarketParameters}}
+
+
+Stores the market parameters required for pricing:\+ spot price, risk-\/free interest rate, and volatility.  
+
+
+
+
+{\ttfamily \+\#include $<$Market\+Parameters.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_chivet_1_1_market_parameters_a334d24cb811e582f8b62b3b7a6cb2158}{Market\+Parameters}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_chivet_1_1_market_parameters_a3a79cdd5f96a28d842d2ad62656e2219}{Market\+Parameters}} (double spot, double risk\+Free\+Rate, double volatility)
+\begin{DoxyCompactList}\small\item\em Parameterised constructor. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_chivet_1_1_market_parameters_a1df027c9b812bc365b2a896645d72d10}{\texorpdfstring{$\sim$}{\string~}\+Market\+Parameters}} ()=default
+\item 
+void \doxymbox{\hyperlink{class_chivet_1_1_market_parameters_ae8e4be3e8f4590a3f5278d95882784ad}{set\+Spot}} (double spot)
+\begin{DoxyCompactList}\small\item\em Set the spot price. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_chivet_1_1_market_parameters_a1fc28c36992592c40de3428317e9b296}{set\+Risk\+Free\+Rate}} (double risk\+Free\+Rate)
+\begin{DoxyCompactList}\small\item\em Set the risk-\/free interest rate. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_chivet_1_1_market_parameters_a82cc8d7ae5568f412180634c52e13cd9}{set\+Volatility}} (double volatility)
+\begin{DoxyCompactList}\small\item\em Set the volatility. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_chivet_1_1_market_parameters_a14776e5fe32740def9b5a0c5015016f1}{get\+Spot}} () const
+\begin{DoxyCompactList}\small\item\em Get the current spot price. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_chivet_1_1_market_parameters_aacab752bf95f011c60e811e3ce8885d3}{gtet\+Risk\+Free\+Rate}} () const
+\begin{DoxyCompactList}\small\item\em Get the risk-\/free interest rate. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_chivet_1_1_market_parameters_a0582b51ee93a4d7387e7ef9a98536927}{get\+Volatility}} () const
+\begin{DoxyCompactList}\small\item\em Get the annualised volatility. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \doxymbox{\hyperlink{class_chivet_1_1_market_parameters_a7975e0717156de656f3a88fa9be0946e}{spot\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Current spot price of the underlying. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_chivet_1_1_market_parameters_ad770d499cca2b6e52ef8925a4e85d26d}{risk\+Free\+Rate\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Risk-\/free rate. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_chivet_1_1_market_parameters_afb893090ba68105db7416ac9a7443092}{volatility\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Volatility. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Stores the market parameters required for pricing:\+ spot price, risk-\/free interest rate, and volatility. 
+
+\label{doc-constructors}
+\Hypertarget{class_chivet_1_1_market_parameters_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_chivet_1_1_market_parameters_a334d24cb811e582f8b62b3b7a6cb2158}\index{Chivet::MarketParameters@{Chivet::MarketParameters}!MarketParameters@{MarketParameters}}
+\index{MarketParameters@{MarketParameters}!Chivet::MarketParameters@{Chivet::MarketParameters}}
+\doxysubsubsection{\texorpdfstring{MarketParameters()}{MarketParameters()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_chivet_1_1_market_parameters_a334d24cb811e582f8b62b3b7a6cb2158} 
+Chivet::\+\+Market\+Parameters::\+\+Market\+Parameters (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Default constructor. 
+
+Initialises with spot = 100, risk-\/free rate = 5\%, volatility = 100\%. \Hypertarget{class_chivet_1_1_market_parameters_a3a79cdd5f96a28d842d2ad62656e2219}\index{Chivet::MarketParameters@{Chivet::MarketParameters}!MarketParameters@{MarketParameters}}
+\index{MarketParameters@{MarketParameters}!Chivet::MarketParameters@{Chivet::MarketParameters}}
+\doxysubsubsection{\texorpdfstring{MarketParameters()}{MarketParameters()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_chivet_1_1_market_parameters_a3a79cdd5f96a28d842d2ad62656e2219} 
+Chivet::\+\+Market\+Parameters::\+\+Market\+Parameters (\begin{DoxyParamCaption}\item[{double}]{spot}{, }\item[{double}]{risk\+Free\+Rate}{, }\item[{double}]{volatility}{}\end{DoxyParamCaption})}
+
+
+
+Parameterised constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em spot} & Current spot price of the underlying (must be \texorpdfstring{$>$}{>} 0). \\
+\hline
+{\em risk\+Free\+Rate} & Continuously-\/compounded risk-\/free interest rate. \\
+\hline
+{\em volatility} & Annualised volatility of the underlying (must be \texorpdfstring{$>$}{>}= 0). \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std::\+invalid\+\_\+argument} & If spot \texorpdfstring{$<$}{<}= 0 or volatility \texorpdfstring{$<$}{<} 0. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{class_chivet_1_1_market_parameters_a1df027c9b812bc365b2a896645d72d10}\index{Chivet::MarketParameters@{Chivet::MarketParameters}!````~MarketParameters@{\texorpdfstring{$\sim$}{\string~}MarketParameters}}
+\index{````~MarketParameters@{\texorpdfstring{$\sim$}{\string~}MarketParameters}!Chivet::MarketParameters@{Chivet::MarketParameters}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}MarketParameters()}{\string~MarketParameters()}}
+{\footnotesize\ttfamily \label{class_chivet_1_1_market_parameters_a1df027c9b812bc365b2a896645d72d10} 
+Chivet::\+\+Market\+Parameters::\+\texorpdfstring{$\sim$}{\string~}\+Market\+Parameters (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_chivet_1_1_market_parameters_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_chivet_1_1_market_parameters_a14776e5fe32740def9b5a0c5015016f1}\index{Chivet::MarketParameters@{Chivet::MarketParameters}!getSpot@{getSpot}}
+\index{getSpot@{getSpot}!Chivet::MarketParameters@{Chivet::MarketParameters}}
+\doxysubsubsection{\texorpdfstring{getSpot()}{getSpot()}}
+{\footnotesize\ttfamily \label{class_chivet_1_1_market_parameters_a14776e5fe32740def9b5a0c5015016f1} 
+double Chivet::\+\+Market\+Parameters::\+get\+Spot (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the current spot price. 
+
+\Hypertarget{class_chivet_1_1_market_parameters_a0582b51ee93a4d7387e7ef9a98536927}\index{Chivet::MarketParameters@{Chivet::MarketParameters}!getVolatility@{getVolatility}}
+\index{getVolatility@{getVolatility}!Chivet::MarketParameters@{Chivet::MarketParameters}}
+\doxysubsubsection{\texorpdfstring{getVolatility()}{getVolatility()}}
+{\footnotesize\ttfamily \label{class_chivet_1_1_market_parameters_a0582b51ee93a4d7387e7ef9a98536927} 
+double Chivet::\+\+Market\+Parameters::\+get\+Volatility (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the annualised volatility. 
+
+\Hypertarget{class_chivet_1_1_market_parameters_aacab752bf95f011c60e811e3ce8885d3}\index{Chivet::MarketParameters@{Chivet::MarketParameters}!gtetRiskFreeRate@{gtetRiskFreeRate}}
+\index{gtetRiskFreeRate@{gtetRiskFreeRate}!Chivet::MarketParameters@{Chivet::MarketParameters}}
+\doxysubsubsection{\texorpdfstring{gtetRiskFreeRate()}{gtetRiskFreeRate()}}
+{\footnotesize\ttfamily \label{class_chivet_1_1_market_parameters_aacab752bf95f011c60e811e3ce8885d3} 
+double Chivet::\+\+Market\+Parameters::\+gtet\+Risk\+Free\+Rate (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the risk-\/free interest rate. 
+
+\Hypertarget{class_chivet_1_1_market_parameters_a1fc28c36992592c40de3428317e9b296}\index{Chivet::MarketParameters@{Chivet::MarketParameters}!setRiskFreeRate@{setRiskFreeRate}}
+\index{setRiskFreeRate@{setRiskFreeRate}!Chivet::MarketParameters@{Chivet::MarketParameters}}
+\doxysubsubsection{\texorpdfstring{setRiskFreeRate()}{setRiskFreeRate()}}
+{\footnotesize\ttfamily \label{class_chivet_1_1_market_parameters_a1fc28c36992592c40de3428317e9b296} 
+void Chivet::\+\+Market\+Parameters::\+set\+Risk\+Free\+Rate (\begin{DoxyParamCaption}\item[{double}]{risk\+Free\+Rate}{}\end{DoxyParamCaption})}
+
+
+
+Set the risk-\/free interest rate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em risk\+Free\+Rate} & New risk-\/free rate. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_chivet_1_1_market_parameters_ae8e4be3e8f4590a3f5278d95882784ad}\index{Chivet::MarketParameters@{Chivet::MarketParameters}!setSpot@{setSpot}}
+\index{setSpot@{setSpot}!Chivet::MarketParameters@{Chivet::MarketParameters}}
+\doxysubsubsection{\texorpdfstring{setSpot()}{setSpot()}}
+{\footnotesize\ttfamily \label{class_chivet_1_1_market_parameters_ae8e4be3e8f4590a3f5278d95882784ad} 
+void Chivet::\+\+Market\+Parameters::\+set\+Spot (\begin{DoxyParamCaption}\item[{double}]{spot}{}\end{DoxyParamCaption})}
+
+
+
+Set the spot price. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em spot} & New spot price (must be \texorpdfstring{$>$}{>} 0). \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std::\+invalid\+\_\+argument} & If spot \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{class_chivet_1_1_market_parameters_a82cc8d7ae5568f412180634c52e13cd9}\index{Chivet::MarketParameters@{Chivet::MarketParameters}!setVolatility@{setVolatility}}
+\index{setVolatility@{setVolatility}!Chivet::MarketParameters@{Chivet::MarketParameters}}
+\doxysubsubsection{\texorpdfstring{setVolatility()}{setVolatility()}}
+{\footnotesize\ttfamily \label{class_chivet_1_1_market_parameters_a82cc8d7ae5568f412180634c52e13cd9} 
+void Chivet::\+\+Market\+Parameters::\+set\+Volatility (\begin{DoxyParamCaption}\item[{double}]{volatility}{}\end{DoxyParamCaption})}
+
+
+
+Set the volatility. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em volatility} & New volatility (must be \texorpdfstring{$>$}{>}= 0). \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std::\+invalid\+\_\+argument} & If volatility \texorpdfstring{$<$}{<} 0. \\
+\hline
+\end{DoxyExceptions}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_chivet_1_1_market_parameters_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_chivet_1_1_market_parameters_ad770d499cca2b6e52ef8925a4e85d26d}\index{Chivet::MarketParameters@{Chivet::MarketParameters}!riskFreeRate\_@{riskFreeRate\_}}
+\index{riskFreeRate\_@{riskFreeRate\_}!Chivet::MarketParameters@{Chivet::MarketParameters}}
+\doxysubsubsection{\texorpdfstring{riskFreeRate\_}{riskFreeRate\_}}
+{\footnotesize\ttfamily \label{class_chivet_1_1_market_parameters_ad770d499cca2b6e52ef8925a4e85d26d} 
+double Chivet::\+\+Market\+Parameters::\+risk\+Free\+Rate\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Risk-\/free rate. 
+
+\Hypertarget{class_chivet_1_1_market_parameters_a7975e0717156de656f3a88fa9be0946e}\index{Chivet::MarketParameters@{Chivet::MarketParameters}!spot\_@{spot\_}}
+\index{spot\_@{spot\_}!Chivet::MarketParameters@{Chivet::MarketParameters}}
+\doxysubsubsection{\texorpdfstring{spot\_}{spot\_}}
+{\footnotesize\ttfamily \label{class_chivet_1_1_market_parameters_a7975e0717156de656f3a88fa9be0946e} 
+double Chivet::\+\+Market\+Parameters::\+spot\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Current spot price of the underlying. 
+
+\Hypertarget{class_chivet_1_1_market_parameters_afb893090ba68105db7416ac9a7443092}\index{Chivet::MarketParameters@{Chivet::MarketParameters}!volatility\_@{volatility\_}}
+\index{volatility\_@{volatility\_}!Chivet::MarketParameters@{Chivet::MarketParameters}}
+\doxysubsubsection{\texorpdfstring{volatility\_}{volatility\_}}
+{\footnotesize\ttfamily \label{class_chivet_1_1_market_parameters_afb893090ba68105db7416ac9a7443092} 
+double Chivet::\+\+Market\+Parameters::\+volatility\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Volatility. 
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+Chivet/\+include/\+\doxymbox{\hyperlink{_market_parameters_8hpp}{Market\+Parameters.\+hpp}}\item 
+Chivet/\+src/\+\doxymbox{\hyperlink{_market_parameters_8cpp}{Market\+Parameters.\+cpp}}\end{DoxyCompactItemize}

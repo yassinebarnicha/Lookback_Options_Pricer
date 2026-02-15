@@ -1,0 +1,32 @@
+\doxysection{monte\+\_\+carlo\+\_\+engine.\+h}
+\hypertarget{monte__carlo__engine_8h_source}{}\label{monte__carlo__engine_8h_source}\index{Barnicha/include/lookback/monte\_carlo\_engine.h@{Barnicha/include/lookback/monte\_carlo\_engine.h}}
+\doxymbox{\hyperlink{monte__carlo__engine_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{pricing__engine_8h}{pricing\_engine.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{one__step__bridge__sampler_8h}{one\_step\_bridge\_sampler.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <cstddef>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_barnicha}{Barnicha}}\ }
+\DoxyCodeLine{00012\ \{}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_barnicha_1_1_monte_carlo_engine_ac91318a86d3db9722d3a1c30d5ac6924}{MonteCarloEngine}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_barnicha_1_1_pricing_engine}{PricingEngine}}\ }
+\DoxyCodeLine{00021\ \{}
+\DoxyCodeLine{00022\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \ \ \doxymbox{\hyperlink{class_barnicha_1_1_monte_carlo_engine_ac91318a86d3db9722d3a1c30d5ac6924}{MonteCarloEngine}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_barnicha_1_1_one_step_bridge_sampler}{OneStepBridgeSampler}}\&\ sampler,}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::size\_t\ n\_paths,}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ antithetic\_on\_normal\ =\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ std::vector<double>\ \doxymbox{\hyperlink{class_barnicha_1_1_monte_carlo_engine_af869789542038ab35345d17f29edb7d1}{discounted\_payoff\_samples}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_barnicha_1_1_market_data}{MarketData}}\&\ market,}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_barnicha_1_1_lookback_option}{LookbackOption}}\&\ option)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_barnicha_1_1_one_step_bridge_sampler}{OneStepBridgeSampler}}\&\ \doxymbox{\hyperlink{class_barnicha_1_1_monte_carlo_engine_a65bb7fc0119d6a37aa9bb53dcab95f35}{sampler\_}};}
+\DoxyCodeLine{00032\ \ \ \ \ std::size\_t\ \doxymbox{\hyperlink{class_barnicha_1_1_monte_carlo_engine_a76c96ddebfe9a34eeeb0c41754e5308f}{n\_paths\_}};}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_barnicha_1_1_monte_carlo_engine_ae7a06260c6c2a0602b169d63feeb8b3d}{antithetic\_on\_normal\_}};}
+\DoxyCodeLine{00034\ \};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,65 @@
+\doxysection{Barnicha::\+One\+Step\+Sample Struct Reference}
+\hypertarget{struct_barnicha_1_1_one_step_sample}{}\label{struct_barnicha_1_1_one_step_sample}\index{Barnicha::OneStepSample@{Barnicha::OneStepSample}}
+
+
+\doxylink{namespace_random}{Random} draws needed for one one-\/step lookback path.  
+
+
+
+
+{\ttfamily \+\#include $<$one\+\_\+step\+\_\+bridge\+\_\+sampler.\+h$>$}
+
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \doxymbox{\hyperlink{struct_barnicha_1_1_one_step_sample_a0de2e04369a20b9a1a230fdfefe98bd7}{z}}
+\begin{DoxyCompactList}\small\item\em standard normal for terminal value \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{struct_barnicha_1_1_one_step_sample_a62ce18919a080a5d77e6c736e755bfc1}{u\+\_\+max}}
+\begin{DoxyCompactList}\small\item\em uniform for sampling the conditional maximum \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{struct_barnicha_1_1_one_step_sample_afae6dfcda4419777031043e85d446152}{u\+\_\+min}}
+\begin{DoxyCompactList}\small\item\em uniform for sampling the conditional minimum \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{namespace_random}{Random} draws needed for one one-\/step lookback path. 
+
+We separate the {\itshape generation} of randomness from the {\itshape pricing}:\+ the sampler stores samples so that the same random numbers can be reused for price and for Greeks (common random numbers /\+ CRN). 
+
+\label{doc-variable-members}
+\Hypertarget{struct_barnicha_1_1_one_step_sample_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_barnicha_1_1_one_step_sample_a62ce18919a080a5d77e6c736e755bfc1}\index{Barnicha::OneStepSample@{Barnicha::OneStepSample}!u\_max@{u\_max}}
+\index{u\_max@{u\_max}!Barnicha::OneStepSample@{Barnicha::OneStepSample}}
+\doxysubsubsection{\texorpdfstring{u\_max}{u\_max}}
+{\footnotesize\ttfamily \label{struct_barnicha_1_1_one_step_sample_a62ce18919a080a5d77e6c736e755bfc1} 
+double Barnicha::\+\+One\+Step\+Sample::\+u\+\_\+max}
+
+
+
+uniform for sampling the conditional maximum 
+
+\Hypertarget{struct_barnicha_1_1_one_step_sample_afae6dfcda4419777031043e85d446152}\index{Barnicha::OneStepSample@{Barnicha::OneStepSample}!u\_min@{u\_min}}
+\index{u\_min@{u\_min}!Barnicha::OneStepSample@{Barnicha::OneStepSample}}
+\doxysubsubsection{\texorpdfstring{u\_min}{u\_min}}
+{\footnotesize\ttfamily \label{struct_barnicha_1_1_one_step_sample_afae6dfcda4419777031043e85d446152} 
+double Barnicha::\+\+One\+Step\+Sample::\+u\+\_\+min}
+
+
+
+uniform for sampling the conditional minimum 
+
+\Hypertarget{struct_barnicha_1_1_one_step_sample_a0de2e04369a20b9a1a230fdfefe98bd7}\index{Barnicha::OneStepSample@{Barnicha::OneStepSample}!z@{z}}
+\index{z@{z}!Barnicha::OneStepSample@{Barnicha::OneStepSample}}
+\doxysubsubsection{\texorpdfstring{z}{z}}
+{\footnotesize\ttfamily \label{struct_barnicha_1_1_one_step_sample_a0de2e04369a20b9a1a230fdfefe98bd7} 
+double Barnicha::\+\+One\+Step\+Sample::\+z}
+
+
+
+standard normal for terminal value 
+
+
+
+The documentation for this struct was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+Barnicha/\+include/\+lookback/\+\doxymbox{\hyperlink{one__step__bridge__sampler_8h}{one\+\_\+step\+\_\+bridge\+\_\+sampler.\+h}}\end{DoxyCompactItemize}

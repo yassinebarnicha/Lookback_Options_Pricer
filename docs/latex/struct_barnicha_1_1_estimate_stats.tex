@@ -1,0 +1,82 @@
+\doxysection{Barnicha::\+Estimate\+Stats Struct Reference}
+\hypertarget{struct_barnicha_1_1_estimate_stats}{}\label{struct_barnicha_1_1_estimate_stats}\index{Barnicha::EstimateStats@{Barnicha::EstimateStats}}
+
+
+Statistics for an estimate (typically Monte Carlo).  
+
+
+
+
+{\ttfamily \+\#include $<$estimate\+\_\+stats.\+h$>$}
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \doxymbox{\hyperlink{struct_barnicha_1_1_estimate_stats}{Estimate\+Stats}} \doxymbox{\hyperlink{struct_barnicha_1_1_estimate_stats_a60de3de439650bdefc7196d4f8a58654}{deterministic}} (double x)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \doxymbox{\hyperlink{struct_barnicha_1_1_estimate_stats_a6393b9d992250523cb369071eaa08671}{estimate}} = 0.\+0
+\item 
+double \doxymbox{\hyperlink{struct_barnicha_1_1_estimate_stats_a6fd3bb2cf326bb5b8aef51099273182a}{std\+\_\+dev}} = 0.\+0
+\item 
+double \doxymbox{\hyperlink{struct_barnicha_1_1_estimate_stats_ae44bb42d8f6b1ca7c2fa0d81b43b4f65}{ci95\+\_\+low}} = 0.\+0
+\item 
+double \doxymbox{\hyperlink{struct_barnicha_1_1_estimate_stats_a97462afd1d644a76bcf86ac49c8bf4de}{ci95\+\_\+high}} = 0.\+0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Statistics for an estimate (typically Monte Carlo). 
+
+We report:\+
+\begin{DoxyItemize}
+\item estimate :\+ point estimate (sample mean)
+\item std\+\_\+dev :\+ standard error of the estimate (sample\+\_\+std /\+ sqrt(n))
+\item ci95\+\_\+low/\+high :\+ symmetric 95\% confidence interval (normal approximation) 
+\end{DoxyItemize}
+
+\label{doc-func-members}
+\Hypertarget{struct_barnicha_1_1_estimate_stats_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_barnicha_1_1_estimate_stats_a60de3de439650bdefc7196d4f8a58654}\index{Barnicha::EstimateStats@{Barnicha::EstimateStats}!deterministic@{deterministic}}
+\index{deterministic@{deterministic}!Barnicha::EstimateStats@{Barnicha::EstimateStats}}
+\doxysubsubsection{\texorpdfstring{deterministic()}{deterministic()}}
+{\footnotesize\ttfamily \label{struct_barnicha_1_1_estimate_stats_a60de3de439650bdefc7196d4f8a58654} 
+\doxymbox{\hyperlink{struct_barnicha_1_1_estimate_stats}{Estimate\+Stats}} Barnicha::\+\+Estimate\+Stats::\+deterministic (\begin{DoxyParamCaption}\item[{double}]{x}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+\label{doc-variable-members}
+\Hypertarget{struct_barnicha_1_1_estimate_stats_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_barnicha_1_1_estimate_stats_a97462afd1d644a76bcf86ac49c8bf4de}\index{Barnicha::EstimateStats@{Barnicha::EstimateStats}!ci95\_high@{ci95\_high}}
+\index{ci95\_high@{ci95\_high}!Barnicha::EstimateStats@{Barnicha::EstimateStats}}
+\doxysubsubsection{\texorpdfstring{ci95\_high}{ci95\_high}}
+{\footnotesize\ttfamily \label{struct_barnicha_1_1_estimate_stats_a97462afd1d644a76bcf86ac49c8bf4de} 
+double Barnicha::\+\+Estimate\+Stats::\+ci95\+\_\+high = 0.\+0}
+
+\Hypertarget{struct_barnicha_1_1_estimate_stats_ae44bb42d8f6b1ca7c2fa0d81b43b4f65}\index{Barnicha::EstimateStats@{Barnicha::EstimateStats}!ci95\_low@{ci95\_low}}
+\index{ci95\_low@{ci95\_low}!Barnicha::EstimateStats@{Barnicha::EstimateStats}}
+\doxysubsubsection{\texorpdfstring{ci95\_low}{ci95\_low}}
+{\footnotesize\ttfamily \label{struct_barnicha_1_1_estimate_stats_ae44bb42d8f6b1ca7c2fa0d81b43b4f65} 
+double Barnicha::\+\+Estimate\+Stats::\+ci95\+\_\+low = 0.\+0}
+
+\Hypertarget{struct_barnicha_1_1_estimate_stats_a6393b9d992250523cb369071eaa08671}\index{Barnicha::EstimateStats@{Barnicha::EstimateStats}!estimate@{estimate}}
+\index{estimate@{estimate}!Barnicha::EstimateStats@{Barnicha::EstimateStats}}
+\doxysubsubsection{\texorpdfstring{estimate}{estimate}}
+{\footnotesize\ttfamily \label{struct_barnicha_1_1_estimate_stats_a6393b9d992250523cb369071eaa08671} 
+double Barnicha::\+\+Estimate\+Stats::\+estimate = 0.\+0}
+
+\Hypertarget{struct_barnicha_1_1_estimate_stats_a6fd3bb2cf326bb5b8aef51099273182a}\index{Barnicha::EstimateStats@{Barnicha::EstimateStats}!std\_dev@{std\_dev}}
+\index{std\_dev@{std\_dev}!Barnicha::EstimateStats@{Barnicha::EstimateStats}}
+\doxysubsubsection{\texorpdfstring{std\_dev}{std\_dev}}
+{\footnotesize\ttfamily \label{struct_barnicha_1_1_estimate_stats_a6fd3bb2cf326bb5b8aef51099273182a} 
+double Barnicha::\+\+Estimate\+Stats::\+std\+\_\+dev = 0.\+0}
+
+
+
+The documentation for this struct was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+Barnicha/\+include/\+lookback/\+\doxymbox{\hyperlink{estimate__stats_8h}{estimate\+\_\+stats.\+h}}\end{DoxyCompactItemize}

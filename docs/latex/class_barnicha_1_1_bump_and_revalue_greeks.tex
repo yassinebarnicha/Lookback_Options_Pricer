@@ -1,0 +1,170 @@
+\doxysection{Barnicha::\+Bump\+And\+Revalue\+Greeks Class Reference}
+\hypertarget{class_barnicha_1_1_bump_and_revalue_greeks}{}\label{class_barnicha_1_1_bump_and_revalue_greeks}\index{Barnicha::BumpAndRevalueGreeks@{Barnicha::BumpAndRevalueGreeks}}
+
+
+Bump-\/and-\/revalue Greeks with uncertainty reporting.  
+
+
+
+
+{\ttfamily \+\#include $<$bump\+\_\+and\+\_\+revalue\+\_\+greeks.\+h$>$}
+
+Inheritance diagram for Barnicha::\+Bump\+And\+Revalue\+Greeks:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_barnicha_1_1_bump_and_revalue_greeks}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_barnicha_1_1_bump_and_revalue_greeks_ae5c2a6d785e3cbf095b4c63819e28fc2}{Bump\+And\+Revalue\+Greeks}} (bool compute\+\_\+price=true, bool compute\+\_\+delta=true, bool compute\+\_\+gamma=true, bool compute\+\_\+theta=true, bool compute\+\_\+rho=true, bool compute\+\_\+vega=true)
+\item 
+\doxymbox{\hyperlink{class_barnicha_1_1_bump_and_revalue_greeks_ae5c2a6d785e3cbf095b4c63819e28fc2}{Bump\+And\+Revalue\+Greeks}} \& \doxymbox{\hyperlink{class_barnicha_1_1_bump_and_revalue_greeks_af388986af05deb37fc1c6034dc27bf29}{set\+\_\+bumps}} (std::\+optional$<$ double $>$ d\+\_\+spot\+\_\+rel=std::\+nullopt, std::\+optional$<$ double $>$ d\+\_\+rate\+\_\+abs=std::\+nullopt, std::\+optional$<$ double $>$ d\+\_\+vol\+\_\+abs=std::\+nullopt, std::\+optional$<$ double $>$ d\+\_\+t\+\_\+abs=std::\+nullopt)
+\item 
+\doxymbox{\hyperlink{struct_barnicha_1_1_greeks_result}{Greeks\+Result}} \doxymbox{\hyperlink{class_barnicha_1_1_bump_and_revalue_greeks_a01ba730c5c330d3271f7517d22b93510}{compute}} (const \doxymbox{\hyperlink{class_barnicha_1_1_pricing_engine}{Pricing\+Engine}} \&engine, const \doxymbox{\hyperlink{struct_barnicha_1_1_market_data}{Market\+Data}} \&market, const \doxymbox{\hyperlink{class_barnicha_1_1_lookback_option}{Lookback\+Option}} \&option) const override
+\begin{DoxyCompactList}\small\item\em Compute requested outputs using the provided pricing engine. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_barnicha_1_1_greeks_calculator}{Barnicha::\+\+Greeks\+Calculator}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \doxymbox{\hyperlink{class_barnicha_1_1_greeks_calculator_ae39a43216abcda30ea957c7cab2dd3b1}{\texorpdfstring{$\sim$}{\string~}\+Greeks\+Calculator}} ()=default
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \doxymbox{\hyperlink{class_barnicha_1_1_bump_and_revalue_greeks_a3b1290043762c6142069390cf8102f40}{compute\+\_\+price\+\_\+}}
+\item 
+bool \doxymbox{\hyperlink{class_barnicha_1_1_bump_and_revalue_greeks_aa988bc14f6b57949ea6ee2a4de254baa}{compute\+\_\+delta\+\_\+}}
+\item 
+bool \doxymbox{\hyperlink{class_barnicha_1_1_bump_and_revalue_greeks_a6d56c69c7133e1775f9848b7edefff2e}{compute\+\_\+gamma\+\_\+}}
+\item 
+bool \doxymbox{\hyperlink{class_barnicha_1_1_bump_and_revalue_greeks_af9c50b56180a2ff0ec9758414fbbb60e}{compute\+\_\+theta\+\_\+}}
+\item 
+bool \doxymbox{\hyperlink{class_barnicha_1_1_bump_and_revalue_greeks_a3535d66bb27138e029fecfa1b8c66f68}{compute\+\_\+rho\+\_\+}}
+\item 
+bool \doxymbox{\hyperlink{class_barnicha_1_1_bump_and_revalue_greeks_ab4f2360d9226b590c0fe8c40e6162102}{compute\+\_\+vega\+\_\+}}
+\item 
+double \doxymbox{\hyperlink{class_barnicha_1_1_bump_and_revalue_greeks_adff2b098bcab7307a6e05c9f355176ae}{d\+\_\+spot\+\_\+rel\+\_\+}} = 1e-\/4
+\item 
+double \doxymbox{\hyperlink{class_barnicha_1_1_bump_and_revalue_greeks_ae2182dcdd9245055d4f794a698797521}{d\+\_\+rate\+\_\+abs\+\_\+}} = 1e-\/4
+\item 
+double \doxymbox{\hyperlink{class_barnicha_1_1_bump_and_revalue_greeks_a5fe8dcd17ec58a6247e4a0f3bdc3419d}{d\+\_\+vol\+\_\+abs\+\_\+}} = 1e-\/4
+\item 
+double \doxymbox{\hyperlink{class_barnicha_1_1_bump_and_revalue_greeks_a754d5fd3abb49141d6b0bd6b9e3a3f59}{d\+\_\+t\+\_\+abs\+\_\+}} = 1e-\/4
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Bump-\/and-\/revalue Greeks with uncertainty reporting. 
+
+
+\begin{DoxyItemize}
+\item With \doxylink{class_barnicha_1_1_monte_carlo_engine}{Monte\+Carlo\+Engine}:\+ computes Greeks per path (CRN) =\texorpdfstring{$>$}{>} standard errors + CI95.
+\item With deterministic engines (\doxylink{class_barnicha_1_1_analytic_engine}{Analytic\+Engine}):\+ std\+\_\+dev=0. 
+\end{DoxyItemize}
+
+\label{doc-constructors}
+\Hypertarget{class_barnicha_1_1_bump_and_revalue_greeks_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_barnicha_1_1_bump_and_revalue_greeks_ae5c2a6d785e3cbf095b4c63819e28fc2}\index{Barnicha::BumpAndRevalueGreeks@{Barnicha::BumpAndRevalueGreeks}!BumpAndRevalueGreeks@{BumpAndRevalueGreeks}}
+\index{BumpAndRevalueGreeks@{BumpAndRevalueGreeks}!Barnicha::BumpAndRevalueGreeks@{Barnicha::BumpAndRevalueGreeks}}
+\doxysubsubsection{\texorpdfstring{BumpAndRevalueGreeks()}{BumpAndRevalueGreeks()}}
+{\footnotesize\ttfamily \label{class_barnicha_1_1_bump_and_revalue_greeks_ae5c2a6d785e3cbf095b4c63819e28fc2} 
+Barnicha::\+\+Bump\+And\+Revalue\+Greeks::\+\+Bump\+And\+Revalue\+Greeks (\begin{DoxyParamCaption}\item[{bool}]{compute\+\_\+price}{ = {\ttfamily true}, }\item[{bool}]{compute\+\_\+delta}{ = {\ttfamily true}, }\item[{bool}]{compute\+\_\+gamma}{ = {\ttfamily true}, }\item[{bool}]{compute\+\_\+theta}{ = {\ttfamily true}, }\item[{bool}]{compute\+\_\+rho}{ = {\ttfamily true}, }\item[{bool}]{compute\+\_\+vega}{ = {\ttfamily true}}\end{DoxyParamCaption})}
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_barnicha_1_1_bump_and_revalue_greeks_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_barnicha_1_1_bump_and_revalue_greeks_a01ba730c5c330d3271f7517d22b93510}\index{Barnicha::BumpAndRevalueGreeks@{Barnicha::BumpAndRevalueGreeks}!compute@{compute}}
+\index{compute@{compute}!Barnicha::BumpAndRevalueGreeks@{Barnicha::BumpAndRevalueGreeks}}
+\doxysubsubsection{\texorpdfstring{compute()}{compute()}}
+{\footnotesize\ttfamily \label{class_barnicha_1_1_bump_and_revalue_greeks_a01ba730c5c330d3271f7517d22b93510} 
+\doxymbox{\hyperlink{struct_barnicha_1_1_greeks_result}{Greeks\+Result}} Barnicha::\+\+Bump\+And\+Revalue\+Greeks::\+compute (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_barnicha_1_1_pricing_engine}{Pricing\+Engine}} \&}]{engine}{, }\item[{const \doxymbox{\hyperlink{struct_barnicha_1_1_market_data}{Market\+Data}} \&}]{market}{, }\item[{const \doxymbox{\hyperlink{class_barnicha_1_1_lookback_option}{Lookback\+Option}} \&}]{option}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Compute requested outputs using the provided pricing engine. 
+
+
+
+Implements \doxymbox{\hyperlink{class_barnicha_1_1_greeks_calculator_a7585896102b0c5a5265970105ccdc210}{Barnicha::\+\+Greeks\+Calculator}}.
+
+\Hypertarget{class_barnicha_1_1_bump_and_revalue_greeks_af388986af05deb37fc1c6034dc27bf29}\index{Barnicha::BumpAndRevalueGreeks@{Barnicha::BumpAndRevalueGreeks}!set\_bumps@{set\_bumps}}
+\index{set\_bumps@{set\_bumps}!Barnicha::BumpAndRevalueGreeks@{Barnicha::BumpAndRevalueGreeks}}
+\doxysubsubsection{\texorpdfstring{set\_bumps()}{set\_bumps()}}
+{\footnotesize\ttfamily \label{class_barnicha_1_1_bump_and_revalue_greeks_af388986af05deb37fc1c6034dc27bf29} 
+\doxymbox{\hyperlink{class_barnicha_1_1_bump_and_revalue_greeks_ae5c2a6d785e3cbf095b4c63819e28fc2}{Bump\+And\+Revalue\+Greeks}} \& Barnicha::\+\+Bump\+And\+Revalue\+Greeks::\+set\+\_\+bumps (\begin{DoxyParamCaption}\item[{std::\+optional$<$ double $>$}]{d\+\_\+spot\+\_\+rel}{ = {\ttfamily std:\+:\+nullopt}, }\item[{std::\+optional$<$ double $>$}]{d\+\_\+rate\+\_\+abs}{ = {\ttfamily std:\+:\+nullopt}, }\item[{std::\+optional$<$ double $>$}]{d\+\_\+vol\+\_\+abs}{ = {\ttfamily std:\+:\+nullopt}, }\item[{std::\+optional$<$ double $>$}]{d\+\_\+t\+\_\+abs}{ = {\ttfamily std:\+:\+nullopt}}\end{DoxyParamCaption})}
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_barnicha_1_1_bump_and_revalue_greeks_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_barnicha_1_1_bump_and_revalue_greeks_aa988bc14f6b57949ea6ee2a4de254baa}\index{Barnicha::BumpAndRevalueGreeks@{Barnicha::BumpAndRevalueGreeks}!compute\_delta\_@{compute\_delta\_}}
+\index{compute\_delta\_@{compute\_delta\_}!Barnicha::BumpAndRevalueGreeks@{Barnicha::BumpAndRevalueGreeks}}
+\doxysubsubsection{\texorpdfstring{compute\_delta\_}{compute\_delta\_}}
+{\footnotesize\ttfamily \label{class_barnicha_1_1_bump_and_revalue_greeks_aa988bc14f6b57949ea6ee2a4de254baa} 
+bool Barnicha::\+\+Bump\+And\+Revalue\+Greeks::\+compute\+\_\+delta\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_barnicha_1_1_bump_and_revalue_greeks_a6d56c69c7133e1775f9848b7edefff2e}\index{Barnicha::BumpAndRevalueGreeks@{Barnicha::BumpAndRevalueGreeks}!compute\_gamma\_@{compute\_gamma\_}}
+\index{compute\_gamma\_@{compute\_gamma\_}!Barnicha::BumpAndRevalueGreeks@{Barnicha::BumpAndRevalueGreeks}}
+\doxysubsubsection{\texorpdfstring{compute\_gamma\_}{compute\_gamma\_}}
+{\footnotesize\ttfamily \label{class_barnicha_1_1_bump_and_revalue_greeks_a6d56c69c7133e1775f9848b7edefff2e} 
+bool Barnicha::\+\+Bump\+And\+Revalue\+Greeks::\+compute\+\_\+gamma\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_barnicha_1_1_bump_and_revalue_greeks_a3b1290043762c6142069390cf8102f40}\index{Barnicha::BumpAndRevalueGreeks@{Barnicha::BumpAndRevalueGreeks}!compute\_price\_@{compute\_price\_}}
+\index{compute\_price\_@{compute\_price\_}!Barnicha::BumpAndRevalueGreeks@{Barnicha::BumpAndRevalueGreeks}}
+\doxysubsubsection{\texorpdfstring{compute\_price\_}{compute\_price\_}}
+{\footnotesize\ttfamily \label{class_barnicha_1_1_bump_and_revalue_greeks_a3b1290043762c6142069390cf8102f40} 
+bool Barnicha::\+\+Bump\+And\+Revalue\+Greeks::\+compute\+\_\+price\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_barnicha_1_1_bump_and_revalue_greeks_a3535d66bb27138e029fecfa1b8c66f68}\index{Barnicha::BumpAndRevalueGreeks@{Barnicha::BumpAndRevalueGreeks}!compute\_rho\_@{compute\_rho\_}}
+\index{compute\_rho\_@{compute\_rho\_}!Barnicha::BumpAndRevalueGreeks@{Barnicha::BumpAndRevalueGreeks}}
+\doxysubsubsection{\texorpdfstring{compute\_rho\_}{compute\_rho\_}}
+{\footnotesize\ttfamily \label{class_barnicha_1_1_bump_and_revalue_greeks_a3535d66bb27138e029fecfa1b8c66f68} 
+bool Barnicha::\+\+Bump\+And\+Revalue\+Greeks::\+compute\+\_\+rho\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_barnicha_1_1_bump_and_revalue_greeks_af9c50b56180a2ff0ec9758414fbbb60e}\index{Barnicha::BumpAndRevalueGreeks@{Barnicha::BumpAndRevalueGreeks}!compute\_theta\_@{compute\_theta\_}}
+\index{compute\_theta\_@{compute\_theta\_}!Barnicha::BumpAndRevalueGreeks@{Barnicha::BumpAndRevalueGreeks}}
+\doxysubsubsection{\texorpdfstring{compute\_theta\_}{compute\_theta\_}}
+{\footnotesize\ttfamily \label{class_barnicha_1_1_bump_and_revalue_greeks_af9c50b56180a2ff0ec9758414fbbb60e} 
+bool Barnicha::\+\+Bump\+And\+Revalue\+Greeks::\+compute\+\_\+theta\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_barnicha_1_1_bump_and_revalue_greeks_ab4f2360d9226b590c0fe8c40e6162102}\index{Barnicha::BumpAndRevalueGreeks@{Barnicha::BumpAndRevalueGreeks}!compute\_vega\_@{compute\_vega\_}}
+\index{compute\_vega\_@{compute\_vega\_}!Barnicha::BumpAndRevalueGreeks@{Barnicha::BumpAndRevalueGreeks}}
+\doxysubsubsection{\texorpdfstring{compute\_vega\_}{compute\_vega\_}}
+{\footnotesize\ttfamily \label{class_barnicha_1_1_bump_and_revalue_greeks_ab4f2360d9226b590c0fe8c40e6162102} 
+bool Barnicha::\+\+Bump\+And\+Revalue\+Greeks::\+compute\+\_\+vega\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_barnicha_1_1_bump_and_revalue_greeks_ae2182dcdd9245055d4f794a698797521}\index{Barnicha::BumpAndRevalueGreeks@{Barnicha::BumpAndRevalueGreeks}!d\_rate\_abs\_@{d\_rate\_abs\_}}
+\index{d\_rate\_abs\_@{d\_rate\_abs\_}!Barnicha::BumpAndRevalueGreeks@{Barnicha::BumpAndRevalueGreeks}}
+\doxysubsubsection{\texorpdfstring{d\_rate\_abs\_}{d\_rate\_abs\_}}
+{\footnotesize\ttfamily \label{class_barnicha_1_1_bump_and_revalue_greeks_ae2182dcdd9245055d4f794a698797521} 
+double Barnicha::\+\+Bump\+And\+Revalue\+Greeks::\+d\+\_\+rate\+\_\+abs\+\_\+ = 1e-\/4\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_barnicha_1_1_bump_and_revalue_greeks_adff2b098bcab7307a6e05c9f355176ae}\index{Barnicha::BumpAndRevalueGreeks@{Barnicha::BumpAndRevalueGreeks}!d\_spot\_rel\_@{d\_spot\_rel\_}}
+\index{d\_spot\_rel\_@{d\_spot\_rel\_}!Barnicha::BumpAndRevalueGreeks@{Barnicha::BumpAndRevalueGreeks}}
+\doxysubsubsection{\texorpdfstring{d\_spot\_rel\_}{d\_spot\_rel\_}}
+{\footnotesize\ttfamily \label{class_barnicha_1_1_bump_and_revalue_greeks_adff2b098bcab7307a6e05c9f355176ae} 
+double Barnicha::\+\+Bump\+And\+Revalue\+Greeks::\+d\+\_\+spot\+\_\+rel\+\_\+ = 1e-\/4\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_barnicha_1_1_bump_and_revalue_greeks_a754d5fd3abb49141d6b0bd6b9e3a3f59}\index{Barnicha::BumpAndRevalueGreeks@{Barnicha::BumpAndRevalueGreeks}!d\_t\_abs\_@{d\_t\_abs\_}}
+\index{d\_t\_abs\_@{d\_t\_abs\_}!Barnicha::BumpAndRevalueGreeks@{Barnicha::BumpAndRevalueGreeks}}
+\doxysubsubsection{\texorpdfstring{d\_t\_abs\_}{d\_t\_abs\_}}
+{\footnotesize\ttfamily \label{class_barnicha_1_1_bump_and_revalue_greeks_a754d5fd3abb49141d6b0bd6b9e3a3f59} 
+double Barnicha::\+\+Bump\+And\+Revalue\+Greeks::\+d\+\_\+t\+\_\+abs\+\_\+ = 1e-\/4\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_barnicha_1_1_bump_and_revalue_greeks_a5fe8dcd17ec58a6247e4a0f3bdc3419d}\index{Barnicha::BumpAndRevalueGreeks@{Barnicha::BumpAndRevalueGreeks}!d\_vol\_abs\_@{d\_vol\_abs\_}}
+\index{d\_vol\_abs\_@{d\_vol\_abs\_}!Barnicha::BumpAndRevalueGreeks@{Barnicha::BumpAndRevalueGreeks}}
+\doxysubsubsection{\texorpdfstring{d\_vol\_abs\_}{d\_vol\_abs\_}}
+{\footnotesize\ttfamily \label{class_barnicha_1_1_bump_and_revalue_greeks_a5fe8dcd17ec58a6247e4a0f3bdc3419d} 
+double Barnicha::\+\+Bump\+And\+Revalue\+Greeks::\+d\+\_\+vol\+\_\+abs\+\_\+ = 1e-\/4\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+Barnicha/\+include/\+lookback/\+\doxymbox{\hyperlink{bump__and__revalue__greeks_8h}{bump\+\_\+and\+\_\+revalue\+\_\+greeks.\+h}}\item 
+Barnicha/\+src/\+\doxymbox{\hyperlink{bump__and__revalue__greeks_8cpp}{bump\+\_\+and\+\_\+revalue\+\_\+greeks.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,89 @@
+\doxysection{Pricer.\+hpp}
+\hypertarget{_pricer_8hpp_source}{}\label{_pricer_8hpp_source}\index{Chivet/include/Pricer.hpp@{Chivet/include/Pricer.hpp}}
+\doxymbox{\hyperlink{_pricer_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#ifndef\ PRICER\_HPP}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ PRICER\_HPP}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_market_parameters_8hpp}{MarketParameters.hpp}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_monte_carlo_simulator_8hpp}{MonteCarloSimulator.hpp}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_option_parameters_8hpp}{OptionParameters.hpp}}"{}}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00015\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_chivet}{Chivet}}\ }
+\DoxyCodeLine{00016\ \{}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_chivet_1_1_price_and_delta}{PriceAndDelta}}\ \{}
+\DoxyCodeLine{00025\ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{struct_chivet_1_1_price_and_delta_ae97c83f9b39cff5083c93e8ff59aecf8}{price}};\ \ \ \ }
+\DoxyCodeLine{00026\ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{struct_chivet_1_1_price_and_delta_ab44a44265761d09592370c8e7d74a433}{priceStd}};\ }
+\DoxyCodeLine{00027\ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{struct_chivet_1_1_price_and_delta_a00ec142b4eb20a98e8f4f63ac9bc7b98}{delta}};\ \ \ \ }
+\DoxyCodeLine{00028\ \};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00035\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_chivet_1_1_pricing_result}{PricingResult}}\ \{}
+\DoxyCodeLine{00036\ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{struct_chivet_1_1_pricing_result_a2ce783d1b0c2e3e960ae2c7ea31bb6ed}{price}};\ \ \ \ }
+\DoxyCodeLine{00037\ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{struct_chivet_1_1_pricing_result_add8d7a03a50ef8e04c62a48d3b2e8dbd}{priceStd}};\ }
+\DoxyCodeLine{00038\ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{struct_chivet_1_1_pricing_result_a97466ace8d424b55a66b1df608a6a371}{delta}};\ \ \ \ }
+\DoxyCodeLine{00039\ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{struct_chivet_1_1_pricing_result_a7fc78b2698ef6f56eabff5bfdb41f072}{deltaStd}};\ }
+\DoxyCodeLine{00040\ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{struct_chivet_1_1_pricing_result_a33bf943cc2b262dfed73cc1a48d82c51}{gamma}};\ \ \ \ }
+\DoxyCodeLine{00041\ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{struct_chivet_1_1_pricing_result_a5f12572996836c6e63cbd5f464d7ba93}{gammaStd}};\ }
+\DoxyCodeLine{00042\ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{struct_chivet_1_1_pricing_result_a7314c57ae14a3c5944155e6c78425223}{theta}};\ \ \ \ }
+\DoxyCodeLine{00043\ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{struct_chivet_1_1_pricing_result_a424c5f6b62233ee03e325c81b84f44b5}{thetaStd}};\ }
+\DoxyCodeLine{00044\ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{struct_chivet_1_1_pricing_result_a59bcb93c3b4dd57e32b1c40f33188f58}{rho}};\ \ \ \ \ \ }
+\DoxyCodeLine{00045\ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{struct_chivet_1_1_pricing_result_a85d13ae1df2b5545de04315c2f935cba}{rhoStd}};\ \ \ }
+\DoxyCodeLine{00046\ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{struct_chivet_1_1_pricing_result_a867bef700063af96d1aa09f6730b6314}{vega}};\ \ \ \ \ }
+\DoxyCodeLine{00047\ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{struct_chivet_1_1_pricing_result_a9bba33bac916e1b54f336cc463c521bb}{vegaStd}};\ \ }
+\DoxyCodeLine{00048\ \};}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00064\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_chivet_1_1_pricer_lookback_option_aa61054933ae977d47d3d4cb0aef1ba18}{PricerLookbackOption}}\ \{}
+\DoxyCodeLine{00065\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00066\ \ \ \doxymbox{\hyperlink{class_chivet_1_1_lookback_option}{LookbackOption}}\ \doxymbox{\hyperlink{class_chivet_1_1_pricer_lookback_option_a0e70a3d30e397d19c8a64eedc8d52f70}{option\_}};\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00067\ \ \ \doxymbox{\hyperlink{class_chivet_1_1_market_parameters}{MarketParameters}}\ \doxymbox{\hyperlink{class_chivet_1_1_pricer_lookback_option_a5afa5df331a757980762d8bb8b32c03b}{MarketParameters\_}};\ }
+\DoxyCodeLine{00068\ \ \ \doxymbox{\hyperlink{class_chivet_1_1_monte_carlo_simulator}{MonteCarloSimulator}}\ \doxymbox{\hyperlink{class_chivet_1_1_pricer_lookback_option_a46d5702e4b3bd27855c7ed924e232543}{simulator\_}};\ \ \ \ \ }
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00072\ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_chivet_1_1_pricer_lookback_option_a2b1ec01c486c4e02f718deaf6f370bd9}{SPOT\_BUMP}}\ =}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ 0.001;\ }
+\DoxyCodeLine{00074\ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_chivet_1_1_pricer_lookback_option_ae092dd8759471c444bec91c8dc289e76}{VOL\_BUMP}}\ =\ 0.001;\ \ \ }
+\DoxyCodeLine{00075\ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_chivet_1_1_pricer_lookback_option_ad8eb25ea79c56eafb75df235516e56eb}{RATE\_BUMP}}\ =\ 0.0001;\ }
+\DoxyCodeLine{00076\ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_chivet_1_1_pricer_lookback_option_a6b0f8d7939d90b8a760580a7cdc54981}{TIME\_BUMP}}\ =}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ 1.0\ /\ 365.0;\ }
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00101\ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_chivet_1_1_pricer_lookback_option_ac30ce3d66728d7090f4f64240d8d6201}{computeRawPrice}}(\textcolor{keywordtype}{double}\ spot,\ \textcolor{keywordtype}{double}\ rate,\ \textcolor{keywordtype}{double}\ volatility,}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ maturity,\ \textcolor{keywordtype}{double}\ \&stdError,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ seed,}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<double>\ \&values,\ \textcolor{keywordtype}{bool}\ storeValues\ =\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00107\ \ \ \doxymbox{\hyperlink{class_chivet_1_1_pricer_lookback_option_aa61054933ae977d47d3d4cb0aef1ba18}{PricerLookbackOption}}();}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00115\ \ \ \doxymbox{\hyperlink{class_chivet_1_1_pricer_lookback_option_aa61054933ae977d47d3d4cb0aef1ba18}{PricerLookbackOption}}(\doxymbox{\hyperlink{class_chivet_1_1_lookback_option}{LookbackOption}}\ option,\ \doxymbox{\hyperlink{class_chivet_1_1_market_parameters}{MarketParameters}}\ marketParameters,}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_chivet_1_1_monte_carlo_simulator}{MonteCarloSimulator}}\ simulator);}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00119\ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_chivet_1_1_pricer_lookback_option_a497db8951a9f050e2e5e0f477e58273a}{setOption}}(\doxymbox{\hyperlink{class_chivet_1_1_lookback_option}{LookbackOption}}\ option);}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00126\ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_chivet_1_1_pricer_lookback_option_a497db8951a9f050e2e5e0f477e58273a}{setOption}}(\doxymbox{\hyperlink{namespace_chivet_a3b2090f5176dce254e4ab67a0a803837}{OptionType}}\ type,\ \textcolor{keywordtype}{double}\ maturity);}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00129\ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_chivet_1_1_pricer_lookback_option_a44d705e94c89aa59d3f55085a2173292}{setMarketParameters}}(\doxymbox{\hyperlink{class_chivet_1_1_market_parameters}{MarketParameters}}\ marketParameters);}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00137\ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_chivet_1_1_pricer_lookback_option_a44d705e94c89aa59d3f55085a2173292}{setMarketParameters}}(\textcolor{keywordtype}{double}\ spot,\ \textcolor{keywordtype}{double}\ rate,\ \textcolor{keywordtype}{double}\ volatility);}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00145\ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_chivet_1_1_pricer_lookback_option_ad42ef8233a887b25b71986941a7b2e04}{setMonteCarloSimulator}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ numSimulations,}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ numTimeSteps,}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ seed\ =\ 0);}
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00150\ \ \ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_chivet_1_1_lookback_option}{LookbackOption}}\ \&\doxymbox{\hyperlink{class_chivet_1_1_pricer_lookback_option_a66bc6a361c4b8e54fb7404061de0f6b9}{getOption}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00153\ \ \ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_chivet_1_1_market_parameters}{MarketParameters}}\ \&\doxymbox{\hyperlink{class_chivet_1_1_pricer_lookback_option_a5e732dcadf48e464fc25a126a7f9b974}{getMarketParameters}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00156\ \ \ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_chivet_1_1_monte_carlo_simulator}{MonteCarloSimulator}}\ \&\doxymbox{\hyperlink{class_chivet_1_1_pricer_lookback_option_a3e8b8f1bb8ec90a3735fc79e5abff9f0}{getSimulator}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00157\ }
+\DoxyCodeLine{00159\ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_chivet_1_1_pricer_lookback_option_aec7b9c904932157a881b57d806672807}{setBgkCorrection}}(\textcolor{keywordtype}{bool}\ enabled);}
+\DoxyCodeLine{00160\ }
+\DoxyCodeLine{00173\ \ \ \doxymbox{\hyperlink{struct_chivet_1_1_pricing_result}{PricingResult}}\ \doxymbox{\hyperlink{class_chivet_1_1_pricer_lookback_option_af3cee0d4b0ebaa643c418cafa8b54193}{compute}}(\textcolor{keywordtype}{bool}\ withGreekStdErrors\ =\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00174\ }
+\DoxyCodeLine{00182\ \ \ \doxymbox{\hyperlink{struct_chivet_1_1_price_and_delta}{PriceAndDelta}}\ \doxymbox{\hyperlink{class_chivet_1_1_pricer_lookback_option_aab0b45aaf4ee831ea8429709890339ad}{priceAndDeltaForSpot}}(\textcolor{keywordtype}{double}\ spot);}
+\DoxyCodeLine{00183\ \};}
+\DoxyCodeLine{00184\ \}}
+\DoxyCodeLine{00185\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ !PRICER\_HPP}}
+
+\end{DoxyCode}

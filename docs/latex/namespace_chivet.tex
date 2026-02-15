@@ -1,0 +1,90 @@
+\doxysection{Chivet Namespace Reference}
+\hypertarget{namespace_chivet}{}\label{namespace_chivet}\index{Chivet@{Chivet}}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \doxymbox{\hyperlink{namespace_chivet_1_1_random}{Random}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \doxymbox{\hyperlink{class_chivet_1_1_lookback_analytic_solution}{Lookback\+Analytic\+Solution}}
+\begin{DoxyCompactList}\small\item\em Provides closed-\/form (analytic) prices and Greeks for floating-\/strike lookback options under the Black-\/\+Scholes framework. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_chivet_1_1_market_parameters}{Market\+Parameters}}
+\begin{DoxyCompactList}\small\item\em Stores the market parameters required for pricing:\+ spot price, risk-\/free interest rate, and volatility. \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{struct_chivet_1_1_spot_results}{Spot\+Results}}
+\begin{DoxyCompactList}\small\item\em Holds the outcome of a single simulated spot-\/price path. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_chivet_1_1_monte_carlo_simulator}{Monte\+Carlo\+Simulator}}
+\begin{DoxyCompactList}\small\item\em Generates spot-\/price paths under Geometric Brownian Motion (GBM). \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_chivet_1_1_lookback_option}{Lookback\+Option}}
+\begin{DoxyCompactList}\small\item\em Represents a floating-\/strike lookback option. \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{struct_chivet_1_1_price_and_delta}{Price\+And\+Delta}}
+\begin{DoxyCompactList}\small\item\em Lightweight result holding price and delta for a single spot value. \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{struct_chivet_1_1_pricing_result}{Pricing\+Result}}
+\begin{DoxyCompactList}\small\item\em Full set of Monte Carlo pricing results including all first-\/order Greeks and their standard errors. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_chivet_1_1_pricer_lookback_option}{Pricer\+Lookback\+Option}}
+\begin{DoxyCompactList}\small\item\em Prices a floating-\/strike lookback option via Monte Carlo and computes Greeks using central finite differences with common random numbers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \doxymbox{\hyperlink{namespace_chivet_a3b2090f5176dce254e4ab67a0a803837}{Option\+Type}} \{ \doxymbox{\hyperlink{namespace_chivet_a3b2090f5176dce254e4ab67a0a803837ac3755e61202abd74da5885d2e9c9160e}{Call}}
+, \doxymbox{\hyperlink{namespace_chivet_a3b2090f5176dce254e4ab67a0a803837ad0bf1810982e9728fcf3ac444a015373}{Put}}
+ \}
+\begin{DoxyCompactList}\small\item\em Distinguishes between Call and Put options. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static double \doxymbox{\hyperlink{namespace_chivet_af71b3e37f7b7e723fb187ecce4bfaf1c}{compute\+Std\+Error}} (const std::\+vector$<$ double $>$ \&values)
+\begin{DoxyCompactList}\small\item\em Compute the standard error of the mean from a sample of values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-enum-members}
+\Hypertarget{namespace_chivet_doc-enum-members}
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{namespace_chivet_a3b2090f5176dce254e4ab67a0a803837}\index{Chivet@{Chivet}!OptionType@{OptionType}}
+\index{OptionType@{OptionType}!Chivet@{Chivet}}
+\doxysubsubsection{\texorpdfstring{OptionType}{OptionType}}
+{\footnotesize\ttfamily \label{namespace_chivet_a3b2090f5176dce254e4ab67a0a803837} 
+enum class \doxymbox{\hyperlink{namespace_chivet_a3b2090f5176dce254e4ab67a0a803837}{Chivet::\+\+Option\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Distinguishes between Call and Put options. 
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Call@{Call}!Chivet@{Chivet}}
+\index{Chivet@{Chivet}!Call@{Call}}
+}\Hypertarget{namespace_chivet_a3b2090f5176dce254e4ab67a0a803837ac3755e61202abd74da5885d2e9c9160e}\label{namespace_chivet_a3b2090f5176dce254e4ab67a0a803837ac3755e61202abd74da5885d2e9c9160e} 
+Call&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Put@{Put}!Chivet@{Chivet}}
+\index{Chivet@{Chivet}!Put@{Put}}
+}\Hypertarget{namespace_chivet_a3b2090f5176dce254e4ab67a0a803837ad0bf1810982e9728fcf3ac444a015373}\label{namespace_chivet_a3b2090f5176dce254e4ab67a0a803837ad0bf1810982e9728fcf3ac444a015373} 
+Put&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\label{doc-func-members}
+\Hypertarget{namespace_chivet_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{namespace_chivet_af71b3e37f7b7e723fb187ecce4bfaf1c}\index{Chivet@{Chivet}!computeStdError@{computeStdError}}
+\index{computeStdError@{computeStdError}!Chivet@{Chivet}}
+\doxysubsubsection{\texorpdfstring{computeStdError()}{computeStdError()}}
+{\footnotesize\ttfamily \label{namespace_chivet_af71b3e37f7b7e723fb187ecce4bfaf1c} 
+double Chivet::\+compute\+Std\+Error (\begin{DoxyParamCaption}\item[{const std::\+vector$<$ double $>$ \&}]{values}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Compute the standard error of the mean from a sample of values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em values} & Vector of per-\/simulation realisations. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Standard error = $\sqrt{\hat\sigma^2 / N}$. 
+\end{DoxyReturn}

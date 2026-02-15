@@ -1,0 +1,28 @@
+var searchData=
+[
+  ['c_0',['Unified Lookback Options Pricing Library (C++)',['../index.html',1,'']]],
+  ['call_1',['Call',['../namespace_chivet.html#a3b2090f5176dce254e4ab67a0a803837ac3755e61202abd74da5885d2e9c9160e',1,'Chivet::Call'],['../namespace_barnicha.html#a6e8767d591b9a3eb31aab69bd44c0ff1ac3755e61202abd74da5885d2e9c9160e',1,'Barnicha::Call']]],
+  ['carlo_2',['Engine A — Barnicha (Exact One-Step Monte Carlo)',['../index.html#autotoc_md5',1,'']]],
+  ['carlo_20bgk_3',['Engine B — Chivet (Time-Stepping Monte Carlo + BGK)',['../index.html#autotoc_md15',1,'']]],
+  ['carlo_20uncertainty_4',['Monte Carlo uncertainty',['../index.html#autotoc_md24',1,'']]],
+  ['carlo_20uncertainty_20reported_20outputs_5',['Monte Carlo uncertainty (reported outputs)',['../index.html#autotoc_md14',1,'']]],
+  ['chivet_6',['Chivet',['../namespace_chivet.html',1,'']]],
+  ['chivet_20time_20stepping_20monte_20carlo_20bgk_7',['Engine B — Chivet (Time-Stepping Monte Carlo + BGK)',['../index.html#autotoc_md15',1,'']]],
+  ['chivet_3a_3arandom_8',['Random',['../namespace_chivet_1_1_random.html',1,'Chivet']]],
+  ['ci95_5fhigh_9',['ci95_high',['../struct_barnicha_1_1_estimate_stats.html#a97462afd1d644a76bcf86ac49c8bf4de',1,'Barnicha::EstimateStats']]],
+  ['ci95_5flow_10',['ci95_low',['../struct_barnicha_1_1_estimate_stats.html#ae44bb42d8f6b1ca7c2fa0d81b43b4f65',1,'Barnicha::EstimateStats']]],
+  ['common_20to_20both_20engines_11',['Greeks (common to both engines)',['../index.html#autotoc_md22',1,'']]],
+  ['compute_12',['compute',['../class_chivet_1_1_pricer_lookback_option.html#af3cee0d4b0ebaa643c418cafa8b54193',1,'Chivet::PricerLookbackOption::compute()'],['../class_barnicha_1_1_bump_and_revalue_greeks.html#a01ba730c5c330d3271f7517d22b93510',1,'Barnicha::BumpAndRevalueGreeks::compute()'],['../class_barnicha_1_1_greeks_calculator.html#a7585896102b0c5a5265970105ccdc210',1,'Barnicha::GreeksCalculator::compute()']]],
+  ['compute_5fdelta_5f_13',['compute_delta_',['../class_barnicha_1_1_bump_and_revalue_greeks.html#aa988bc14f6b57949ea6ee2a4de254baa',1,'Barnicha::BumpAndRevalueGreeks']]],
+  ['compute_5fgamma_5f_14',['compute_gamma_',['../class_barnicha_1_1_bump_and_revalue_greeks.html#a6d56c69c7133e1775f9848b7edefff2e',1,'Barnicha::BumpAndRevalueGreeks']]],
+  ['compute_5fprice_5f_15',['compute_price_',['../class_barnicha_1_1_bump_and_revalue_greeks.html#a3b1290043762c6142069390cf8102f40',1,'Barnicha::BumpAndRevalueGreeks']]],
+  ['compute_5frho_5f_16',['compute_rho_',['../class_barnicha_1_1_bump_and_revalue_greeks.html#a3535d66bb27138e029fecfa1b8c66f68',1,'Barnicha::BumpAndRevalueGreeks']]],
+  ['compute_5ftheta_5f_17',['compute_theta_',['../class_barnicha_1_1_bump_and_revalue_greeks.html#af9c50b56180a2ff0ec9758414fbbb60e',1,'Barnicha::BumpAndRevalueGreeks']]],
+  ['compute_5fvega_5f_18',['compute_vega_',['../class_barnicha_1_1_bump_and_revalue_greeks.html#ab4f2360d9226b590c0fe8c40e6162102',1,'Barnicha::BumpAndRevalueGreeks']]],
+  ['computerawprice_19',['computeRawPrice',['../class_chivet_1_1_pricer_lookback_option.html#ac30ce3d66728d7090f4f64240d8d6201',1,'Chivet::PricerLookbackOption']]],
+  ['computestderror_20',['computeStdError',['../namespace_chivet.html#af71b3e37f7b7e723fb187ecce4bfaf1c',1,'Chivet']]],
+  ['contract_20specification_21',['Contract Specification',['../index.html#autotoc_md3',1,'']]],
+  ['core_20idea_20no_20discretization_20bias_22',['Core idea (no discretization bias)',['../index.html#autotoc_md6',1,'']]],
+  ['core_20idea_20path_20simulation_23',['Core idea (path simulation)',['../index.html#autotoc_md16',1,'']]],
+  ['correction_20optional_20used_20for_20pricing_24',['BGK correction (optional, used for pricing)',['../index.html#autotoc_md20',1,'']]]
+];

@@ -1,0 +1,48 @@
+\doxysection{Barnicha/\+include/\+lookback/\+lookback\+\_\+dll.h File Reference}
+\hypertarget{lookback__dll_8h}{}\label{lookback__dll_8h}\index{Barnicha/include/lookback/lookback\_dll.h@{Barnicha/include/lookback/lookback\_dll.h}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{lookback__dll_8h_a2f9d43016b5717063dcb156fc4fd48e4}{price\+\_\+lookback\+\_\+cond}} (double ttm, int option\+Type, double spot, double rate, double vol, long paths, long seed, double \texorpdfstring{$\ast$}{*}out\+\_\+values, int \texorpdfstring{$\ast$}{*}out\+\_\+size)
+\begin{DoxyCompactList}\small\item\em Prices a lookback option using the conditional expectation method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{lookback__dll_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{lookback__dll_8h_a2f9d43016b5717063dcb156fc4fd48e4}\index{lookback\_dll.h@{lookback\_dll.h}!price\_lookback\_cond@{price\_lookback\_cond}}
+\index{price\_lookback\_cond@{price\_lookback\_cond}!lookback\_dll.h@{lookback\_dll.h}}
+\doxysubsubsection{\texorpdfstring{price\_lookback\_cond()}{price\_lookback\_cond()}}
+{\footnotesize\ttfamily \label{lookback__dll_8h_a2f9d43016b5717063dcb156fc4fd48e4} 
+int price\+\_\+lookback\+\_\+cond (\begin{DoxyParamCaption}\item[{double}]{ttm}{, }\item[{int}]{option\+Type}{, }\item[{double}]{spot}{, }\item[{double}]{rate}{, }\item[{double}]{vol}{, }\item[{long}]{paths}{, }\item[{long}]{seed}{, }\item[{double \texorpdfstring{$\ast$}{*}}]{out\+\_\+values}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{out\+\_\+size}{}\end{DoxyParamCaption})}
+
+
+
+Prices a lookback option using the conditional expectation method. 
+
+Uses Monte Carlo simulation of the terminal asset price and applies the conditional distribution of the maximum/\+minimum to compute the payoff. Results are written into the output buffer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ttm} & Time to maturity (years). \\
+\hline
+{\em option\+Type} & Option type (0 = Call, 1 = Put). \\
+\hline
+{\em spot} & Current spot price. \\
+\hline
+{\em rate} & Risk-\/free rate. \\
+\hline
+{\em vol} & Volatility. \\
+\hline
+{\em paths} & Number of Monte Carlo paths. \\
+\hline
+{\em seed} & RNG seed. \\
+\hline
+{\em out\+\_\+values} & Output buffer for results. \\
+\hline
+{\em out\+\_\+size} & Number of values written.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, non-\/zero on error. 
+\end{DoxyReturn}

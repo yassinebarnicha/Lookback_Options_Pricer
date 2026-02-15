@@ -1,0 +1,94 @@
+\doxysection{Barnicha::\+One\+Step\+Bridge\+Sampler Class Reference}
+\hypertarget{class_barnicha_1_1_one_step_bridge_sampler}{}\label{class_barnicha_1_1_one_step_bridge_sampler}\index{Barnicha::OneStepBridgeSampler@{Barnicha::OneStepBridgeSampler}}
+
+
+Generates and stores samples once (CRN across bumps).  
+
+
+
+
+{\ttfamily \+\#include $<$one\+\_\+step\+\_\+bridge\+\_\+sampler.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_barnicha_1_1_one_step_bridge_sampler_a0a779290fea0cebc99ff3def71a30ba7}{One\+Step\+Bridge\+Sampler}} (unsigned int seed=42)
+\item 
+void \doxymbox{\hyperlink{class_barnicha_1_1_one_step_bridge_sampler_a7cf48550a4626f5e68755ef292437217}{generate}} (std::\+size\+\_\+t n\+\_\+samples)
+\begin{DoxyCompactList}\small\item\em Generate n\+\_\+samples and store them internally. \end{DoxyCompactList}\item 
+const std::\+vector$<$ \doxymbox{\hyperlink{struct_barnicha_1_1_one_step_sample}{One\+Step\+Sample}} $>$ \& \doxymbox{\hyperlink{class_barnicha_1_1_one_step_bridge_sampler_ae89c65190435ac34cd451f5578c02a4a}{samples}} () const
+\begin{DoxyCompactList}\small\item\em Access stored samples (read-\/only). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_barnicha_1_1_rng}{Rng}} \doxymbox{\hyperlink{class_barnicha_1_1_one_step_bridge_sampler_a25328bfd88b062189ce2405c18773ff7}{rng\+\_\+}}
+\item 
+std::\+vector$<$ \doxymbox{\hyperlink{struct_barnicha_1_1_one_step_sample}{One\+Step\+Sample}} $>$ \doxymbox{\hyperlink{class_barnicha_1_1_one_step_bridge_sampler_aea7d724f1ced711949699bd054c2113b}{samples\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Generates and stores samples once (CRN across bumps). 
+
+\label{doc-constructors}
+\Hypertarget{class_barnicha_1_1_one_step_bridge_sampler_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_barnicha_1_1_one_step_bridge_sampler_a0a779290fea0cebc99ff3def71a30ba7}\index{Barnicha::OneStepBridgeSampler@{Barnicha::OneStepBridgeSampler}!OneStepBridgeSampler@{OneStepBridgeSampler}}
+\index{OneStepBridgeSampler@{OneStepBridgeSampler}!Barnicha::OneStepBridgeSampler@{Barnicha::OneStepBridgeSampler}}
+\doxysubsubsection{\texorpdfstring{OneStepBridgeSampler()}{OneStepBridgeSampler()}}
+{\footnotesize\ttfamily \label{class_barnicha_1_1_one_step_bridge_sampler_a0a779290fea0cebc99ff3def71a30ba7} 
+Barnicha::\+\+One\+Step\+Bridge\+Sampler::\+\+One\+Step\+Bridge\+Sampler (\begin{DoxyParamCaption}\item[{unsigned int}]{seed}{ = {\ttfamily 42}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em seed} & RNG seed \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_barnicha_1_1_one_step_bridge_sampler_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_barnicha_1_1_one_step_bridge_sampler_a7cf48550a4626f5e68755ef292437217}\index{Barnicha::OneStepBridgeSampler@{Barnicha::OneStepBridgeSampler}!generate@{generate}}
+\index{generate@{generate}!Barnicha::OneStepBridgeSampler@{Barnicha::OneStepBridgeSampler}}
+\doxysubsubsection{\texorpdfstring{generate()}{generate()}}
+{\footnotesize\ttfamily \label{class_barnicha_1_1_one_step_bridge_sampler_a7cf48550a4626f5e68755ef292437217} 
+void Barnicha::\+\+One\+Step\+Bridge\+Sampler::\+generate (\begin{DoxyParamCaption}\item[{std::\+size\+\_\+t}]{n\+\_\+samples}{}\end{DoxyParamCaption})}
+
+
+
+Generate n\+\_\+samples and store them internally. 
+
+\Hypertarget{class_barnicha_1_1_one_step_bridge_sampler_ae89c65190435ac34cd451f5578c02a4a}\index{Barnicha::OneStepBridgeSampler@{Barnicha::OneStepBridgeSampler}!samples@{samples}}
+\index{samples@{samples}!Barnicha::OneStepBridgeSampler@{Barnicha::OneStepBridgeSampler}}
+\doxysubsubsection{\texorpdfstring{samples()}{samples()}}
+{\footnotesize\ttfamily \label{class_barnicha_1_1_one_step_bridge_sampler_ae89c65190435ac34cd451f5578c02a4a} 
+const std::\+vector$<$ \doxymbox{\hyperlink{struct_barnicha_1_1_one_step_sample}{One\+Step\+Sample}} $>$ \& Barnicha::\+\+One\+Step\+Bridge\+Sampler::\+samples (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Access stored samples (read-\/only). 
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_barnicha_1_1_one_step_bridge_sampler_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_barnicha_1_1_one_step_bridge_sampler_a25328bfd88b062189ce2405c18773ff7}\index{Barnicha::OneStepBridgeSampler@{Barnicha::OneStepBridgeSampler}!rng\_@{rng\_}}
+\index{rng\_@{rng\_}!Barnicha::OneStepBridgeSampler@{Barnicha::OneStepBridgeSampler}}
+\doxysubsubsection{\texorpdfstring{rng\_}{rng\_}}
+{\footnotesize\ttfamily \label{class_barnicha_1_1_one_step_bridge_sampler_a25328bfd88b062189ce2405c18773ff7} 
+\doxymbox{\hyperlink{class_barnicha_1_1_rng}{Rng}} Barnicha::\+\+One\+Step\+Bridge\+Sampler::\+rng\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_barnicha_1_1_one_step_bridge_sampler_aea7d724f1ced711949699bd054c2113b}\index{Barnicha::OneStepBridgeSampler@{Barnicha::OneStepBridgeSampler}!samples\_@{samples\_}}
+\index{samples\_@{samples\_}!Barnicha::OneStepBridgeSampler@{Barnicha::OneStepBridgeSampler}}
+\doxysubsubsection{\texorpdfstring{samples\_}{samples\_}}
+{\footnotesize\ttfamily \label{class_barnicha_1_1_one_step_bridge_sampler_aea7d724f1ced711949699bd054c2113b} 
+std::\+vector$<$\doxymbox{\hyperlink{struct_barnicha_1_1_one_step_sample}{One\+Step\+Sample}}$>$ Barnicha::\+\+One\+Step\+Bridge\+Sampler::\+samples\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+Barnicha/\+include/\+lookback/\+\doxymbox{\hyperlink{one__step__bridge__sampler_8h}{one\+\_\+step\+\_\+bridge\+\_\+sampler.\+h}}\item 
+Barnicha/\+src/\+\doxymbox{\hyperlink{one__step__bridge__sampler_8cpp}{one\+\_\+step\+\_\+bridge\+\_\+sampler.\+cpp}}\end{DoxyCompactItemize}

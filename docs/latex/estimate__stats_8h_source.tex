@@ -1,0 +1,23 @@
+\doxysection{estimate\+\_\+stats.\+h}
+\hypertarget{estimate__stats_8h_source}{}\label{estimate__stats_8h_source}\index{Barnicha/include/lookback/estimate\_stats.h@{Barnicha/include/lookback/estimate\_stats.h}}
+\doxymbox{\hyperlink{estimate__stats_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <cmath>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_barnicha}{Barnicha}}\ \{}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_barnicha_1_1_estimate_stats}{EstimateStats}}\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{struct_barnicha_1_1_estimate_stats_a6393b9d992250523cb369071eaa08671}{estimate}}\ =\ 0.0;}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{struct_barnicha_1_1_estimate_stats_a6fd3bb2cf326bb5b8aef51099273182a}{std\_dev}}\ \ =\ 0.0;}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{struct_barnicha_1_1_estimate_stats_ae44bb42d8f6b1ca7c2fa0d81b43b4f65}{ci95\_low}}\ =\ 0.0;}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{struct_barnicha_1_1_estimate_stats_a97462afd1d644a76bcf86ac49c8bf4de}{ci95\_high}}=\ 0.0;}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{static}\ \doxymbox{\hyperlink{struct_barnicha_1_1_estimate_stats}{EstimateStats}}\ \doxymbox{\hyperlink{struct_barnicha_1_1_estimate_stats_a60de3de439650bdefc7196d4f8a58654}{deterministic}}(\textcolor{keywordtype}{double}\ x)\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{struct_barnicha_1_1_estimate_stats}{EstimateStats}}\{x,\ 0.0,\ x,\ x\};}
+\DoxyCodeLine{00026\ \ \ \ \ \}}
+\DoxyCodeLine{00027\ \};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \}\ \textcolor{comment}{//\ namespace\ lookback}}
+
+\end{DoxyCode}

@@ -1,0 +1,291 @@
+\doxysection{Chivet::\+Lookback\+Analytic\+Solution Class Reference}
+\hypertarget{class_chivet_1_1_lookback_analytic_solution}{}\label{class_chivet_1_1_lookback_analytic_solution}\index{Chivet::LookbackAnalyticSolution@{Chivet::LookbackAnalyticSolution}}
+
+
+Provides closed-\/form (analytic) prices and Greeks for floating-\/strike lookback options under the Black-\/\+Scholes framework.  
+
+
+
+
+{\ttfamily \+\#include $<$Analytic\+Lookback.\+hpp$>$}
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static double \doxymbox{\hyperlink{class_chivet_1_1_lookback_analytic_solution_a6b9186c0f33271b099b69498381aa329}{price}} (\doxymbox{\hyperlink{namespace_chivet_a3b2090f5176dce254e4ab67a0a803837}{Option\+Type}} option, double S0, double T, double sigma, double r)
+\begin{DoxyCompactList}\small\item\em Compute the analytic price of a floating-\/strike lookback option. \end{DoxyCompactList}\item 
+static double \doxymbox{\hyperlink{class_chivet_1_1_lookback_analytic_solution_a739f11af2e83aaa22cc34c0fe2d8cbe6}{delta}} (\doxymbox{\hyperlink{namespace_chivet_a3b2090f5176dce254e4ab67a0a803837}{Option\+Type}} option, double S0, double T, double sigma, double r)
+\begin{DoxyCompactList}\small\item\em Compute Delta ( $\partial V / \partial S$) via finite difference. \end{DoxyCompactList}\item 
+static double \doxymbox{\hyperlink{class_chivet_1_1_lookback_analytic_solution_a9a4c93e4c438933d1fa90260805d8a16}{gamma}} (\doxymbox{\hyperlink{namespace_chivet_a3b2090f5176dce254e4ab67a0a803837}{Option\+Type}} option, double S0, double T, double sigma, double r)
+\begin{DoxyCompactList}\small\item\em Compute Gamma ( $\partial^2 V / \partial S^2$) via finite difference. \end{DoxyCompactList}\item 
+static double \doxymbox{\hyperlink{class_chivet_1_1_lookback_analytic_solution_aeea77942e2b18ae7b4f890f1ed4b020e}{vega}} (\doxymbox{\hyperlink{namespace_chivet_a3b2090f5176dce254e4ab67a0a803837}{Option\+Type}} option, double S0, double T, double sigma, double r)
+\begin{DoxyCompactList}\small\item\em Compute Vega ( $\partial V / \partial \sigma$) via finite difference. \end{DoxyCompactList}\item 
+static double \doxymbox{\hyperlink{class_chivet_1_1_lookback_analytic_solution_ae10a54efe3afde08fecf2a70cd0a823e}{theta}} (\doxymbox{\hyperlink{namespace_chivet_a3b2090f5176dce254e4ab67a0a803837}{Option\+Type}} option, double S0, double T, double sigma, double r)
+\begin{DoxyCompactList}\small\item\em Compute Theta ( $\partial V / \partial T$) via finite difference. \end{DoxyCompactList}\item 
+static double \doxymbox{\hyperlink{class_chivet_1_1_lookback_analytic_solution_a14469c952d98376debcf41175637201f}{rho}} (\doxymbox{\hyperlink{namespace_chivet_a3b2090f5176dce254e4ab67a0a803837}{Option\+Type}} option, double S0, double T, double sigma, double r)
+\begin{DoxyCompactList}\small\item\em Compute Rho ( $\partial V / \partial r$) via finite difference. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static double \doxymbox{\hyperlink{class_chivet_1_1_lookback_analytic_solution_a9e320b55f8dabac6a8c9b813ad533aff}{delta\+\_\+plus}} (double tau, double s, double r, double sigma)
+\begin{DoxyCompactList}\small\item\em Compute  $d_+ = \frac{\ln s + (r +
+\frac{1}{2}\sigma^2)\tau}{\sigma\sqrt{\tau}}$. \end{DoxyCompactList}\item 
+static double \doxymbox{\hyperlink{class_chivet_1_1_lookback_analytic_solution_ad8370fdb82083f4fa979aaca33e9c02e}{delta\+\_\+minus}} (double tau, double s, double r, double sigma)
+\begin{DoxyCompactList}\small\item\em Compute  $d_- = \frac{\ln s + (r -
+\frac{1}{2}\sigma^2)\tau}{\sigma\sqrt{\tau}}$. \end{DoxyCompactList}\item 
+static double \doxymbox{\hyperlink{class_chivet_1_1_lookback_analytic_solution_a04b82edeee4dfec0dca8eabb17d96fcf}{normal\+CDF}} (double x)
+\begin{DoxyCompactList}\small\item\em Standard normal cumulative distribution function $\Phi(x)$. \end{DoxyCompactList}\item 
+static double \doxymbox{\hyperlink{class_chivet_1_1_lookback_analytic_solution_ac65ff430a94c8d2afe4bfdcf53726141}{normal\+PDF}} (double x)
+\begin{DoxyCompactList}\small\item\em Standard normal probability density function $\phi(x)$. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Provides closed-\/form (analytic) prices and Greeks for floating-\/strike lookback options under the Black-\/\+Scholes framework. 
+
+Greeks are computed via central finite differences on the analytic price formula. 
+
+\label{doc-func-members}
+\Hypertarget{class_chivet_1_1_lookback_analytic_solution_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_chivet_1_1_lookback_analytic_solution_a739f11af2e83aaa22cc34c0fe2d8cbe6}\index{Chivet::LookbackAnalyticSolution@{Chivet::LookbackAnalyticSolution}!delta@{delta}}
+\index{delta@{delta}!Chivet::LookbackAnalyticSolution@{Chivet::LookbackAnalyticSolution}}
+\doxysubsubsection{\texorpdfstring{delta()}{delta()}}
+{\footnotesize\ttfamily \label{class_chivet_1_1_lookback_analytic_solution_a739f11af2e83aaa22cc34c0fe2d8cbe6} 
+double Chivet::\+\+Lookback\+Analytic\+Solution::\+delta (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{namespace_chivet_a3b2090f5176dce254e4ab67a0a803837}{Option\+Type}}}]{option}{, }\item[{double}]{S0}{, }\item[{double}]{T}{, }\item[{double}]{sigma}{, }\item[{double}]{r}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Compute Delta ( $\partial V / \partial S$) via finite difference. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em option} & Call or Put. \\
+\hline
+{\em S0} & Current spot price. \\
+\hline
+{\em T} & Time to maturity in years. \\
+\hline
+{\em sigma} & Volatility. \\
+\hline
+{\em r} & Risk-\/free interest rate. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The option price.    
+\end{DoxyReturn}
+\Hypertarget{class_chivet_1_1_lookback_analytic_solution_ad8370fdb82083f4fa979aaca33e9c02e}\index{Chivet::LookbackAnalyticSolution@{Chivet::LookbackAnalyticSolution}!delta\_minus@{delta\_minus}}
+\index{delta\_minus@{delta\_minus}!Chivet::LookbackAnalyticSolution@{Chivet::LookbackAnalyticSolution}}
+\doxysubsubsection{\texorpdfstring{delta\_minus()}{delta\_minus()}}
+{\footnotesize\ttfamily \label{class_chivet_1_1_lookback_analytic_solution_ad8370fdb82083f4fa979aaca33e9c02e} 
+double Chivet::\+\+Lookback\+Analytic\+Solution::\+delta\+\_\+minus (\begin{DoxyParamCaption}\item[{double}]{tau}{, }\item[{double}]{s}{, }\item[{double}]{r}{, }\item[{double}]{sigma}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Compute  $d_- = \frac{\ln s + (r -
+\frac{1}{2}\sigma^2)\tau}{\sigma\sqrt{\tau}}$. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tau} & Time to maturity. \\
+\hline
+{\em s} & Spot ratio. \\
+\hline
+{\em r} & Risk-\/free rate. \\
+\hline
+{\em sigma} & Volatility. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_chivet_1_1_lookback_analytic_solution_a9e320b55f8dabac6a8c9b813ad533aff}\index{Chivet::LookbackAnalyticSolution@{Chivet::LookbackAnalyticSolution}!delta\_plus@{delta\_plus}}
+\index{delta\_plus@{delta\_plus}!Chivet::LookbackAnalyticSolution@{Chivet::LookbackAnalyticSolution}}
+\doxysubsubsection{\texorpdfstring{delta\_plus()}{delta\_plus()}}
+{\footnotesize\ttfamily \label{class_chivet_1_1_lookback_analytic_solution_a9e320b55f8dabac6a8c9b813ad533aff} 
+double Chivet::\+\+Lookback\+Analytic\+Solution::\+delta\+\_\+plus (\begin{DoxyParamCaption}\item[{double}]{tau}{, }\item[{double}]{s}{, }\item[{double}]{r}{, }\item[{double}]{sigma}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Compute  $d_+ = \frac{\ln s + (r +
+\frac{1}{2}\sigma^2)\tau}{\sigma\sqrt{\tau}}$. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tau} & Time to maturity. \\
+\hline
+{\em s} & Spot ratio. \\
+\hline
+{\em r} & Risk-\/free rate. \\
+\hline
+{\em sigma} & Volatility. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_chivet_1_1_lookback_analytic_solution_a9a4c93e4c438933d1fa90260805d8a16}\index{Chivet::LookbackAnalyticSolution@{Chivet::LookbackAnalyticSolution}!gamma@{gamma}}
+\index{gamma@{gamma}!Chivet::LookbackAnalyticSolution@{Chivet::LookbackAnalyticSolution}}
+\doxysubsubsection{\texorpdfstring{gamma()}{gamma()}}
+{\footnotesize\ttfamily \label{class_chivet_1_1_lookback_analytic_solution_a9a4c93e4c438933d1fa90260805d8a16} 
+double Chivet::\+\+Lookback\+Analytic\+Solution::\+gamma (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{namespace_chivet_a3b2090f5176dce254e4ab67a0a803837}{Option\+Type}}}]{option}{, }\item[{double}]{S0}{, }\item[{double}]{T}{, }\item[{double}]{sigma}{, }\item[{double}]{r}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Compute Gamma ( $\partial^2 V / \partial S^2$) via finite difference. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em option} & Call or Put. \\
+\hline
+{\em S0} & Current spot price. \\
+\hline
+{\em T} & Time to maturity in years. \\
+\hline
+{\em sigma} & Volatility. \\
+\hline
+{\em r} & Risk-\/free interest rate. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The option price.    
+\end{DoxyReturn}
+\Hypertarget{class_chivet_1_1_lookback_analytic_solution_a04b82edeee4dfec0dca8eabb17d96fcf}\index{Chivet::LookbackAnalyticSolution@{Chivet::LookbackAnalyticSolution}!normalCDF@{normalCDF}}
+\index{normalCDF@{normalCDF}!Chivet::LookbackAnalyticSolution@{Chivet::LookbackAnalyticSolution}}
+\doxysubsubsection{\texorpdfstring{normalCDF()}{normalCDF()}}
+{\footnotesize\ttfamily \label{class_chivet_1_1_lookback_analytic_solution_a04b82edeee4dfec0dca8eabb17d96fcf} 
+double Chivet::\+\+Lookback\+Analytic\+Solution::\+normal\+CDF (\begin{DoxyParamCaption}\item[{double}]{x}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Standard normal cumulative distribution function $\Phi(x)$. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Input value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+$P(Z \le x)$ for $Z \sim \mathcal{N}(0,1)$. 
+\end{DoxyReturn}
+\Hypertarget{class_chivet_1_1_lookback_analytic_solution_ac65ff430a94c8d2afe4bfdcf53726141}\index{Chivet::LookbackAnalyticSolution@{Chivet::LookbackAnalyticSolution}!normalPDF@{normalPDF}}
+\index{normalPDF@{normalPDF}!Chivet::LookbackAnalyticSolution@{Chivet::LookbackAnalyticSolution}}
+\doxysubsubsection{\texorpdfstring{normalPDF()}{normalPDF()}}
+{\footnotesize\ttfamily \label{class_chivet_1_1_lookback_analytic_solution_ac65ff430a94c8d2afe4bfdcf53726141} 
+double Chivet::\+\+Lookback\+Analytic\+Solution::\+normal\+PDF (\begin{DoxyParamCaption}\item[{double}]{x}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Standard normal probability density function $\phi(x)$. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Input value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+$\frac{1}{\sqrt{2\pi}} e^{-x^2/2}$. 
+\end{DoxyReturn}
+\Hypertarget{class_chivet_1_1_lookback_analytic_solution_a6b9186c0f33271b099b69498381aa329}\index{Chivet::LookbackAnalyticSolution@{Chivet::LookbackAnalyticSolution}!price@{price}}
+\index{price@{price}!Chivet::LookbackAnalyticSolution@{Chivet::LookbackAnalyticSolution}}
+\doxysubsubsection{\texorpdfstring{price()}{price()}}
+{\footnotesize\ttfamily \label{class_chivet_1_1_lookback_analytic_solution_a6b9186c0f33271b099b69498381aa329} 
+double Chivet::\+\+Lookback\+Analytic\+Solution::\+price (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{namespace_chivet_a3b2090f5176dce254e4ab67a0a803837}{Option\+Type}}}]{option}{, }\item[{double}]{S0}{, }\item[{double}]{T}{, }\item[{double}]{sigma}{, }\item[{double}]{r}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Compute the analytic price of a floating-\/strike lookback option. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em option} & Call or Put. \\
+\hline
+{\em S0} & Current spot price. \\
+\hline
+{\em T} & Time to maturity in years. \\
+\hline
+{\em sigma} & Volatility. \\
+\hline
+{\em r} & Risk-\/free interest rate. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The option price. 
+\end{DoxyReturn}
+\Hypertarget{class_chivet_1_1_lookback_analytic_solution_a14469c952d98376debcf41175637201f}\index{Chivet::LookbackAnalyticSolution@{Chivet::LookbackAnalyticSolution}!rho@{rho}}
+\index{rho@{rho}!Chivet::LookbackAnalyticSolution@{Chivet::LookbackAnalyticSolution}}
+\doxysubsubsection{\texorpdfstring{rho()}{rho()}}
+{\footnotesize\ttfamily \label{class_chivet_1_1_lookback_analytic_solution_a14469c952d98376debcf41175637201f} 
+double Chivet::\+\+Lookback\+Analytic\+Solution::\+rho (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{namespace_chivet_a3b2090f5176dce254e4ab67a0a803837}{Option\+Type}}}]{option}{, }\item[{double}]{S0}{, }\item[{double}]{T}{, }\item[{double}]{sigma}{, }\item[{double}]{r}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Compute Rho ( $\partial V / \partial r$) via finite difference. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em option} & Call or Put. \\
+\hline
+{\em S0} & Current spot price. \\
+\hline
+{\em T} & Time to maturity in years. \\
+\hline
+{\em sigma} & Volatility. \\
+\hline
+{\em r} & Risk-\/free interest rate. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The option price.    
+\end{DoxyReturn}
+\Hypertarget{class_chivet_1_1_lookback_analytic_solution_ae10a54efe3afde08fecf2a70cd0a823e}\index{Chivet::LookbackAnalyticSolution@{Chivet::LookbackAnalyticSolution}!theta@{theta}}
+\index{theta@{theta}!Chivet::LookbackAnalyticSolution@{Chivet::LookbackAnalyticSolution}}
+\doxysubsubsection{\texorpdfstring{theta()}{theta()}}
+{\footnotesize\ttfamily \label{class_chivet_1_1_lookback_analytic_solution_ae10a54efe3afde08fecf2a70cd0a823e} 
+double Chivet::\+\+Lookback\+Analytic\+Solution::\+theta (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{namespace_chivet_a3b2090f5176dce254e4ab67a0a803837}{Option\+Type}}}]{option}{, }\item[{double}]{S0}{, }\item[{double}]{T}{, }\item[{double}]{sigma}{, }\item[{double}]{r}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Compute Theta ( $\partial V / \partial T$) via finite difference. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em option} & Call or Put. \\
+\hline
+{\em S0} & Current spot price. \\
+\hline
+{\em T} & Time to maturity in years. \\
+\hline
+{\em sigma} & Volatility. \\
+\hline
+{\em r} & Risk-\/free interest rate. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The option price.    
+\end{DoxyReturn}
+\Hypertarget{class_chivet_1_1_lookback_analytic_solution_aeea77942e2b18ae7b4f890f1ed4b020e}\index{Chivet::LookbackAnalyticSolution@{Chivet::LookbackAnalyticSolution}!vega@{vega}}
+\index{vega@{vega}!Chivet::LookbackAnalyticSolution@{Chivet::LookbackAnalyticSolution}}
+\doxysubsubsection{\texorpdfstring{vega()}{vega()}}
+{\footnotesize\ttfamily \label{class_chivet_1_1_lookback_analytic_solution_aeea77942e2b18ae7b4f890f1ed4b020e} 
+double Chivet::\+\+Lookback\+Analytic\+Solution::\+vega (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{namespace_chivet_a3b2090f5176dce254e4ab67a0a803837}{Option\+Type}}}]{option}{, }\item[{double}]{S0}{, }\item[{double}]{T}{, }\item[{double}]{sigma}{, }\item[{double}]{r}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Compute Vega ( $\partial V / \partial \sigma$) via finite difference. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em option} & Call or Put. \\
+\hline
+{\em S0} & Current spot price. \\
+\hline
+{\em T} & Time to maturity in years. \\
+\hline
+{\em sigma} & Volatility. \\
+\hline
+{\em r} & Risk-\/free interest rate. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The option price.    
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+Chivet/\+include/\+\doxymbox{\hyperlink{_analytic_lookback_8hpp}{Analytic\+Lookback.\+hpp}}\item 
+Chivet/\+src/\+\doxymbox{\hyperlink{_analytic_lookback_8cpp}{Analytic\+Lookback.\+cpp}}\end{DoxyCompactItemize}

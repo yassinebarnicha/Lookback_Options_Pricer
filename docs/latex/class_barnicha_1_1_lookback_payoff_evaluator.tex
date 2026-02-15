@@ -1,0 +1,94 @@
+\doxysection{Barnicha::\+Lookback\+Payoff\+Evaluator Class Reference}
+\hypertarget{class_barnicha_1_1_lookback_payoff_evaluator}{}\label{class_barnicha_1_1_lookback_payoff_evaluator}\index{Barnicha::LookbackPayoffEvaluator@{Barnicha::LookbackPayoffEvaluator}}
+
+
+Computes one payoff using exact one-\/step sampling (no time grid).  
+
+
+
+
+{\ttfamily \+\#include $<$lookback\+\_\+payoff\+\_\+evaluator.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_barnicha_1_1_lookback_payoff_evaluator_a8c79b797a19ea467dfeaccc5953a37e2}{Lookback\+Payoff\+Evaluator}} (const \doxymbox{\hyperlink{struct_barnicha_1_1_market_data}{Market\+Data}} \&market, const \doxymbox{\hyperlink{class_barnicha_1_1_lookback_option}{Lookback\+Option}} \&option)
+\item 
+double \doxymbox{\hyperlink{class_barnicha_1_1_lookback_payoff_evaluator_adeaf22aae4ebdfb909951de206d60373}{operator()}} (const \doxymbox{\hyperlink{struct_barnicha_1_1_one_step_sample}{One\+Step\+Sample}} \&sample) const
+\begin{DoxyCompactList}\small\item\em Evaluate the payoff for one random sample. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{struct_barnicha_1_1_market_data}{Market\+Data}} \doxymbox{\hyperlink{class_barnicha_1_1_lookback_payoff_evaluator_ab48232c8e5c6ed31e98ed43e18584b35}{market\+\_\+}}
+\item 
+\doxymbox{\hyperlink{class_barnicha_1_1_lookback_option}{Lookback\+Option}} \doxymbox{\hyperlink{class_barnicha_1_1_lookback_payoff_evaluator_af45170bb5d3db7c1821b8cd9137b3417}{option\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Computes one payoff using exact one-\/step sampling (no time grid). 
+
+Let X\+\_\+t = log S\+\_\+t. Under Black–\+Scholes:\+ X\+\_\+T = x0 + (r -\/ 0.\+5 sigma\texorpdfstring{$^\wedge$}{\string^}2) T + sigma sqrt(\+T) z.
+
+Conditional on (X\+\_\+0=x0, X\+\_\+T=x\+\_\+t), the (driftless) Brownian bridge maximum has CDF:\+ P(max X \texorpdfstring{$<$}{<}= m \texorpdfstring{$\vert$}{|} x0, x\+\_\+t) = 1 -\/ exp(-\/2 (m-\/x0)(m-\/x\+\_\+t)/\+(sigma\texorpdfstring{$^\wedge$}{\string^}2 T)), for m \texorpdfstring{$>$}{>}= max(x0, x\+\_\+t).
+
+Inversion yields a quadratic equation in m with two roots:\+
+\begin{DoxyItemize}
+\item the upper root gives the maximum,
+\item the lower root gives the minimum (by symmetry). 
+\end{DoxyItemize}
+
+\label{doc-constructors}
+\Hypertarget{class_barnicha_1_1_lookback_payoff_evaluator_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_barnicha_1_1_lookback_payoff_evaluator_a8c79b797a19ea467dfeaccc5953a37e2}\index{Barnicha::LookbackPayoffEvaluator@{Barnicha::LookbackPayoffEvaluator}!LookbackPayoffEvaluator@{LookbackPayoffEvaluator}}
+\index{LookbackPayoffEvaluator@{LookbackPayoffEvaluator}!Barnicha::LookbackPayoffEvaluator@{Barnicha::LookbackPayoffEvaluator}}
+\doxysubsubsection{\texorpdfstring{LookbackPayoffEvaluator()}{LookbackPayoffEvaluator()}}
+{\footnotesize\ttfamily \label{class_barnicha_1_1_lookback_payoff_evaluator_a8c79b797a19ea467dfeaccc5953a37e2} 
+Barnicha::\+\+Lookback\+Payoff\+Evaluator::\+\+Lookback\+Payoff\+Evaluator (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{struct_barnicha_1_1_market_data}{Market\+Data}} \&}]{market}{, }\item[{const \doxymbox{\hyperlink{class_barnicha_1_1_lookback_option}{Lookback\+Option}} \&}]{option}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em market} & Black–\+Scholes inputs \\
+\hline
+{\em option} & lookback contract \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_barnicha_1_1_lookback_payoff_evaluator_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_barnicha_1_1_lookback_payoff_evaluator_adeaf22aae4ebdfb909951de206d60373}\index{Barnicha::LookbackPayoffEvaluator@{Barnicha::LookbackPayoffEvaluator}!operator()@{operator()}}
+\index{operator()@{operator()}!Barnicha::LookbackPayoffEvaluator@{Barnicha::LookbackPayoffEvaluator}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily \label{class_barnicha_1_1_lookback_payoff_evaluator_adeaf22aae4ebdfb909951de206d60373} 
+double Barnicha::\+\+Lookback\+Payoff\+Evaluator::\+operator() (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{struct_barnicha_1_1_one_step_sample}{One\+Step\+Sample}} \&}]{sample}{}\end{DoxyParamCaption}) const}
+
+
+
+Evaluate the payoff for one random sample. 
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_barnicha_1_1_lookback_payoff_evaluator_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_barnicha_1_1_lookback_payoff_evaluator_ab48232c8e5c6ed31e98ed43e18584b35}\index{Barnicha::LookbackPayoffEvaluator@{Barnicha::LookbackPayoffEvaluator}!market\_@{market\_}}
+\index{market\_@{market\_}!Barnicha::LookbackPayoffEvaluator@{Barnicha::LookbackPayoffEvaluator}}
+\doxysubsubsection{\texorpdfstring{market\_}{market\_}}
+{\footnotesize\ttfamily \label{class_barnicha_1_1_lookback_payoff_evaluator_ab48232c8e5c6ed31e98ed43e18584b35} 
+\doxymbox{\hyperlink{struct_barnicha_1_1_market_data}{Market\+Data}} Barnicha::\+\+Lookback\+Payoff\+Evaluator::\+market\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_barnicha_1_1_lookback_payoff_evaluator_af45170bb5d3db7c1821b8cd9137b3417}\index{Barnicha::LookbackPayoffEvaluator@{Barnicha::LookbackPayoffEvaluator}!option\_@{option\_}}
+\index{option\_@{option\_}!Barnicha::LookbackPayoffEvaluator@{Barnicha::LookbackPayoffEvaluator}}
+\doxysubsubsection{\texorpdfstring{option\_}{option\_}}
+{\footnotesize\ttfamily \label{class_barnicha_1_1_lookback_payoff_evaluator_af45170bb5d3db7c1821b8cd9137b3417} 
+\doxymbox{\hyperlink{class_barnicha_1_1_lookback_option}{Lookback\+Option}} Barnicha::\+\+Lookback\+Payoff\+Evaluator::\+option\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+Barnicha/\+include/\+lookback/\+\doxymbox{\hyperlink{lookback__payoff__evaluator_8h}{lookback\+\_\+payoff\+\_\+evaluator.\+h}}\item 
+Barnicha/\+src/\+\doxymbox{\hyperlink{lookback__payoff__evaluator_8cpp}{lookback\+\_\+payoff\+\_\+evaluator.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,318 @@
+\doxysection{Chivet::\+Monte\+Carlo\+Simulator Class Reference}
+\hypertarget{class_chivet_1_1_monte_carlo_simulator}{}\label{class_chivet_1_1_monte_carlo_simulator}\index{Chivet::MonteCarloSimulator@{Chivet::MonteCarloSimulator}}
+
+
+Generates spot-\/price paths under Geometric Brownian Motion (GBM).  
+
+
+
+
+{\ttfamily \+\#include $<$Monte\+Carlo\+Simulator.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_chivet_1_1_monte_carlo_simulator_aec81998af333bb81f96d34f8d08246ba}{Monte\+Carlo\+Simulator}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_chivet_1_1_monte_carlo_simulator_aec00a0aadf0b3639cc842908b902d7bf}{Monte\+Carlo\+Simulator}} (unsigned long num\+Simulations, unsigned long num\+Time\+Steps, unsigned int seed=0)
+\begin{DoxyCompactList}\small\item\em Parameterised constructor. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_chivet_1_1_monte_carlo_simulator_a77f69db92bace6bf2df0ccf400aae843}{set\+Num\+Simulations}} (unsigned long num\+Simulations)
+\begin{DoxyCompactList}\small\item\em Set the number of simulations. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_chivet_1_1_monte_carlo_simulator_a33e2fe78d0fc4e7df6641166310cf42a}{set\+Num\+Time\+Steps}} (unsigned long num\+Time\+Steps)
+\begin{DoxyCompactList}\small\item\em Set the number of time steps per path. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_chivet_1_1_monte_carlo_simulator_afe1f632e03488fb3a87345c7edc6d8e3}{set\+Random\+Seed}} (unsigned int seed)
+\begin{DoxyCompactList}\small\item\em Re-\/seed the random number generator. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_chivet_1_1_monte_carlo_simulator_a89117c4c23569e50a0855abcf36897dd}{set\+Bgk\+Correction}} (bool enabled)
+\begin{DoxyCompactList}\small\item\em Enable or disable the Broadie-\/\+Glasserman-\/\+Kou continuity correction. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_chivet_1_1_monte_carlo_simulator_a1bcf7a151ca05bca10bb5537a0705798}{get\+Bgk\+Correction}} () const
+\begin{DoxyCompactList}\small\item\em Check whether the BGK correction is enabled. \end{DoxyCompactList}\item 
+unsigned long \doxymbox{\hyperlink{class_chivet_1_1_monte_carlo_simulator_acd0108278b368b982ef7c216d873dd35}{get\+Num\+Simulations}} () const
+\begin{DoxyCompactList}\small\item\em Get the number of simulations. \end{DoxyCompactList}\item 
+unsigned long \doxymbox{\hyperlink{class_chivet_1_1_monte_carlo_simulator_ab99923f4a033b784e4fc6e8f77e52b62}{get\+Num\+Time\+Steps}} () const
+\begin{DoxyCompactList}\small\item\em Get the number of time steps per path. \end{DoxyCompactList}\item 
+unsigned int \doxymbox{\hyperlink{class_chivet_1_1_monte_carlo_simulator_a2c6f1ac8d157d1cfc023a61607e0e5ea}{get\+Random\+Seed}} () const
+\begin{DoxyCompactList}\small\item\em Get a seed value derived from the current clock (snapshot). \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{struct_chivet_1_1_spot_results}{Spot\+Results}} \doxymbox{\hyperlink{class_chivet_1_1_monte_carlo_simulator_a9830b12470aa5308f08fd7b0261f1238}{simulate\+Single\+Path}} (double initial\+Spot, double rate, double volatility, double time\+To\+Maturity) const
+\begin{DoxyCompactList}\small\item\em Simulate a single GBM price path. \end{DoxyCompactList}\item 
+std::\+vector$<$ \doxymbox{\hyperlink{struct_chivet_1_1_spot_results}{Spot\+Results}} $>$ \doxymbox{\hyperlink{class_chivet_1_1_monte_carlo_simulator_a9aa088e990599af10ea011cef52173f5}{simulate\+Paths}} (double initial\+Spot, double rate, double volatility, double time\+To\+Maturity) const
+\begin{DoxyCompactList}\small\item\em Simulate all Monte Carlo paths. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_chivet_1_1_monte_carlo_simulator_a06ac78377d8a8bc93012d4f5644a1dd7}{generate\+Standard\+Normal}} () const
+\begin{DoxyCompactList}\small\item\em Draw a single sample from the standard normal distribution. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned long \doxymbox{\hyperlink{class_chivet_1_1_monte_carlo_simulator_ae524fa673a79e96e28f3b861bab4c218}{num\+Simulations\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Number of Monte Carlo paths. \end{DoxyCompactList}\item 
+unsigned long \doxymbox{\hyperlink{class_chivet_1_1_monte_carlo_simulator_ac03953f3be81f35943987224eb59c3b1}{num\+Time\+Steps\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Number of discrete time steps per path. \end{DoxyCompactList}\item 
+std::\+mt19937 \doxymbox{\hyperlink{class_chivet_1_1_monte_carlo_simulator_a65d357189649ca1fedf631fe9fb540ba}{rng\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Mersenne Twister PRNG. \end{DoxyCompactList}\item 
+std::\+normal\+\_\+distribution$<$ double $>$ \doxymbox{\hyperlink{class_chivet_1_1_monte_carlo_simulator_a11c626d9caab4548934687ea871dc73f}{norm\+Dist\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Standard normal distribution N(0, 1). \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_chivet_1_1_monte_carlo_simulator_a4e16c1a71c054e9b46801d9b6188a57d}{bgk\+Correction\+\_\+}} = false
+\begin{DoxyCompactList}\small\item\em Apply Broadie-\/\+Glasserman-\/\+Kou continuity correction. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr double \doxymbox{\hyperlink{class_chivet_1_1_monte_carlo_simulator_a87f0cc19e236dca5e174ceae2985e62b}{BGK\+\_\+\+BETA1}} = 0.\+5826
+\begin{DoxyCompactList}\small\item\em Broadie-\/\+Glasserman-\/\+Kou constant:\+ $\beta_1 = -\zeta(1/2)/\sqrt{2\pi} \approx 0.5826$. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Generates spot-\/price paths under Geometric Brownian Motion (GBM). 
+
+The underlying dynamics are:\+    \[  S_{t+dt} = S_t \exp\!\bigl[(r - \tfrac{1}{2}\sigma^2)\,dt
+             + \sigma\sqrt{dt}\,Z\bigr], \quad Z \sim \mathcal{N}(0,1)
+\]
+
+Each path tracks the spot at maturity and the running maximum /\+ minimum, which are needed for lookback option payoffs. 
+
+\label{doc-constructors}
+\Hypertarget{class_chivet_1_1_monte_carlo_simulator_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_chivet_1_1_monte_carlo_simulator_aec81998af333bb81f96d34f8d08246ba}\index{Chivet::MonteCarloSimulator@{Chivet::MonteCarloSimulator}!MonteCarloSimulator@{MonteCarloSimulator}}
+\index{MonteCarloSimulator@{MonteCarloSimulator}!Chivet::MonteCarloSimulator@{Chivet::MonteCarloSimulator}}
+\doxysubsubsection{\texorpdfstring{MonteCarloSimulator()}{MonteCarloSimulator()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_chivet_1_1_monte_carlo_simulator_aec81998af333bb81f96d34f8d08246ba} 
+Chivet::\+\+Monte\+Carlo\+Simulator::\+\+Monte\+Carlo\+Simulator (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Default constructor. 
+
+Initialises with 10 000 simulations, 1 000 time steps, and a random seed derived from the system clock. \Hypertarget{class_chivet_1_1_monte_carlo_simulator_aec00a0aadf0b3639cc842908b902d7bf}\index{Chivet::MonteCarloSimulator@{Chivet::MonteCarloSimulator}!MonteCarloSimulator@{MonteCarloSimulator}}
+\index{MonteCarloSimulator@{MonteCarloSimulator}!Chivet::MonteCarloSimulator@{Chivet::MonteCarloSimulator}}
+\doxysubsubsection{\texorpdfstring{MonteCarloSimulator()}{MonteCarloSimulator()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_chivet_1_1_monte_carlo_simulator_aec00a0aadf0b3639cc842908b902d7bf} 
+Chivet::\+\+Monte\+Carlo\+Simulator::\+\+Monte\+Carlo\+Simulator (\begin{DoxyParamCaption}\item[{unsigned long}]{num\+Simulations}{, }\item[{unsigned long}]{num\+Time\+Steps}{, }\item[{unsigned int}]{seed}{ = {\ttfamily 0}}\end{DoxyParamCaption})}
+
+
+
+Parameterised constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em num\+Simulations} & Number of Monte Carlo paths to generate. \\
+\hline
+{\em num\+Time\+Steps} & Number of discrete time steps per path. \\
+\hline
+{\em seed} & \doxylink{namespace_chivet_1_1_random}{Random} seed (0 = derive from system clock). \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_chivet_1_1_monte_carlo_simulator_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_chivet_1_1_monte_carlo_simulator_a06ac78377d8a8bc93012d4f5644a1dd7}\index{Chivet::MonteCarloSimulator@{Chivet::MonteCarloSimulator}!generateStandardNormal@{generateStandardNormal}}
+\index{generateStandardNormal@{generateStandardNormal}!Chivet::MonteCarloSimulator@{Chivet::MonteCarloSimulator}}
+\doxysubsubsection{\texorpdfstring{generateStandardNormal()}{generateStandardNormal()}}
+{\footnotesize\ttfamily \label{class_chivet_1_1_monte_carlo_simulator_a06ac78377d8a8bc93012d4f5644a1dd7} 
+double Chivet::\+\+Monte\+Carlo\+Simulator::\+generate\+Standard\+Normal (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Draw a single sample from the standard normal distribution. 
+
+\begin{DoxyReturn}{Returns}
+A realisation of $Z \sim \mathcal{N}(0,1)$. 
+\end{DoxyReturn}
+\Hypertarget{class_chivet_1_1_monte_carlo_simulator_a1bcf7a151ca05bca10bb5537a0705798}\index{Chivet::MonteCarloSimulator@{Chivet::MonteCarloSimulator}!getBgkCorrection@{getBgkCorrection}}
+\index{getBgkCorrection@{getBgkCorrection}!Chivet::MonteCarloSimulator@{Chivet::MonteCarloSimulator}}
+\doxysubsubsection{\texorpdfstring{getBgkCorrection()}{getBgkCorrection()}}
+{\footnotesize\ttfamily \label{class_chivet_1_1_monte_carlo_simulator_a1bcf7a151ca05bca10bb5537a0705798} 
+bool Chivet::\+\+Monte\+Carlo\+Simulator::\+get\+Bgk\+Correction (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Check whether the BGK correction is enabled. 
+
+\Hypertarget{class_chivet_1_1_monte_carlo_simulator_acd0108278b368b982ef7c216d873dd35}\index{Chivet::MonteCarloSimulator@{Chivet::MonteCarloSimulator}!getNumSimulations@{getNumSimulations}}
+\index{getNumSimulations@{getNumSimulations}!Chivet::MonteCarloSimulator@{Chivet::MonteCarloSimulator}}
+\doxysubsubsection{\texorpdfstring{getNumSimulations()}{getNumSimulations()}}
+{\footnotesize\ttfamily \label{class_chivet_1_1_monte_carlo_simulator_acd0108278b368b982ef7c216d873dd35} 
+unsigned long Chivet::\+\+Monte\+Carlo\+Simulator::\+get\+Num\+Simulations (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the number of simulations. 
+
+\Hypertarget{class_chivet_1_1_monte_carlo_simulator_ab99923f4a033b784e4fc6e8f77e52b62}\index{Chivet::MonteCarloSimulator@{Chivet::MonteCarloSimulator}!getNumTimeSteps@{getNumTimeSteps}}
+\index{getNumTimeSteps@{getNumTimeSteps}!Chivet::MonteCarloSimulator@{Chivet::MonteCarloSimulator}}
+\doxysubsubsection{\texorpdfstring{getNumTimeSteps()}{getNumTimeSteps()}}
+{\footnotesize\ttfamily \label{class_chivet_1_1_monte_carlo_simulator_ab99923f4a033b784e4fc6e8f77e52b62} 
+unsigned long Chivet::\+\+Monte\+Carlo\+Simulator::\+get\+Num\+Time\+Steps (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the number of time steps per path. 
+
+\Hypertarget{class_chivet_1_1_monte_carlo_simulator_a2c6f1ac8d157d1cfc023a61607e0e5ea}\index{Chivet::MonteCarloSimulator@{Chivet::MonteCarloSimulator}!getRandomSeed@{getRandomSeed}}
+\index{getRandomSeed@{getRandomSeed}!Chivet::MonteCarloSimulator@{Chivet::MonteCarloSimulator}}
+\doxysubsubsection{\texorpdfstring{getRandomSeed()}{getRandomSeed()}}
+{\footnotesize\ttfamily \label{class_chivet_1_1_monte_carlo_simulator_a2c6f1ac8d157d1cfc023a61607e0e5ea} 
+unsigned int Chivet::\+\+Monte\+Carlo\+Simulator::\+get\+Random\+Seed (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get a seed value derived from the current clock (snapshot). 
+
+\Hypertarget{class_chivet_1_1_monte_carlo_simulator_a89117c4c23569e50a0855abcf36897dd}\index{Chivet::MonteCarloSimulator@{Chivet::MonteCarloSimulator}!setBgkCorrection@{setBgkCorrection}}
+\index{setBgkCorrection@{setBgkCorrection}!Chivet::MonteCarloSimulator@{Chivet::MonteCarloSimulator}}
+\doxysubsubsection{\texorpdfstring{setBgkCorrection()}{setBgkCorrection()}}
+{\footnotesize\ttfamily \label{class_chivet_1_1_monte_carlo_simulator_a89117c4c23569e50a0855abcf36897dd} 
+void Chivet::\+\+Monte\+Carlo\+Simulator::\+set\+Bgk\+Correction (\begin{DoxyParamCaption}\item[{bool}]{enabled}{}\end{DoxyParamCaption})}
+
+
+
+Enable or disable the Broadie-\/\+Glasserman-\/\+Kou continuity correction. 
+
+\Hypertarget{class_chivet_1_1_monte_carlo_simulator_a77f69db92bace6bf2df0ccf400aae843}\index{Chivet::MonteCarloSimulator@{Chivet::MonteCarloSimulator}!setNumSimulations@{setNumSimulations}}
+\index{setNumSimulations@{setNumSimulations}!Chivet::MonteCarloSimulator@{Chivet::MonteCarloSimulator}}
+\doxysubsubsection{\texorpdfstring{setNumSimulations()}{setNumSimulations()}}
+{\footnotesize\ttfamily \label{class_chivet_1_1_monte_carlo_simulator_a77f69db92bace6bf2df0ccf400aae843} 
+void Chivet::\+\+Monte\+Carlo\+Simulator::\+set\+Num\+Simulations (\begin{DoxyParamCaption}\item[{unsigned long}]{num\+Simulations}{}\end{DoxyParamCaption})}
+
+
+
+Set the number of simulations. 
+
+\Hypertarget{class_chivet_1_1_monte_carlo_simulator_a33e2fe78d0fc4e7df6641166310cf42a}\index{Chivet::MonteCarloSimulator@{Chivet::MonteCarloSimulator}!setNumTimeSteps@{setNumTimeSteps}}
+\index{setNumTimeSteps@{setNumTimeSteps}!Chivet::MonteCarloSimulator@{Chivet::MonteCarloSimulator}}
+\doxysubsubsection{\texorpdfstring{setNumTimeSteps()}{setNumTimeSteps()}}
+{\footnotesize\ttfamily \label{class_chivet_1_1_monte_carlo_simulator_a33e2fe78d0fc4e7df6641166310cf42a} 
+void Chivet::\+\+Monte\+Carlo\+Simulator::\+set\+Num\+Time\+Steps (\begin{DoxyParamCaption}\item[{unsigned long}]{num\+Time\+Steps}{}\end{DoxyParamCaption})}
+
+
+
+Set the number of time steps per path. 
+
+\Hypertarget{class_chivet_1_1_monte_carlo_simulator_afe1f632e03488fb3a87345c7edc6d8e3}\index{Chivet::MonteCarloSimulator@{Chivet::MonteCarloSimulator}!setRandomSeed@{setRandomSeed}}
+\index{setRandomSeed@{setRandomSeed}!Chivet::MonteCarloSimulator@{Chivet::MonteCarloSimulator}}
+\doxysubsubsection{\texorpdfstring{setRandomSeed()}{setRandomSeed()}}
+{\footnotesize\ttfamily \label{class_chivet_1_1_monte_carlo_simulator_afe1f632e03488fb3a87345c7edc6d8e3} 
+void Chivet::\+\+Monte\+Carlo\+Simulator::\+set\+Random\+Seed (\begin{DoxyParamCaption}\item[{unsigned int}]{seed}{}\end{DoxyParamCaption})}
+
+
+
+Re-\/seed the random number generator. 
+
+\Hypertarget{class_chivet_1_1_monte_carlo_simulator_a9aa088e990599af10ea011cef52173f5}\index{Chivet::MonteCarloSimulator@{Chivet::MonteCarloSimulator}!simulatePaths@{simulatePaths}}
+\index{simulatePaths@{simulatePaths}!Chivet::MonteCarloSimulator@{Chivet::MonteCarloSimulator}}
+\doxysubsubsection{\texorpdfstring{simulatePaths()}{simulatePaths()}}
+{\footnotesize\ttfamily \label{class_chivet_1_1_monte_carlo_simulator_a9aa088e990599af10ea011cef52173f5} 
+std::\+vector$<$ \doxymbox{\hyperlink{struct_chivet_1_1_spot_results}{Spot\+Results}} $>$ Chivet::\+\+Monte\+Carlo\+Simulator::\+simulate\+Paths (\begin{DoxyParamCaption}\item[{double}]{initial\+Spot}{, }\item[{double}]{rate}{, }\item[{double}]{volatility}{, }\item[{double}]{time\+To\+Maturity}{}\end{DoxyParamCaption}) const}
+
+
+
+Simulate all Monte Carlo paths. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em initial\+Spot} & Initial spot price $S_0$. \\
+\hline
+{\em rate} & Risk-\/free interest rate $r$. \\
+\hline
+{\em volatility} & Volatility $\sigma$. \\
+\hline
+{\em time\+To\+Maturity} & Time to maturity $T$ in years. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector of \doxylink{struct_chivet_1_1_spot_results}{Spot\+Results}, one per simulation. 
+\end{DoxyReturn}
+\Hypertarget{class_chivet_1_1_monte_carlo_simulator_a9830b12470aa5308f08fd7b0261f1238}\index{Chivet::MonteCarloSimulator@{Chivet::MonteCarloSimulator}!simulateSinglePath@{simulateSinglePath}}
+\index{simulateSinglePath@{simulateSinglePath}!Chivet::MonteCarloSimulator@{Chivet::MonteCarloSimulator}}
+\doxysubsubsection{\texorpdfstring{simulateSinglePath()}{simulateSinglePath()}}
+{\footnotesize\ttfamily \label{class_chivet_1_1_monte_carlo_simulator_a9830b12470aa5308f08fd7b0261f1238} 
+\doxymbox{\hyperlink{struct_chivet_1_1_spot_results}{Spot\+Results}} Chivet::\+\+Monte\+Carlo\+Simulator::\+simulate\+Single\+Path (\begin{DoxyParamCaption}\item[{double}]{initial\+Spot}{, }\item[{double}]{rate}{, }\item[{double}]{volatility}{, }\item[{double}]{time\+To\+Maturity}{}\end{DoxyParamCaption}) const}
+
+
+
+Simulate a single GBM price path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em initial\+Spot} & Initial spot price $S_0$. \\
+\hline
+{\em rate} & Risk-\/free interest rate $r$. \\
+\hline
+{\em volatility} & Volatility $\sigma$. \\
+\hline
+{\em time\+To\+Maturity} & Time to maturity $T$ in years. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{struct_chivet_1_1_spot_results}{Spot\+Results} containing spot at maturity, path max, and path min. 
+\end{DoxyReturn}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_chivet_1_1_monte_carlo_simulator_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_chivet_1_1_monte_carlo_simulator_a87f0cc19e236dca5e174ceae2985e62b}\index{Chivet::MonteCarloSimulator@{Chivet::MonteCarloSimulator}!BGK\_BETA1@{BGK\_BETA1}}
+\index{BGK\_BETA1@{BGK\_BETA1}!Chivet::MonteCarloSimulator@{Chivet::MonteCarloSimulator}}
+\doxysubsubsection{\texorpdfstring{BGK\_BETA1}{BGK\_BETA1}}
+{\footnotesize\ttfamily \label{class_chivet_1_1_monte_carlo_simulator_a87f0cc19e236dca5e174ceae2985e62b} 
+double Chivet::\+\+Monte\+Carlo\+Simulator::\+\+BGK\+\_\+\+BETA1 = 0.\+5826\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}, {\ttfamily [private]}}
+
+
+
+Broadie-\/\+Glasserman-\/\+Kou constant:\+ $\beta_1 = -\zeta(1/2)/\sqrt{2\pi} \approx 0.5826$. 
+
+\Hypertarget{class_chivet_1_1_monte_carlo_simulator_a4e16c1a71c054e9b46801d9b6188a57d}\index{Chivet::MonteCarloSimulator@{Chivet::MonteCarloSimulator}!bgkCorrection\_@{bgkCorrection\_}}
+\index{bgkCorrection\_@{bgkCorrection\_}!Chivet::MonteCarloSimulator@{Chivet::MonteCarloSimulator}}
+\doxysubsubsection{\texorpdfstring{bgkCorrection\_}{bgkCorrection\_}}
+{\footnotesize\ttfamily \label{class_chivet_1_1_monte_carlo_simulator_a4e16c1a71c054e9b46801d9b6188a57d} 
+bool Chivet::\+\+Monte\+Carlo\+Simulator::\+bgk\+Correction\+\_\+ = false\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Apply Broadie-\/\+Glasserman-\/\+Kou continuity correction. 
+
+\Hypertarget{class_chivet_1_1_monte_carlo_simulator_a11c626d9caab4548934687ea871dc73f}\index{Chivet::MonteCarloSimulator@{Chivet::MonteCarloSimulator}!normDist\_@{normDist\_}}
+\index{normDist\_@{normDist\_}!Chivet::MonteCarloSimulator@{Chivet::MonteCarloSimulator}}
+\doxysubsubsection{\texorpdfstring{normDist\_}{normDist\_}}
+{\footnotesize\ttfamily \label{class_chivet_1_1_monte_carlo_simulator_a11c626d9caab4548934687ea871dc73f} 
+std::\+normal\+\_\+distribution$<$double$>$ Chivet::\+\+Monte\+Carlo\+Simulator::\+norm\+Dist\+\_\+\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}
+
+
+
+Standard normal distribution N(0, 1). 
+
+\Hypertarget{class_chivet_1_1_monte_carlo_simulator_ae524fa673a79e96e28f3b861bab4c218}\index{Chivet::MonteCarloSimulator@{Chivet::MonteCarloSimulator}!numSimulations\_@{numSimulations\_}}
+\index{numSimulations\_@{numSimulations\_}!Chivet::MonteCarloSimulator@{Chivet::MonteCarloSimulator}}
+\doxysubsubsection{\texorpdfstring{numSimulations\_}{numSimulations\_}}
+{\footnotesize\ttfamily \label{class_chivet_1_1_monte_carlo_simulator_ae524fa673a79e96e28f3b861bab4c218} 
+unsigned long Chivet::\+\+Monte\+Carlo\+Simulator::\+num\+Simulations\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Number of Monte Carlo paths. 
+
+\Hypertarget{class_chivet_1_1_monte_carlo_simulator_ac03953f3be81f35943987224eb59c3b1}\index{Chivet::MonteCarloSimulator@{Chivet::MonteCarloSimulator}!numTimeSteps\_@{numTimeSteps\_}}
+\index{numTimeSteps\_@{numTimeSteps\_}!Chivet::MonteCarloSimulator@{Chivet::MonteCarloSimulator}}
+\doxysubsubsection{\texorpdfstring{numTimeSteps\_}{numTimeSteps\_}}
+{\footnotesize\ttfamily \label{class_chivet_1_1_monte_carlo_simulator_ac03953f3be81f35943987224eb59c3b1} 
+unsigned long Chivet::\+\+Monte\+Carlo\+Simulator::\+num\+Time\+Steps\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Number of discrete time steps per path. 
+
+\Hypertarget{class_chivet_1_1_monte_carlo_simulator_a65d357189649ca1fedf631fe9fb540ba}\index{Chivet::MonteCarloSimulator@{Chivet::MonteCarloSimulator}!rng\_@{rng\_}}
+\index{rng\_@{rng\_}!Chivet::MonteCarloSimulator@{Chivet::MonteCarloSimulator}}
+\doxysubsubsection{\texorpdfstring{rng\_}{rng\_}}
+{\footnotesize\ttfamily \label{class_chivet_1_1_monte_carlo_simulator_a65d357189649ca1fedf631fe9fb540ba} 
+std::\+mt19937 Chivet::\+\+Monte\+Carlo\+Simulator::\+rng\+\_\+\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}
+
+
+
+Mersenne Twister PRNG. 
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+Chivet/\+include/\+\doxymbox{\hyperlink{_monte_carlo_simulator_8hpp}{Monte\+Carlo\+Simulator.\+hpp}}\item 
+Chivet/\+src/\+\doxymbox{\hyperlink{_monte_carlo_simulator_8cpp}{Monte\+Carlo\+Simulator.\+cpp}}\end{DoxyCompactItemize}
