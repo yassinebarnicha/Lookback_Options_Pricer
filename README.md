@@ -119,7 +119,7 @@ Main classes:
 Antithetic variates are applied **only** to the normal draw used for the terminal value:
 
 For each sample $$\( (Z, U_{\max}, U_{\min}) \)$$, we also evaluate  
-$$\( (-Z, U_{\max}, U_{\min}) \) $$and average the payoffs.
+$$\((-Z, U_{\max}, U_{\min}) \)$$and average the payoffs.
 
 This reduces variance while preserving **exact** extremum sampling conditional on endpoints.
 
